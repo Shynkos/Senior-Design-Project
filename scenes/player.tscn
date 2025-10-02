@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cesp8xbn0fvnx"]
+[gd_scene load_steps=5 format=3 uid="uid://cesp8xbn0fvnx"]
 
 [ext_resource type="Script" uid="uid://cujmkd7d5hao1" path="res://scenes/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://c532unsw2rpsd" path="res://textures/Placeholder.jpg" id="2_g2els"]
+[ext_resource type="PackedScene" uid="uid://p55t88r54536" path="res://gun.tscn" id="3_qhqgy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
 size = Vector2(42, 128)
@@ -21,3 +22,5 @@ shape = SubResource("RectangleShape2D_g2els")
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_enabled = true
 position_smoothing_speed = 10.0
+
+[node name="Gun" parent="." instance=ExtResource("3_qhqgy")]

@@ -4,6 +4,12 @@ extends CharacterBody2D
 @export var gravity = 2000.0
 @export var jump_vel = -800.0
 var on_ground = true
+# preloading projectile
+
+@export var bullet: PackedScene
+func Attack():
+	if Input.is_action_just_pressed("Fire"):
+		get_node("Gun").fire()
 
 func _physics_process(delta):
 	# get key input from user
@@ -24,5 +30,6 @@ func _physics_process(delta):
 	# jump if user presses space
 	if Input.is_action_just_pressed("Jump") and on_ground:
 		velocity.y = jump_vel
-	
+	# register attacks
+	Attack();
 	move_and_slide()	
