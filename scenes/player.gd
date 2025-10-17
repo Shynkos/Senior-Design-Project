@@ -13,10 +13,10 @@ func Attack():
 
 func _physics_process(delta):
 	# get key input from user
-	var direction = Input.get_vector("Move left", "Move right", "", "")
+	var direction = Input.get_axis("Move left", "Move right")
 	
 	# update horizontal velocity based on direction
-	velocity.x = 500 * direction.x
+	velocity.x = 500 * direction
 	
 	# update boolean if player is on the ground
 	if is_on_floor():
