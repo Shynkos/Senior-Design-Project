@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=3 uid="uid://cr4yx7hsy8g63"]
+
+[ext_resource type="Script" uid="uid://byvowrr4v34oh" path="res://scenes/pause_menu.gd" id="1_n87rw"]
+
+[node name="PauseMenu" type="CanvasLayer"]
+script = ExtResource("1_n87rw")
+
+[node name="Resume Button" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.35900003
+anchor_top = 0.27800003
+anchor_right = 0.64100003
+anchor_bottom = 0.32200003
+offset_left = 0.47998047
+offset_top = -0.16001892
+offset_right = -0.4800415
+offset_bottom = 0.15997314
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Resume"
+icon_alignment = 1
+
+[node name="Options Button" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.35900003
+anchor_top = 0.347
+anchor_right = 0.64100003
+anchor_bottom = 0.39200002
+offset_left = 0.47998047
+offset_top = 0.16000366
+offset_right = -0.4800415
+offset_bottom = -0.24002075
+text = "Options"
+
+[node name="Quit Button" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.35900003
+anchor_top = 0.41700003
+anchor_right = 0.64100003
+anchor_bottom = 0.46100003
+offset_left = 0.47998047
+offset_top = -0.24002075
+offset_right = -0.4800415
+offset_bottom = 0.07998657
+text = "Quit Game"
+
+[connection signal="pressed" from="Resume Button" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="Options Button" to="." method="_on_options_button_pressed"]
