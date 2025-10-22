@@ -48,3 +48,4 @@ text = "Quit Game"
 
 [connection signal="pressed" from="Resume Button" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="Options Button" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="Quit Button" to="." method="_on_quit_button_pressed"]
