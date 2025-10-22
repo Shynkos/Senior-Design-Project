@@ -33,3 +33,11 @@ func _physics_process(delta):
 	# register attacks
 	Attack();
 	move_and_slide()	
+
+
+func _on_pause_menu_options():
+	$OptionsMenu.visible = visible
+
+
+func _on_options_menu_back():
+	$PauseMenu.visible = visible

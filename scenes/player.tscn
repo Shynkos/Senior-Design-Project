@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://cesp8xbn0fvnx"]
+[gd_scene load_steps=7 format=3 uid="uid://cesp8xbn0fvnx"]
 
 [ext_resource type="Script" uid="uid://cujmkd7d5hao1" path="res://scenes/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://c532unsw2rpsd" path="res://textures/Placeholder.jpg" id="2_g2els"]
 [ext_resource type="PackedScene" uid="uid://p55t88r54536" path="res://gun.tscn" id="3_qhqgy"]
+[ext_resource type="PackedScene" uid="uid://cr4yx7hsy8g63" path="res://scenes/pause_menu.tscn" id="4_dqkch"]
+[ext_resource type="PackedScene" uid="uid://d373lh2hft810" path="res://scenes/options_menu.tscn" id="5_qlg0r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
 size = Vector2(42, 128)
@@ -24,3 +26,12 @@ position_smoothing_enabled = true
 position_smoothing_speed = 10.0
 
 [node name="Gun" parent="." instance=ExtResource("3_qhqgy")]
+
+[node name="PauseMenu" parent="." instance=ExtResource("4_dqkch")]
+visible = false
+
+[node name="OptionsMenu" parent="." instance=ExtResource("5_qlg0r")]
+visible = false
+
+[connection signal="options" from="PauseMenu" to="." method="_on_pause_menu_options"]
+[connection signal="back" from="OptionsMenu" to="." method="_on_options_menu_back"]
