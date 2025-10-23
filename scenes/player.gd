@@ -11,6 +11,10 @@ func Attack():
 	if Input.is_action_just_pressed("Fire"):
 		get_node("Gun").fire()
 
+func _process(delta):
+	if Input.is_action_just_pressed("Pause") and !$ControlsMenu.visible:
+		$PauseMenu.visible = !$PauseMenu.visible
+
 func _physics_process(delta):
 	# get key input from user
 	var direction = Input.get_axis("Move left", "Move right")
@@ -41,3 +45,11 @@ func _on_pause_menu_options():
 
 func _on_options_menu_back():
 	$PauseMenu.visible = visible
+
+
+func _on_options_menu_controls():
+	$ControlsMenu.visible = visible
+
+
+func _on_controls_menu_back():
+	$OptionsMenu.visible = visible
