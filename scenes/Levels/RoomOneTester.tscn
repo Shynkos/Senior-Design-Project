@@ -394,8 +394,10 @@ offset_bottom = 10.0
 text = "5"
 
 [node name="Label" type="Label" parent="."]
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 1870.0
+offset_top = -64.0
+offset_right = 2022.0
+offset_bottom = -15.0
 text = "First code: 213
 Second code: 15243"
 
