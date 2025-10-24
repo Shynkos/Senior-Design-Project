@@ -1,9 +1,9 @@
 [gd_scene load_steps=7 format=4 uid="uid://3f40n7i81oax"]
 
-[ext_resource type="Texture2D" uid="uid://wdeyd68ttq5p" path="res://addons/simple64x_tiles6.png" id="1_0ugm7"]
-[ext_resource type="PackedScene" uid="uid://tfertef25w1k" path="res://button_puzzle.tscn" id="2_uuaxm"]
-[ext_resource type="PackedScene" uid="uid://e0apxppajl0x" path="res://button.tscn" id="3_c3an2"]
-[ext_resource type="PackedScene" uid="uid://cesp8xbn0fvnx" path="res://scenes/player.tscn" id="4_c3an2"]
+[ext_resource type="Texture2D" uid="uid://wdeyd68ttq5p" path="res://textures/simple64x_tiles6.png" id="1_0ugm7"]
+[ext_resource type="PackedScene" uid="uid://tfertef25w1k" path="res://scenes/Components/button_puzzle.tscn" id="2_uuaxm"]
+[ext_resource type="PackedScene" uid="uid://cglb1282nj8my" path="res://scenes/Objects/button.tscn" id="3_c3an2"]
+[ext_resource type="PackedScene" uid="uid://cesp8xbn0fvnx" path="res://scenes/Characters/player.tscn" id="4_c3an2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vqaso"]
 texture = ExtResource("1_0ugm7")

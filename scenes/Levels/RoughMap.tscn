@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=4 uid="uid://bks0hqxvxojd7"]
 
-[ext_resource type="Texture2D" uid="uid://wdeyd68ttq5p" path="res://addons/simple64x_tiles6.png" id="1_r0gyp"]
-[ext_resource type="Texture2D" uid="uid://fttojcthy02h" path="res://addons/Rat_Attack.png" id="2_5e535"]
-[ext_resource type="Texture2D" uid="uid://btbvigs1pewuc" path="res://addons/Bat_Full.png" id="3_auat3"]
+[ext_resource type="Texture2D" uid="uid://wdeyd68ttq5p" path="res://textures/simple64x_tiles6.png" id="1_r0gyp"]
+[ext_resource type="Texture2D" uid="uid://fttojcthy02h" path="res://textures/Rat_Attack.png" id="2_5e535"]
+[ext_resource type="Texture2D" uid="uid://btbvigs1pewuc" path="res://textures/Bat_Full.png" id="3_auat3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ujpok"]
 texture = ExtResource("1_r0gyp")

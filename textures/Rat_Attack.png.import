@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wdeyd68ttq5p"
-path="res://.godot/imported/simple64x_tiles6.png-9d6be258ff65582f37c0d37b7a4af346.ctex"
+uid="uid://fttojcthy02h"
+path="res://.godot/imported/Rat_Attack.png-fc1076d0a1c647a47f78056cc9291052.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/simple64x_tiles6.png"
-dest_files=["res://.godot/imported/simple64x_tiles6.png-9d6be258ff65582f37c0d37b7a4af346.ctex"]
+source_file="res://textures/Rat_Attack.png"
+dest_files=["res://.godot/imported/Rat_Attack.png-fc1076d0a1c647a47f78056cc9291052.ctex"]
 
 [params]
 

@@ -1,10 +1,10 @@
 [gd_scene load_steps=9 format=4 uid="uid://bx61wpuisvudv"]
 
-[ext_resource type="Texture2D" uid="uid://wdeyd68ttq5p" path="res://addons/simple64x_tiles6.png" id="1_eitah"]
-[ext_resource type="PackedScene" uid="uid://cesp8xbn0fvnx" path="res://scenes/player.tscn" id="2_dmaki"]
-[ext_resource type="PackedScene" uid="uid://cglb1282nj8my" path="res://button.tscn" id="3_4s3ml"]
-[ext_resource type="PackedScene" uid="uid://tfertef25w1k" path="res://button_puzzle.tscn" id="3_hlgq7"]
-[ext_resource type="PackedScene" uid="uid://bbslyjc86f5es" path="res://door_close_trigger.tscn" id="4_8mcyx"]
+[ext_resource type="Texture2D" uid="uid://wdeyd68ttq5p" path="res://textures/simple64x_tiles6.png" id="1_eitah"]
+[ext_resource type="PackedScene" uid="uid://cesp8xbn0fvnx" path="res://scenes/Characters/player.tscn" id="2_dmaki"]
+[ext_resource type="PackedScene" uid="uid://cglb1282nj8my" path="res://scenes/Objects/button.tscn" id="3_4s3ml"]
+[ext_resource type="PackedScene" uid="uid://tfertef25w1k" path="res://scenes/Components/button_puzzle.tscn" id="3_hlgq7"]
+[ext_resource type="PackedScene" uid="uid://bbslyjc86f5es" path="res://scenes/Components/door_close_trigger.tscn" id="4_8mcyx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dmaki"]
 texture = ExtResource("1_eitah")

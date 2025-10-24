@@ -1,7 +1,7 @@
 extends Sprite2D
 
 @onready var marker_2d: Marker2D = $Marker2D
-const BULLET = preload("res://bullet.tscn")
+const BULLET = preload("res://scenes/Components/bullet.tscn")
 
 func _process(delta: float) -> void:
 	look_at(get_global_mouse_position())

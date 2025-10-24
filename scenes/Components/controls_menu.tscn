@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://bqbudpl4pyr10"]
 
-[ext_resource type="Script" uid="uid://cgv4ipot1oqsh" path="res://scenes/controls_menu.gd" id="1_kdy74"]
+[ext_resource type="Script" uid="uid://cgv4ipot1oqsh" path="res://scenes/Components/controls_menu.gd" id="1_kdy74"]
 
 [node name="ControlsMenu" type="CanvasLayer"]
 script = ExtResource("1_kdy74")
