@@ -1,10 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://p55t88r54536"]
+[gd_scene load_steps=3 format=3 uid="uid://dqtfxmrm5wkfj"]
 
-[ext_resource type="Script" uid="uid://civwg3p4gb4ro" path="res://scenes/Components/gun.gd" id="2_dk5gl"]
-[ext_resource type="Texture2D" uid="uid://ctchyq6auwl1b" path="res://textures/player-sprites/arm-with-gun.png" id="2_kw0bs"]
+[ext_resource type="Script" uid="uid://civwg3p4gb4ro" path="res://gun.gd" id="2_dk5gl"]
+[ext_resource type="Texture2D" uid="uid://cwb76yrh3eu1j" path="res://textures/player-sprites/arm-with-gun-scaled-5x.png" id="2_kw0bs"]
 
 [node name="Gun" type="Sprite2D"]
-scale = Vector2(1, 0.234375)
 offset = Vector2(64, 0)
 script = ExtResource("2_dk5gl")
 
@@ -13,5 +12,5 @@ position = Vector2(128, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(54, 8.533333)
-scale = Vector2(4.016667, 13.983334)
+scale = Vector2(0.8, 0.8)
 texture = ExtResource("2_kw0bs")
