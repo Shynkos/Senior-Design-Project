@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://bgkx2c2xth0lu"]
+
+[ext_resource type="PackedScene" uid="uid://cesp8xbn0fvnx" path="res://scenes/Characters/player.tscn" id="1_yigqq"]
+[ext_resource type="Texture2D" uid="uid://c532unsw2rpsd" path="res://textures/Placeholder.jpg" id="2_xro3v"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vvggw"]
+size = Vector2(635, 26)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xro3v"]
+size = Vector2(1152, 26)
+
+[node name="TempLevel" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_yigqq")]
+position = Vector2(69, 552)
+
+[node name="Platform3" type="StaticBody2D" parent="."]
+position = Vector2(937, 535)
+collision_layer = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform3"]
+position = Vector2(-307.5, 0)
+scale = Vector2(25.4, 1)
+texture = ExtResource("2_xro3v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform3"]
+position = Vector2(-307.5, 0)
+shape = SubResource("RectangleShape2D_vvggw")
+
+[node name="Platform" type="StaticBody2D" parent="."]
+position = Vector2(576, 635)
+collision_layer = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Platform"]
+scale = Vector2(46.08, 1)
+texture = ExtResource("2_xro3v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Platform"]
+shape = SubResource("RectangleShape2D_xro3v")

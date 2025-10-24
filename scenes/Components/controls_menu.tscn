@@ -1,0 +1,85 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqbudpl4pyr10"]
+
+[ext_resource type="Script" uid="uid://cgv4ipot1oqsh" path="res://scenes/Components/controls_menu.gd" id="1_kdy74"]
+
+[node name="ControlsMenu" type="CanvasLayer"]
+script = ExtResource("1_kdy74")
+
+[node name="MoveRight" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.504
+anchor_top = 0.27800003
+anchor_right = 0.64000005
+anchor_bottom = 0.32200003
+offset_left = -0.11999512
+offset_top = -0.16001892
+offset_right = -0.20007324
+offset_bottom = 0.15997314
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+icon_alignment = 1
+
+[node name="MoveLeft" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.347
+anchor_right = 0.64100003
+anchor_bottom = 0.39200002
+offset_left = 5.0
+offset_top = 0.16000366
+offset_right = -1.4800415
+offset_bottom = -0.24002075
+
+[node name="Jump" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.504
+anchor_top = 0.41700003
+anchor_right = 0.64100003
+anchor_bottom = 0.46100003
+offset_left = -0.11999512
+offset_top = -0.24002075
+offset_right = -1.4800415
+offset_bottom = 0.07998657
+
+[node name="JumpLabel" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.36200002
+anchor_top = 0.41700003
+anchor_right = 0.49800003
+anchor_bottom = 0.46100003
+offset_left = -0.36001587
+offset_top = -0.24002075
+offset_right = -0.44006348
+offset_bottom = 0.07998657
+text = "Jump"
+horizontal_alignment = 1
+
+[node name="MoveLeftLabel" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.36200002
+anchor_top = 0.347
+anchor_right = 0.49800003
+anchor_bottom = 0.39200002
+offset_left = -0.36001587
+offset_top = 0.16000366
+offset_right = -0.44006348
+offset_bottom = -0.24002075
+text = "Move Left"
+horizontal_alignment = 1
+
+[node name="MoveRightLabel" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.36200002
+anchor_top = 0.27800003
+anchor_right = 0.49800003
+anchor_bottom = 0.32200003
+offset_left = -0.36001587
+offset_top = -0.16001892
+offset_right = -0.44006348
+offset_bottom = 0.15997314
+text = "Move Right"
+horizontal_alignment = 1
+
+[connection signal="pressed" from="MoveRight" to="." method="_on_move_right_pressed"]
