@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://cesp8xbn0fvnx"]
+[gd_scene load_steps=25 format=3 uid="uid://cesp8xbn0fvnx"]
 
 [ext_resource type="Script" uid="uid://cujmkd7d5hao1" path="res://scenes/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://c532unsw2rpsd" path="res://textures/Placeholder.jpg" id="2_g2els"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://bxjhk01ij88s7" path="res://textures/player-sprites/player-idle.png" id="4_dqkch"]
 [ext_resource type="Texture2D" uid="uid://dujll6kfjlqtu" path="res://textures/player-sprites/player-jump.png" id="5_tuyoq"]
 [ext_resource type="Texture2D" uid="uid://cr5gxtc6s1q2h" path="res://textures/player-sprites/player-run.png" id="6_fjrip"]
+[ext_resource type="PackedScene" uid="uid://cr4yx7hsy8g63" path="res://scenes/pause_menu.tscn" id="7_smehm"]
+[ext_resource type="PackedScene" uid="uid://d373lh2hft810" path="res://scenes/options_menu.tscn" id="8_ur7pv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
 size = Vector2(42, 128)
@@ -126,7 +128,7 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player2" type="CharacterBody2D"]
 collision_layer = 5
 collision_mask = 2
 script = ExtResource("1_g2els")
@@ -154,3 +156,12 @@ frame_progress = 0.22007807
 
 [node name="Gun" parent="." instance=ExtResource("3_qhqgy")]
 position = Vector2(-15, -14)
+
+[node name="PauseMenu" parent="." instance=ExtResource("7_smehm")]
+visible = false
+
+[node name="OptionsMenu" parent="." instance=ExtResource("8_ur7pv")]
+visible = false
+
+[connection signal="options" from="PauseMenu" to="." method="_on_pause_menu_options"]
+[connection signal="back" from="OptionsMenu" to="." method="_on_options_menu_back"]

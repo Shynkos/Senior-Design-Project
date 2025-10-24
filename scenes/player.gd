@@ -53,3 +53,12 @@ func toggle_flip_sprite(dir):
 		animated_sprite.flip_h = false
 	if dir == -1: # moving left
 		animated_sprite.flip_h = true
+
+
+func _on_pause_menu_options():
+	$OptionsMenu.visible = visible
+
+
+
+func _on_options_menu_back():
+	$PauseMenu.visible = visible
