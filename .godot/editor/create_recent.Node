@@ -1,0 +1,4 @@
+TileMapLayer
+CollisionShape2D
+Sprite2D
+StaticBody2D
