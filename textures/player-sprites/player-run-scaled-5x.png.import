@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctchyq6auwl1b"
-path="res://.godot/imported/arm-with-gun.png-fb0ce17050ffb01670304b51115e6c08.ctex"
+uid="uid://dpww8k7e1acm"
+path="res://.godot/imported/player-run-scaled-5x.png-57eecdd628449f7455fa85b6df783fc2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/player-sprites/arm-with-gun.png"
-dest_files=["res://.godot/imported/arm-with-gun.png-fb0ce17050ffb01670304b51115e6c08.ctex"]
+source_file="res://textures/player-sprites/player-run-scaled-5x.png"
+dest_files=["res://.godot/imported/player-run-scaled-5x.png-57eecdd628449f7455fa85b6df783fc2.ctex"]
 
 [params]
 

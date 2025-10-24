@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jjtr3oxnfwhn"
-path="res://.godot/imported/player-sit.png-7502c8699b22111bdc76f5914183eac4.ctex"
+uid="uid://8x2hqkd26fki"
+path="res://.godot/imported/player-sit-scaled-5x.png-df55462943bdf80131bf73e9e87a347a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/player-sprites/player-sit.png"
-dest_files=["res://.godot/imported/player-sit.png-7502c8699b22111bdc76f5914183eac4.ctex"]
+source_file="res://textures/player-sprites/player-sit-scaled-5x.png"
+dest_files=["res://.godot/imported/player-sit-scaled-5x.png-df55462943bdf80131bf73e9e87a347a.ctex"]
 
 [params]
 
