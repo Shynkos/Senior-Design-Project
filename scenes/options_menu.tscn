@@ -48,3 +48,4 @@ text = "Video Settings"
 
 [connection signal="pressed" from="Back Button" to="." method="_on_back_button_pressed"]
 [connection signal="pressed" from="Control Settings Button" to="." method="_on_control_settings_button_pressed"]
+[connection signal="pressed" from="Video Settings Button" to="." method="_on_video_settings_button_pressed"]

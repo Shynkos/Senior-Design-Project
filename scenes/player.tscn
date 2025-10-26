@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cesp8xbn0fvnx"]
+[gd_scene load_steps=9 format=3 uid="uid://cesp8xbn0fvnx"]
 
 [ext_resource type="Script" uid="uid://cujmkd7d5hao1" path="res://scenes/player.gd" id="1_g2els"]
 [ext_resource type="Texture2D" uid="uid://c532unsw2rpsd" path="res://textures/Placeholder.jpg" id="2_g2els"]
+[ext_resource type="PackedScene" uid="uid://bxlfg4olb5wys" path="res://scenes/video_menu.tscn" id="3_fjrip"]
 [ext_resource type="PackedScene" uid="uid://p55t88r54536" path="res://gun.tscn" id="3_qhqgy"]
 [ext_resource type="PackedScene" uid="uid://cr4yx7hsy8g63" path="res://scenes/pause_menu.tscn" id="4_dqkch"]
 [ext_resource type="PackedScene" uid="uid://d373lh2hft810" path="res://scenes/options_menu.tscn" id="5_qlg0r"]
@@ -37,7 +38,12 @@ visible = false
 [node name="ControlsMenu" parent="." instance=ExtResource("6_tuyoq")]
 visible = false
 
+[node name="VideoMenu" parent="." instance=ExtResource("3_fjrip")]
+visible = false
+
 [connection signal="options" from="PauseMenu" to="." method="_on_pause_menu_options"]
 [connection signal="back" from="OptionsMenu" to="." method="_on_options_menu_back"]
 [connection signal="controls" from="OptionsMenu" to="." method="_on_options_menu_controls"]
+[connection signal="video" from="OptionsMenu" to="." method="_on_options_menu_video"]
 [connection signal="back" from="ControlsMenu" to="." method="_on_controls_menu_back"]
+[connection signal="back" from="VideoMenu" to="." method="_on_video_menu_back"]

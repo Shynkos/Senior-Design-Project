@@ -1,0 +1,59 @@
+[gd_scene load_steps=2 format=3 uid="uid://bxlfg4olb5wys"]
+
+[ext_resource type="Script" uid="uid://72w5clgltgjw" path="res://scenes/video_menu.gd" id="1_00mv3"]
+
+[node name="VideoMenu" type="CanvasLayer"]
+script = ExtResource("1_00mv3")
+
+[node name="Fullscreen Toggle" type="CheckButton" parent="."]
+anchors_preset = -1
+anchor_left = 0.504
+anchor_top = 0.27800003
+anchor_right = 0.53800005
+anchor_bottom = 0.31100002
+offset_left = -0.11999512
+offset_top = -0.16001892
+offset_right = 0.35992432
+offset_bottom = 8.079987
+
+[node name="Fullscreen Label" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.36200002
+anchor_top = 0.27800003
+anchor_right = 0.49800003
+anchor_bottom = 0.32200003
+offset_left = -0.36001587
+offset_top = -0.16001892
+offset_right = -0.44006348
+offset_bottom = 0.15997314
+text = "Fullscreen"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VSync Toggle" type="CheckButton" parent="."]
+anchors_preset = -1
+anchor_left = 0.504
+anchor_top = 0.347
+anchor_right = 0.53800005
+anchor_bottom = 0.39200002
+offset_left = -0.11999512
+offset_top = 0.16000366
+offset_right = 0.35992432
+offset_bottom = -0.24002075
+
+[node name="VSync Label" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = 0.36200002
+anchor_top = 0.347
+anchor_right = 0.49800003
+anchor_bottom = 0.39200002
+offset_left = -0.36001587
+offset_top = 0.16000366
+offset_right = -0.44006348
+offset_bottom = -0.24002075
+text = "VSync"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="toggled" from="Fullscreen Toggle" to="." method="_on_fullscreen_toggle_toggled"]
+[connection signal="toggled" from="VSync Toggle" to="." method="_on_v_sync_toggle_toggled"]
