@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Metanarratroid"
-run/main_scene="uid://bx61wpuisvudv"
+run/main_scene="uid://dm5yxnc7t8pg8"
 config/features=PackedStringArray("4.5", "Forward Plus")
 config/icon="res://textures/icon.svg"
 

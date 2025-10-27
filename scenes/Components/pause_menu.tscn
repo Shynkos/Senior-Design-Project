@@ -44,7 +44,7 @@ offset_left = 0.47998047
 offset_top = -0.24002075
 offset_right = -0.4800415
 offset_bottom = 0.07998657
-text = "Quit Game"
+text = "Quit to Menu"
 
 [connection signal="pressed" from="Resume Button" to="." method="_on_resume_button_pressed"]
 [connection signal="pressed" from="Options Button" to="." method="_on_options_button_pressed"]

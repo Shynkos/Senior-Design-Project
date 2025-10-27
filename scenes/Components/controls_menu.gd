@@ -8,6 +8,7 @@ func update_labels():
 	$"MoveRight".text = InputMap.action_get_events("Move right")[0].as_text()
 	$"MoveLeft".text = InputMap.action_get_events("Move left")[0].as_text()
 	$"Jump".text = InputMap.action_get_events("Jump")[0].as_text()
+	$"Interact".text = InputMap.action_get_events("Interact")[0].as_text()
 
 
 func _ready():
@@ -56,3 +57,7 @@ func _on_move_left_pressed():
 
 func _on_jump_pressed():
 	rebind_action("Jump")
+
+
+func _on_interact_pressed() -> void:
+	rebind_action("Interact")

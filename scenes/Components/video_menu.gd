@@ -3,6 +3,13 @@ extends CanvasLayer
 signal back
 
 
+func _ready():
+	if 	DisplayServer.window_get_vsync_mode() == DisplayServer.VSYNC_ENABLED:
+		$"VSync Toggle".button_pressed  = true
+	if 	DisplayServer.window_get_mode() == DisplayServer.WINDOW_MODE_FULLSCREEN:
+		$"Fullscreen Toggle".button_pressed  = true
+
+
 func _process(delta):
 	if Input.is_action_just_pressed("Pause") and visible:
 		visible = !visible

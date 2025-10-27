@@ -113,3 +113,4 @@ vertical_alignment = 1
 [connection signal="pressed" from="MoveRight" to="." method="_on_move_right_pressed"]
 [connection signal="pressed" from="MoveLeft" to="." method="_on_move_left_pressed"]
 [connection signal="pressed" from="Jump" to="." method="_on_jump_pressed"]
+[connection signal="pressed" from="Interact" to="." method="_on_interact_pressed"]
