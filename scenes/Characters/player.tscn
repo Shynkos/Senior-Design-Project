@@ -1,7 +1,6 @@
-[gd_scene load_steps=26 format=3 uid="uid://cesp8xbn0fvnx"]
+[gd_scene load_steps=25 format=3 uid="uid://cesp8xbn0fvnx"]
 
 [ext_resource type="Script" uid="uid://cujmkd7d5hao1" path="res://scenes/Characters/player.gd" id="1_g2els"]
-[ext_resource type="Texture2D" uid="uid://c532unsw2rpsd" path="res://textures/Placeholder.jpg" id="2_g2els"]
 [ext_resource type="PackedScene" uid="uid://dqtfxmrm5wkfj" path="res://scenes/Components/gun.tscn" id="3_qhqgy"]
 [ext_resource type="Texture2D" uid="uid://bfijwivux4s8m" path="res://textures/player-sprites/player-idle-scaled-5x.png" id="7_np5j3"]
 [ext_resource type="PackedScene" uid="uid://cr4yx7hsy8g63" path="res://scenes/Components/pause_menu.tscn" id="7_smehm"]
@@ -134,12 +133,6 @@ collision_layer = 5
 collision_mask = 2
 script = ExtResource("1_g2els")
 metadata/_edit_vertical_guides_ = [1225.0]
-
-[node name="PlayerTexture" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(9.536743e-07, 1.9073486e-06)
-scale = Vector2(1.6800001, 5.12)
-texture = ExtResource("2_g2els")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_g2els")
