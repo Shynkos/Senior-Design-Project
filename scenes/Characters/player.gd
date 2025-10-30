@@ -50,6 +50,7 @@ func handle_movement_animation(dir):
 			toggle_flip_sprite(dir)
 	elif !on_ground:
 		animated_sprite.play("jump")
+		toggle_flip_sprite(dir)
 
 # make character sprite face correct direction
 func toggle_flip_sprite(dir):
