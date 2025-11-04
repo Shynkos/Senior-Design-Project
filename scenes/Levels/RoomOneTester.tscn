@@ -344,7 +344,7 @@ button_order2 = Array[int]([0, 4, 1, 3, 2])
 doorTile = Vector2i(11, 1)
 
 [node name="Button" parent="ButtonPuzzle" instance=ExtResource("3_4s3ml")]
-position = Vector2(-777, -141)
+position = Vector2(-745, -136)
 
 [node name="Label" type="Label" parent="ButtonPuzzle/Button"]
 offset_left = -47.0
@@ -352,9 +352,10 @@ offset_top = -19.0
 offset_right = 37.0
 offset_bottom = 14.0
 text = "1"
+metadata/_edit_use_anchors_ = true
 
 [node name="Button2" parent="ButtonPuzzle" instance=ExtResource("3_4s3ml")]
-position = Vector2(-201, -274)
+position = Vector2(-201, -264)
 
 [node name="Label" type="Label" parent="ButtonPuzzle/Button2"]
 offset_left = -45.0
@@ -362,9 +363,10 @@ offset_top = -17.0
 offset_right = -4.0
 offset_bottom = 6.0
 text = "2"
+metadata/_edit_use_anchors_ = true
 
 [node name="Button3" parent="ButtonPuzzle" instance=ExtResource("3_4s3ml")]
-position = Vector2(-569, -370)
+position = Vector2(-569, -360)
 
 [node name="Label" type="Label" parent="ButtonPuzzle/Button3"]
 offset_left = -52.0
@@ -372,9 +374,10 @@ offset_top = -16.0
 offset_right = -12.0
 offset_bottom = 7.0
 text = "3"
+metadata/_edit_use_anchors_ = true
 
 [node name="Button4" parent="ButtonPuzzle" instance=ExtResource("3_4s3ml")]
-position = Vector2(-1018, -559)
+position = Vector2(-1017, -552)
 
 [node name="Label" type="Label" parent="ButtonPuzzle/Button4"]
 offset_left = 38.0
@@ -382,9 +385,10 @@ offset_top = -13.0
 offset_right = 78.0
 offset_bottom = 10.0
 text = "4"
+metadata/_edit_use_anchors_ = true
 
 [node name="Button5" parent="ButtonPuzzle" instance=ExtResource("3_4s3ml")]
-position = Vector2(-72, -565)
+position = Vector2(-65, -552)
 
 [node name="Label" type="Label" parent="ButtonPuzzle/Button5"]
 offset_left = -45.0
@@ -392,6 +396,7 @@ offset_top = -13.0
 offset_right = -5.0
 offset_bottom = 10.0
 text = "5"
+metadata/_edit_use_anchors_ = true
 
 [node name="YellowRoomEnemies" type="Node2D" parent="."]
 
@@ -416,10 +421,10 @@ position = Vector2(5016, -286)
 position = Vector2(4718, -286)
 
 [node name="Label" type="Label" parent="."]
-offset_left = 1870.0
+offset_left = 1928.0
 offset_top = -64.0
-offset_right = 2022.0
-offset_bottom = -15.0
+offset_right = 2080.0
+offset_bottom = 11.0
 text = "First code: 213
 Second code: 15243"
 
