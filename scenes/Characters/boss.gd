@@ -3,9 +3,10 @@ extends CharacterBody2D
 
 signal attack1
 var health = 100
-var speed = 0
+var speed = 100
 @export var Player: Node2D
 @onready var nav = $NavigationAgent2D as NavigationAgent2D
+
 
 
 func _physics_process(_delta):
@@ -20,7 +21,7 @@ func pathfinding():
 
 
 func _on_timer_timeout():
-	speed = 0
+	speed = 100
 	var random = randi_range(1, 5)
 	
 	if random == 1:
