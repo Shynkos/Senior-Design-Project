@@ -1,0 +1,13 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1759432999
+RoughMap.tscn::PackedScene/PackedScene::3126999221912541034::1759178659::0::1::::<><><>0<>0<><>::uid://wdeyd68ttq5p::::res://addons/simple64x_tiles6.png<>uid://fttojcthy02h::::res://addons/Rat_Attack.png<>uid://btbvigs1pewuc::::res://addons/Bat_Full.png
+::res://addons/::1759175014
+Bat_Full.png::CompressedTexture2D/CompressedTexture2D::3723362777917240786::1759174896::1759174896::1::::<><><>0<>0<>c8de847a15226766791ae4188491d3ad<>res://.godot/imported/Bat_Full.png-772969a2ad4f986dd7e058d2723c6717.ctex::
+Rat_Attack.png::CompressedTexture2D/CompressedTexture2D::391346496167889681::1759175014::1759175014::1::::<><><>0<>0<>f19db1030c33f0467e955708534f2572<>res://.godot/imported/Rat_Attack.png-a91cd6f3368c12549be631f67dabd358.ctex::
+simple64x_tiles6.png::CompressedTexture2D/CompressedTexture2D::1550633627308188147::1759172858::1759172858::1::::<><><>0<>0<>92e0f8874d3f32909e38e946df6c3eb4<>res://.godot/imported/simple64x_tiles6.png-9d6be258ff65582f37c0d37b7a4af346.ctex::
+::res://addons/godot-git-plugin/::1758658676
+git_plugin.gdextension::GDExtension/GDExtension::8787879616822365919::1758121346::0::1::::<><><>0<>0<><>::
+THIRDPARTY.md::TextFile/TextFile::-1::1758121346::0::1::::<><><>0<>0<><>::
+::res://addons/godot-git-plugin/linux/::1758121346
+::res://addons/godot-git-plugin/macos/::1758121346
+::res://addons/godot-git-plugin/windows/::1759432992
