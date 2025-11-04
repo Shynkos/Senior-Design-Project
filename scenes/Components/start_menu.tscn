@@ -1,0 +1,68 @@
+[gd_scene load_steps=5 format=3 uid="uid://dm5yxnc7t8pg8"]
+
+[ext_resource type="Script" uid="uid://batr8drh5unao" path="res://scenes/Components/start_menu.gd" id="1_k460v"]
+[ext_resource type="PackedScene" uid="uid://d373lh2hft810" path="res://scenes/Components/options_menu.tscn" id="2_u826s"]
+[ext_resource type="PackedScene" uid="uid://bxlfg4olb5wys" path="res://scenes/Components/video_menu.tscn" id="3_kw17b"]
+[ext_resource type="PackedScene" uid="uid://bqbudpl4pyr10" path="res://scenes/Components/controls_menu.tscn" id="4_afppc"]
+
+[node name="StartMenu" type="CanvasLayer"]
+script = ExtResource("1_k460v")
+
+[node name="Play Button" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.35900003
+anchor_top = 0.27800003
+anchor_right = 0.64100003
+anchor_bottom = 0.32200003
+offset_left = 0.47998047
+offset_top = -0.16001892
+offset_right = -0.4800415
+offset_bottom = 0.15997314
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Play"
+icon_alignment = 1
+
+[node name="Options Button" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.35900003
+anchor_top = 0.347
+anchor_right = 0.64100003
+anchor_bottom = 0.39200002
+offset_left = 0.47998047
+offset_top = 0.16000366
+offset_right = -0.4800415
+offset_bottom = -0.24002075
+text = "Options"
+
+[node name="Quit Button" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.35900003
+anchor_top = 0.41700003
+anchor_right = 0.64100003
+anchor_bottom = 0.46100003
+offset_left = 0.47998047
+offset_top = -0.24002075
+offset_right = -0.4800415
+offset_bottom = 0.07998657
+text = "Quit Game"
+
+[node name="OptionsMenu" parent="." instance=ExtResource("2_u826s")]
+visible = false
+
+[node name="VideoMenu" parent="." instance=ExtResource("3_kw17b")]
+visible = false
+
+[node name="ControlsMenu" parent="." instance=ExtResource("4_afppc")]
+visible = false
+
+[connection signal="pressed" from="Play Button" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Options Button" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="Quit Button" to="." method="_on_quit_button_pressed"]
+[connection signal="back" from="OptionsMenu" to="." method="_on_options_menu_back"]
+[connection signal="controls" from="OptionsMenu" to="." method="_on_options_menu_controls"]
+[connection signal="video" from="OptionsMenu" to="." method="_on_options_menu_video"]
+[connection signal="back" from="VideoMenu" to="." method="_on_video_menu_back"]
+[connection signal="back" from="ControlsMenu" to="." method="_on_controls_menu_back"]

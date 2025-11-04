@@ -6,16 +6,19 @@ extends CharacterBody2D
 @export var gravity = 2000.0
 @export var jump_vel = -800.0
 var on_ground = true
-# preloading projectile
 
+
+# preloading projectile
 @export var bullet: PackedScene
 func Attack():
 	if Input.is_action_just_pressed("Fire"):
 		get_node("Gun").fire()
 
+
 func _process(delta):
-	if Input.is_action_just_pressed("Pause") and !$ControlsMenu.visible:
+	if Input.is_action_just_pressed("Pause") and !$ControlsMenu.visible and !$VideoMenu.visible:
 		$PauseMenu.visible = !$PauseMenu.visible
+
 
 func _physics_process(delta):
 	# get key input from user
@@ -36,6 +39,7 @@ func _physics_process(delta):
 	# jump if user presses space
 	if Input.is_action_just_pressed("Jump") and on_ground:
 		velocity.y = jump_vel
+	
 	# register attacks
 	Attack();
 	move_and_slide()
@@ -64,10 +68,8 @@ func _on_pause_menu_options():
 	$OptionsMenu.visible = visible
 
 
-
 func _on_options_menu_back():
 	$PauseMenu.visible = visible
-
 
 
 func _on_options_menu_controls():
@@ -76,3 +78,11 @@ func _on_options_menu_controls():
 
 func _on_controls_menu_back():
 	$OptionsMenu.visible = visible
+
+
+func _on_video_menu_back():
+	$OptionsMenu.visible = visible
+
+
+func _on_options_menu_video():
+	$VideoMenu.visible = visible
