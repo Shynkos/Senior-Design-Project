@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://cy1dwq0ok3w3n"]
+
+[ext_resource type="Texture2D" uid="uid://dkb3del6y44r6" path="res://textures/boss-sprites/Placeholder.jpg" id="1_ademu"]
+[ext_resource type="Script" uid="uid://s3uassyqtk2e" path="res://scenes/Characters/boss.gd" id="1_b1njl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ademu"]
+size = Vector2(799.9999, 599.9999)
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_b1njl"]
+vertices = PackedVector2Array(70, 50, -70, 50, -70, -50, 70, -50)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-80, 60, 80, 60, 80, -60, -80, -60)])
+
+[node name="Boss" type="CharacterBody2D"]
+motion_mode = 1
+script = ExtResource("1_b1njl")
+
+[node name="BossTexture" type="Sprite2D" parent="."]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_ademu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -3.8146973e-06)
+scale = Vector2(0.2, 0.2)
+shape = SubResource("RectangleShape2D_ademu")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+debug_enabled = true
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_b1njl")
+
+[node name="EventTimer" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="EventTimer" to="." method="_on_timer_timeout"]
