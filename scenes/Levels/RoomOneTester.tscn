@@ -331,8 +331,8 @@ tile_map_data = PackedByteArray("AAD///L/AAADAAEAAAD///P/AAADAAEAAAD///T/AAADAAE
 tile_set = SubResource("TileSet_4s3ml")
 
 [node name="Player" parent="." instance=ExtResource("2_dmaki")]
-position = Vector2(24.000002, -21)
-scale = Vector2(0.5790942, 0.5790942)
+position = Vector2(24, -21)
+scale = Vector2(0.579094, 0.579094)
 
 [node name="ButtonPuzzle" parent="." node_paths=PackedStringArray("door") instance=ExtResource("3_hlgq7")]
 position = Vector2(2889, -120)

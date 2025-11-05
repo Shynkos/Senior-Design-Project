@@ -7,14 +7,14 @@ script = ExtResource("1_liyum")
 
 [node name="Back Button" type="Button" parent="."]
 anchors_preset = -1
-anchor_left = 0.35900003
-anchor_top = 0.27800003
-anchor_right = 0.64100003
-anchor_bottom = 0.32200003
-offset_left = 0.47998047
-offset_top = -0.16001892
-offset_right = -0.4800415
-offset_bottom = 0.15997314
+anchor_left = 0.359
+anchor_top = 0.278
+anchor_right = 0.641
+anchor_bottom = 0.322
+offset_left = 0.47998
+offset_top = -0.160019
+offset_right = -0.480042
+offset_bottom = 0.159973
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
@@ -24,26 +24,26 @@ icon_alignment = 1
 
 [node name="Control Settings Button" type="Button" parent="."]
 anchors_preset = -1
-anchor_left = 0.35900003
-anchor_top = 0.41700003
-anchor_right = 0.64100003
-anchor_bottom = 0.46100003
-offset_left = 0.47998047
-offset_top = -0.24002075
-offset_right = -0.4800415
-offset_bottom = 0.07998657
+anchor_left = 0.359
+anchor_top = 0.417
+anchor_right = 0.641
+anchor_bottom = 0.461
+offset_left = 0.47998
+offset_top = -0.240021
+offset_right = -0.480042
+offset_bottom = 0.0799866
 text = "Control Settings"
 
 [node name="Video Settings Button" type="Button" parent="."]
 anchors_preset = -1
-anchor_left = 0.35900003
+anchor_left = 0.359
 anchor_top = 0.347
-anchor_right = 0.64100003
-anchor_bottom = 0.39200002
-offset_left = 0.47998047
-offset_top = 0.16000366
-offset_right = -0.4800415
-offset_bottom = -0.24002075
+anchor_right = 0.641
+anchor_bottom = 0.392
+offset_left = 0.47998
+offset_top = 0.160004
+offset_right = -0.480042
+offset_bottom = -0.240021
 text = "Video Settings"
 
 [connection signal="pressed" from="Back Button" to="." method="_on_back_button_pressed"]

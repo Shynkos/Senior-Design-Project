@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://q518e65x48ex"
-path="res://.godot/imported/Golem Attack3.png-5c1b96d88facfbb06cb9f32d0c29d03a.ctex"
+uid="uid://n2dncfqxq57g"
+path="res://.godot/imported/Menu.png-a70ba64f4fa24ba81bc83ae3df88c5a2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/Golem/Attack/Attack Frames/Golem Attack3.png"
-dest_files=["res://.godot/imported/Golem Attack3.png-5c1b96d88facfbb06cb9f32d0c29d03a.ctex"]
+source_file="res://addons/Buttons/Menu.png"
+dest_files=["res://.godot/imported/Menu.png-a70ba64f4fa24ba81bc83ae3df88c5a2.ctex"]
 
 [params]
 

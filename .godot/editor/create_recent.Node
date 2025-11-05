@@ -1,3 +1,8 @@
+Panel
+Label
+CanvasLayer
+Control
+VBoxContainer
 TileMapLayer
 CollisionShape2D
 Sprite2D
