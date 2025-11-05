@@ -447,5 +447,5 @@ position = Vector2(74, 55)
 shape = SubResource("RectangleShape2D_hlgq7")
 
 [node name="Boss" parent="." node_paths=PackedStringArray("Player") instance=ExtResource("7_hxri1")]
-position = Vector2(1264, -72)
+position = Vector2(1263, -46)
 Player = NodePath("../Player")
