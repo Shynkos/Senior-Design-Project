@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=4 uid="uid://bx61wpuisvudv"]
+[gd_scene load_steps=11 format=4 uid="uid://bx61wpuisvudv"]
 
 [ext_resource type="Texture2D" uid="uid://wdeyd68ttq5p" path="res://textures/simple64x_tiles6.png" id="1_eitah"]
 [ext_resource type="PackedScene" uid="uid://cesp8xbn0fvnx" path="res://scenes/Characters/player.tscn" id="2_dmaki"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://tfertef25w1k" path="res://scenes/Components/button_puzzle.tscn" id="3_hlgq7"]
 [ext_resource type="PackedScene" uid="uid://bbslyjc86f5es" path="res://scenes/Components/door_close_trigger.tscn" id="4_8mcyx"]
 [ext_resource type="PackedScene" uid="uid://cj5fq7otlfpul" path="res://scenes/Components/ground_enemy.tscn" id="5_hqo3b"]
+[ext_resource type="PackedScene" uid="uid://cy1dwq0ok3w3n" path="res://scenes/Characters/boss.tscn" id="7_hxri1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dmaki"]
 texture = ExtResource("1_eitah")
@@ -444,3 +445,7 @@ hitbox = NodePath("CollisionShape2D")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorCloseTrigger"]
 position = Vector2(74, 55)
 shape = SubResource("RectangleShape2D_hlgq7")
+
+[node name="Boss" parent="." node_paths=PackedStringArray("Player") instance=ExtResource("7_hxri1")]
+position = Vector2(1264, -72)
+Player = NodePath("../Player")
