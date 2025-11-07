@@ -1,13 +1,20 @@
 extends Node2D
 
 
-@export var Player: Node2D
 signal PlayerEntered
+var active = false
 
 
 func _on_area_2d_body_entered(body: Node2D):
-	PlayerEntered.emit(body)
+	if body.name == "Player":
+		PlayerEntered.emit()
 
 
-func _on_boss_attack_1():
-	position.x = Player.position.x
+func _on_self_destruct_timeout():
+	queue_free()
+
+
+func _on_particle_timer_timeout():
+	$Particles.emitting = false
+	$SpikeTexture.visible = true
+	active = true

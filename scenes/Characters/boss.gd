@@ -8,7 +8,6 @@ var speed = 100
 @onready var nav = $NavigationAgent2D as NavigationAgent2D
 
 
-
 func _physics_process(_delta):
 	var direction = to_local(nav.get_next_path_position()).normalized().x
 	velocity.x = direction * speed

@@ -447,3 +447,5 @@ hitbox = NodePath("CollisionShape2D")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorCloseTrigger"]
 position = Vector2(74, 55)
 shape = SubResource("RectangleShape2D_hlgq7")
+
+[connection signal="attack1" from="Boss" to="Player" method="_on_boss_attack_1"]

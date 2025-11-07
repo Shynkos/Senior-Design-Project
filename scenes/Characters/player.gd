@@ -6,6 +6,7 @@ extends CharacterBody2D
 @export var gravity = 2000.0
 @export var jump_vel = -800.0
 var on_ground = true
+var SpikeScene = preload("res://scenes/Components/spike.tscn")
 
 
 # preloading projectile
@@ -15,7 +16,7 @@ func Attack():
 		get_node("Gun").fire()
 
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("Pause") and !$ControlsMenu.visible and !$VideoMenu.visible:
 		$PauseMenu.visible = !$PauseMenu.visible
 
@@ -44,6 +45,7 @@ func _physics_process(delta):
 	Attack();
 	move_and_slide()
 	handle_movement_animation(direction)
+
 
 func handle_movement_animation(dir):
 	if on_ground:
@@ -86,3 +88,17 @@ func _on_video_menu_back():
 
 func _on_options_menu_video():
 	$VideoMenu.visible = visible
+
+
+func test():
+	print("Test")
+
+
+func _on_boss_attack_1():
+	var spikes = SpikeScene.instantiate()
+	spikes.position.x = position.x
+	add_sibling(spikes)
+
+
+func _on_player_hitbox_damage():
+	print("Damage")
