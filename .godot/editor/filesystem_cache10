@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1762400869
+::res://::1762476060
 export_presets.cfg::TextFile::-1::1762397802::0::1::::<><><>0<>0<><>::
 simple64x_tiles6.png::CompressedTexture2D::107469232319606055::1762397802::1762397852::1::::<><><>0<>0<>88682e6629aa53a0318c9bfafbbe8950<>res://.godot/imported/simple64x_tiles6.png-86cae0dfeb0e9309b5b50e6fbaf4160a.ctex::
 ::res://addons/::1762397802
@@ -162,8 +162,8 @@ start_menu.gd::GDScript::2426735165286792930::1762397802::0::1::::<>CanvasLayer<
 start_menu.tscn::PackedScene::8064958475817492065::1762397802::0::1::::<><><>0<>0<><>::uid://batr8drh5unao::::res://scenes/Components/start_menu.gd<>uid://d373lh2hft810::::res://scenes/Components/options_menu.tscn<>uid://bxlfg4olb5wys::::res://scenes/Components/video_menu.tscn<>uid://bqbudpl4pyr10::::res://scenes/Components/controls_menu.tscn
 video_menu.gd::GDScript::2303170665762274472::1762397802::0::1::::<>CanvasLayer<><>0<>0<><>::
 video_menu.tscn::PackedScene::4023788087696512506::1762397802::0::1::::<><><>0<>0<><>::uid://72w5clgltgjw::::res://scenes/Components/video_menu.gd
-::res://scenes/Levels/::1762398247
-RoomOne.tscn::PackedScene::196470433427384067::1762397862::0::1::::<><><>0<>0<><>::
+::res://scenes/Levels/::1762476240
+RoomOne.tscn::PackedScene::196470433427384067::1762476240::0::1::::<><><>0<>0<><>::uid://cy1dwq0ok3w3n::::res://scenes/Characters/boss.tscn<>uid://dmh0bkaltdbmb::::res://textures/red-tileset.png<>uid://cesp8xbn0fvnx::::res://scenes/Characters/player.tscn<>uid://dkt0lynmrdtd1::::res://scenes/Background/Layer_4.png<>uid://dfv68optb2a6g::::res://scenes/Background/Layer_3.png<>uid://cto3nsm1x5tf1::::res://scenes/Background/Layer_2.png<>uid://dwu5y2tacvuhx::::res://scenes/Background/Layer_1.png
 RoomOneTester.tscn::PackedScene::4066378546156261267::1762397802::0::1::::<><><>0<>0<><>::uid://wdeyd68ttq5p::::res://textures/simple64x_tiles6.png<>uid://cesp8xbn0fvnx::::res://scenes/Characters/player.tscn<>uid://cglb1282nj8my::::res://scenes/Objects/button.tscn<>uid://tfertef25w1k::::res://scenes/Components/button_puzzle.tscn<>uid://bbslyjc86f5es::::res://scenes/Components/door_close_trigger.tscn<>uid://cj5fq7otlfpul::::res://scenes/Components/ground_enemy.tscn<>uid://cy1dwq0ok3w3n::::res://scenes/Characters/boss.tscn
 RoughMap.tscn::PackedScene::3126999221912541034::1762397802::0::1::::<><><>0<>0<><>::uid://wdeyd68ttq5p::::res://textures/simple64x_tiles6.png<>uid://fttojcthy02h::::res://textures/Rat_Attack.png<>uid://btbvigs1pewuc::::res://textures/Bat_Full.png
 temp_level.tscn::PackedScene::2829642378158083062::1762397802::0::1::::<><><>0<>0<><>::uid://cesp8xbn0fvnx::::res://scenes/Characters/player.tscn<>uid://c532unsw2rpsd::::res://textures/Placeholder.jpg
@@ -171,10 +171,11 @@ tile_map_layer.tscn::PackedScene::1977415680918969263::1762397802::0::1::::<><><
 ::res://scenes/Objects/::1762397802
 button.gd::GDScript::8930117429047585755::1762397802::0::1::::<>Sprite2D<><>0<>0<><>::
 button.tscn::PackedScene::5216791202496868460::1762397802::0::1::::<><><>0<>0<><>::uid://wdeyd68ttq5p::::res://textures/simple64x_tiles6.png<>uid://d0h2y2emtjbr4::::res://scenes/Objects/button.gd<>uid://cencs2n22lgll::::res://scenes/Components/interaction.tscn
-::res://textures/::1762399333
+::res://textures/::1762477179
 Bat_Full.png::CompressedTexture2D::3723362777917240786::1762397802::1762397852::1::::<><><>0<>0<>69429fde928283997495fbc123638cc2<>res://.godot/imported/Bat_Full.png-2f6021cfe26264bedb857a1de4fee564.ctex::
 ground-enemy.png::CompressedTexture2D::3842158969420301885::1762397802::1762397852::1::::<><><>0<>0<>7c789671642bbb6fe8604c4fff4b8711<>res://.godot/imported/ground-enemy.png-28cb8d2c92f491c721db1ab2356d3f18.ctex::
 icon.svg::CompressedTexture2D::680048851751464912::1762397802::1762397852::1::::<><><>0<>0<>4be9c45802279c0ee937ffff57abf498<>res://.godot/imported/icon.svg-3540dd99eafb6c4e602e8c59cee418fa.ctex::
+iu_1059916_7908026.png::CompressedTexture2D::4827887159299727461::1762477179::1762477180::1::::<><><>0<>0<>ce54271339ec9b60fe53ae322503e753<>res://.godot/imported/iu_1059916_7908026.png-af5e04ccc7a0ccf753323c5cf30151c3.ctex::
 platform.png::CompressedTexture2D::2702314425639466046::1762397802::1762397852::1::::<><><>0<>0<>fb065548a66b95dd55e4a182edd80a92<>res://.godot/imported/platform.png-162e2f87119d2684548b911b8083b385.ctex::
 Rat_Attack.png::CompressedTexture2D::391346496167889681::1762397802::1762397852::1::::<><><>0<>0<>13024700d7958e845ee90594f9b29c85<>res://.godot/imported/Rat_Attack.png-fc1076d0a1c647a47f78056cc9291052.ctex::
 red-tileset.png::CompressedTexture2D::8017499055385977669::1762399333::1762399333::1::::<><><>0<>0<>43de07c011ff1392ddda6f9abd269cd3<>res://.godot/imported/red-tileset.png-ea9cf8dd07705df57d1142352859afe4.ctex::
