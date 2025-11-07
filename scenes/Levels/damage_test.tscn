@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://bhapkutyubpmu"]
+
+[ext_resource type="PackedScene" uid="uid://cesp8xbn0fvnx" path="res://scenes/Characters/player.tscn" id="1_uy4bp"]
+[ext_resource type="PackedScene" uid="uid://cj5fq7otlfpul" path="res://scenes/Components/ground_enemy.tscn" id="2_g833i"]
+[ext_resource type="Script" uid="uid://bk1fe0lmeejyy" path="res://scenes/Components/camera_2d.gd" id="3_g833i"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_2jm22"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k3vd0"]
+size = Vector2(32, 8)
+
+[node name="DamageTest" type="Node2D"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." groups=["ground"]]
+position = Vector2(0, 8)
+scale = Vector2(57.91471, 46.93293)
+collision_layer = 18
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+scale = Vector2(32, 8)
+texture = SubResource("PlaceholderTexture2D_2jm22")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(16, 4)
+shape = SubResource("RectangleShape2D_k3vd0")
+
+[node name="Player" parent="." instance=ExtResource("1_uy4bp")]
+position = Vector2(24, -72)
+
+[node name="GroundEnemy" parent="." instance=ExtResource("2_g833i")]
+position = Vector2(952, -24)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+process_callback = 0
+script = ExtResource("3_g833i")
+
+[editable path="Player"]
+[editable path="Player/Gun"]
