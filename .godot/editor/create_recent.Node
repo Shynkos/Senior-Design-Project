@@ -5,4 +5,10 @@ Timer
 GPUParticles2D
 TileMapLayer
 Sprite2D
+Node2D
+Node
+Sprite2D
+Parallax2D
+TileMapLayer
+CollisionShape2D
 StaticBody2D
