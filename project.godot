@@ -64,3 +64,7 @@ Pause={
 
 2d_physics/layer_2="Projectiles"
 2d_physics/layer_3="Interaction"
+
+[rendering]
+
+environment/defaults/default_clear_color=Color(0.4901207, 0.24903283, 0.15498966, 1)
