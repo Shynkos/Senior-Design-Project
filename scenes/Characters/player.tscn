@@ -1,7 +1,8 @@
-[gd_scene load_steps=28 format=3 uid="uid://cesp8xbn0fvnx"]
+[gd_scene load_steps=29 format=3 uid="uid://cesp8xbn0fvnx"]
 
 [ext_resource type="Script" uid="uid://cujmkd7d5hao1" path="res://scenes/Characters/player.gd" id="1_g2els"]
 [ext_resource type="Script" uid="uid://b4twkyruacspk" path="res://scenes/Characters/player_hitbox.gd" id="2_myi3t"]
+[ext_resource type="PackedScene" uid="uid://dsmyypjk2bfv7" path="res://scenes/Components/hud.tscn" id="2_vvg2b"]
 [ext_resource type="PackedScene" uid="uid://dqtfxmrm5wkfj" path="res://scenes/Components/gun.tscn" id="3_qhqgy"]
 [ext_resource type="Texture2D" uid="uid://bfijwivux4s8m" path="res://textures/player-sprites/player-idle-scaled-5x.png" id="7_np5j3"]
 [ext_resource type="PackedScene" uid="uid://cr4yx7hsy8g63" path="res://scenes/Components/pause_menu.tscn" id="7_smehm"]
@@ -138,6 +139,8 @@ collision_layer = 5
 collision_mask = 2
 script = ExtResource("1_g2els")
 metadata/_edit_vertical_guides_ = [1225.0]
+
+[node name="HUD" parent="." instance=ExtResource("2_vvg2b")]
 
 [node name="PlayerHitbox" type="Area2D" parent="."]
 script = ExtResource("2_myi3t")
