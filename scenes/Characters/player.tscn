@@ -1,6 +1,7 @@
-[gd_scene load_steps=26 format=3 uid="uid://cesp8xbn0fvnx"]
+[gd_scene load_steps=29 format=3 uid="uid://cesp8xbn0fvnx"]
 
 [ext_resource type="Script" uid="uid://cujmkd7d5hao1" path="res://scenes/Characters/player.gd" id="1_g2els"]
+[ext_resource type="Shader" uid="uid://c6ybxh4tj0h76" path="res://scenes/Components/flash.gdshader" id="3_myi3t"]
 [ext_resource type="PackedScene" uid="uid://dqtfxmrm5wkfj" path="res://scenes/Components/gun.tscn" id="3_qhqgy"]
 [ext_resource type="Texture2D" uid="uid://bfijwivux4s8m" path="res://textures/player-sprites/player-idle-scaled-5x.png" id="7_np5j3"]
 [ext_resource type="PackedScene" uid="uid://cr4yx7hsy8g63" path="res://scenes/Components/pause_menu.tscn" id="7_smehm"]
@@ -12,6 +13,11 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
 size = Vector2(42, 128)
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_vvg2b"]
+shader = ExtResource("3_myi3t")
+shader_parameter/Color = Color(0, 0, 0, 0)
+shader_parameter/Progress = 0.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l71n6"]
 atlas = ExtResource("7_np5j3")
@@ -129,10 +135,12 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r13nr"]
+size = Vector2(47, 128)
+
 [node name="Player" type="CharacterBody2D"]
 texture_filter = 1
-collision_layer = 5
-collision_mask = 2
+collision_layer = 0
 script = ExtResource("1_g2els")
 metadata/_edit_vertical_guides_ = [1225.0]
 
@@ -144,6 +152,7 @@ position = Vector2(-15, -14)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
+material = SubResource("ShaderMaterial_vvg2b")
 position = Vector2(1, -3)
 scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_r13nr")
@@ -162,9 +171,29 @@ visible = false
 [node name="VideoMenu" parent="." instance=ExtResource("9_np5j3")]
 visible = false
 
+[node name="Hurtbox" type="Area2D" parent="."]
+collision_layer = 16
+collision_mask = 32
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hurtbox"]
+position = Vector2(1.5, 0)
+shape = SubResource("RectangleShape2D_r13nr")
+
+[node name="Timers" type="Node" parent="."]
+
+[node name="InvulnTimer" type="Timer" parent="Timers"]
+wait_time = 0.25
+one_shot = true
+
+[node name="Coyote" type="Timer" parent="Timers"]
+process_callback = 0
+wait_time = 0.15
+one_shot = true
+
 [connection signal="options" from="PauseMenu" to="." method="_on_pause_menu_options"]
 [connection signal="back" from="OptionsMenu" to="." method="_on_options_menu_back"]
 [connection signal="controls" from="OptionsMenu" to="." method="_on_options_menu_controls"]
 [connection signal="video" from="OptionsMenu" to="." method="_on_options_menu_video"]
 [connection signal="back" from="ControlsMenu" to="." method="_on_controls_menu_back"]
 [connection signal="back" from="VideoMenu" to="." method="_on_video_menu_back"]
+[connection signal="body_entered" from="Hurtbox" to="." method="_on_hurtbox_body_entered"]

@@ -1,9 +1,10 @@
 Timer
-Camera2D
+Node
 CollisionShape2D
+Area2D
+Camera2D
 Sprite2D
 StaticBody2D
 Node2D
-Node
 Parallax2D
 TileMapLayer

@@ -5,6 +5,10 @@ const BULLET = preload("res://scenes/Components/bullet.tscn")
 var wants_to_fire = false
 func _process(delta: float) -> void:
 	look_at(get_global_mouse_position())
+	if global_rotation_degrees<-90 or global_rotation_degrees>90:
+		$Sprite2D.flip_v=true
+	else:
+		$Sprite2D.flip_v=false
 	
 func fire(player_velocity: Vector2, delta) -> void:
 	var new_bullet = BULLET.instantiate()

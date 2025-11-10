@@ -8,7 +8,12 @@ var wants_to_fire = false
 @export var gravity = 2000.0
 @export var jump_vel = -800.0
 var on_ground = true
-
+var jump = false
+var is_hit = false
+var knockback_velocity = Vector2.ZERO
+#health
+@export var MaxHealth: int = 4
+var health: int = MaxHealth
 
 # preloading projectile
 @export var bullet: PackedScene
@@ -21,49 +26,90 @@ func _process(delta):
 		$PauseMenu.visible = !$PauseMenu.visible
 	
 	# register attacks
-	if Input.is_action_just_pressed("Fire"):
-		wants_to_fire = true
-	
+	if not is_hit:
+		if Input.is_action_just_pressed("Fire"):
+			wants_to_fire = true
+		
 	if fire_cooldown > 0.0:
 		fire_cooldown -= delta
-	elif wants_to_fire:
+	elif wants_to_fire and not is_hit:
 		Attack(delta)
 		fire_cooldown = fire_delay
 		wants_to_fire = false
 
 
+#enemy damage
+func _on_hurtbox_body_entered(body: Node2D) -> void:
+	
+	if not $Timers/InvulnTimer.time_left:
+		if body.is_in_group("Enemies"):
+			take_damage(body)
+
+func take_damage(source: Node2D):
+	var direction = sign(global_position.x - source.global_position.x)
+	
+	knockback_velocity = Vector2(300 * direction, -400)
+	velocity = knockback_velocity
+	is_hit = true
+	health -= 1
+	$Timers/InvulnTimer.start()
+	flash([$AnimatedSprite2D])
+	#play damage noise
+	if health<=0:
+		#player dies
+		death()
+
+func death():
+	pass
+
 func _physics_process(delta):
-	# get key input from user
+	#cleaning up
+	if is_hit:
+		handle_knockback(delta)
+	else:
+		handle_movement(delta)
+	on_ground = is_on_floor()
+	move_and_slide()
+	
+	if is_on_floor():
+		is_hit = false
+		jump = false
+	if not is_hit and not is_on_floor() and on_ground:
+		$Timers/Coyote.start()
+
+func handle_knockback(delta):
+	velocity.y += gravity * delta
+	velocity.x = lerp(velocity.x, 0.0, delta * 3.0)
+
+
+
+func handle_movement(delta):
+		# get key input from user
 	var direction = Input.get_axis("Move left", "Move right")
 	
 	# update horizontal velocity based on direction
 	velocity.x = 500 * direction
 	
-	# update boolean if player is on the ground
-	if is_on_floor():
-		on_ground = true
-	else:
-		on_ground = false
+	
 		
 	# gravity
 	velocity.y += gravity * delta
 	
 	# jump if user presses space
-	if Input.is_action_just_pressed("Jump") and on_ground:
+	if Input.is_action_just_pressed("Jump") and (is_on_floor() or $Timers/Coyote.time_left):
 		velocity.y = jump_vel
+		jump = true
 	
-	
-	move_and_slide()
 	handle_movement_animation(direction)
 
 func handle_movement_animation(dir):
 	if on_ground:
-		if !velocity:
+		if abs(velocity.x) < 0.1:
 			animated_sprite.play("idle")
-		if velocity:
+		else:
 			animated_sprite.play("run")
 			toggle_flip_sprite(dir)
-	elif !on_ground:
+	elif jump:
 		animated_sprite.play("jump")
 		toggle_flip_sprite(dir)
 
@@ -97,3 +143,14 @@ func _on_video_menu_back():
 
 func _on_options_menu_video():
 	$VideoMenu.visible = visible
+
+
+
+func flash(nodes):
+	var tween = create_tween()
+	tween.tween_method(set_flash_value.bind(nodes), 0.0, 1.0, 0.1).set_trans(Tween.TRANS_QUAD)
+	tween.tween_method(set_flash_value.bind(nodes), 1.0, 0.0, 0.4).set_trans(Tween.TRANS_QUAD)
+
+func set_flash_value(value: float, nodes):
+	for node in nodes:
+		node.material.set_shader_parameter('Progress', value)

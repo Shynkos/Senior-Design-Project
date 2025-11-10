@@ -14,8 +14,9 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
-	move_local_x(target_position.x * speed * delta)
-	move_local_y(target_position.y* speed * delta)
+	#move_local_x(target_position.x * speed * delta)
+	#move_local_y(target_position.y* speed * delta)
+	position += target_position*speed*delta
 	
 
 func despawn() -> void:
