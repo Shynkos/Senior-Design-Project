@@ -19,7 +19,7 @@ config/icon="res://textures/icon.svg"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
 window/vsync/vsync_mode=0
 
 [editor]
@@ -62,5 +62,15 @@ Pause={
 
 [layer_names]
 
-2d_physics/layer_2="Projectiles"
+2d_physics/layer_1="Environment"
 2d_physics/layer_3="Interaction"
+2d_physics/layer_4="PlayerHitbox"
+2d_physics/layer_5="PlayerHurtbox"
+2d_physics/layer_6="EnemyHitbox"
+2d_physics/layer_7="EnemyHurtbox"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
+environment/defaults/default_clear_color=Color(0.36862746, 0.13333334, 0.101960786, 1)
+2d/snap/snap_2d_transforms_to_pixel=true
