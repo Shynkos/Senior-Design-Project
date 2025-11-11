@@ -1,11 +1,17 @@
-[gd_scene load_steps=23 format=3 uid="uid://cj5fq7otlfpul"]
+[gd_scene load_steps=25 format=3 uid="uid://cj5fq7otlfpul"]
 
 [ext_resource type="Texture2D" uid="uid://bu0f2dgtkhe8t" path="res://textures/ground-enemy.png" id="1_6pyix"]
 [ext_resource type="Script" uid="uid://cr3tp2if4keqp" path="res://scenes/Components/ground_enemy.gd" id="1_ihoex"]
+[ext_resource type="Shader" uid="uid://c6ybxh4tj0h76" path="res://scenes/Components/flash.gdshader" id="2_5rf8v"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ihoex"]
 radius = 19.0
 height = 68.0
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7w0y1"]
+shader = ExtResource("2_5rf8v")
+shader_parameter/Color = Color(0.011764706, 0.011764706, 0.011764706, 1)
+shader_parameter/Progress = 0.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5rf8v"]
 atlas = ExtResource("1_6pyix")
@@ -156,7 +162,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="GroundEnemy" type="CharacterBody2D"]
+[node name="GroundEnemy" type="CharacterBody2D" groups=["Enemies"]]
+collision_layer = 96
+collision_mask = 25
 script = ExtResource("1_ihoex")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -165,6 +173,7 @@ rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_ihoex")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_7w0y1")
 scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_kfspl")
 animation = &"idle"

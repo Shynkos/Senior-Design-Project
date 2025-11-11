@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 TileMapLayer
 AnimatedSprite2D
 Sprite2D
@@ -7,3 +8,15 @@ Node2D
 Node
 Parallax2D
 StaticBody2D
+=======
+Timer
+Node
+CollisionShape2D
+Area2D
+Camera2D
+Sprite2D
+StaticBody2D
+Node2D
+Parallax2D
+TileMapLayer
+>>>>>>> CoBranch
