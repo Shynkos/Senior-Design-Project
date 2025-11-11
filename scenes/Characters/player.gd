@@ -1,7 +1,9 @@
 extends CharacterBody2D
 
+var fire_cooldown = 0.0
+var wants_to_fire = false
+@export var fire_delay = 0.2
 @onready var animated_sprite = $AnimatedSprite2D
-
 # gravity and jump velocity
 @export var gravity = 2000.0
 @export var jump_vel = -800.0
@@ -11,14 +13,24 @@ var SpikeScene = preload("res://scenes/Components/spike.tscn")
 
 # preloading projectile
 @export var bullet: PackedScene
-func Attack():
-	if Input.is_action_just_pressed("Fire"):
-		get_node("Gun").fire()
+func Attack(delta):
+	get_node("Gun").fire(velocity, delta)
 
 
 func _process(_delta):
 	if Input.is_action_just_pressed("Pause") and !$ControlsMenu.visible and !$VideoMenu.visible:
 		$PauseMenu.visible = !$PauseMenu.visible
+	
+	# register attacks
+	if Input.is_action_just_pressed("Fire"):
+		wants_to_fire = true
+	
+	if fire_cooldown > 0.0:
+		fire_cooldown -= delta
+	elif wants_to_fire:
+		Attack(delta)
+		fire_cooldown = fire_delay
+		wants_to_fire = false
 
 
 func _physics_process(delta):
@@ -41,8 +53,7 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("Jump") and on_ground:
 		velocity.y = jump_vel
 	
-	# register attacks
-	Attack();
+	
 	move_and_slide()
 	handle_movement_animation(direction)
 

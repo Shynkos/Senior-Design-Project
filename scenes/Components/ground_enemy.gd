@@ -2,6 +2,10 @@ extends CharacterBody2D
 
 @onready var animated_sprite = $AnimatedSprite2D
 
+#enemy stats
+@export var health: int = 25
+
+
 # placeholder simple movement code borrowed from https://forum.godotengine.org/t/enemy-movement-controll/75581/2
 var direction = 1
 var start_position = 0
@@ -35,3 +39,14 @@ func toggle_flip_sprite(dir):
 		animated_sprite.flip_h = false
 	if dir == 1: # moving right
 		animated_sprite.flip_h = true
+
+#damage system
+func take_damage(amount):
+	#get damage animation
+	health -= amount
+	if health <= 0:
+		die()
+
+func die():
+	#get death animation
+	queue_free()

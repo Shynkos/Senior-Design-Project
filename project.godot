@@ -19,7 +19,7 @@ config/icon="res://textures/icon.svg"
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/stretch/mode="canvas_items"
+window/stretch/mode="viewport"
 window/vsync/vsync_mode=0
 
 [editor]
@@ -67,4 +67,6 @@ Pause={
 
 [rendering]
 
+textures/canvas_textures/default_texture_filter=0
 environment/defaults/default_clear_color=Color(0.36862746, 0.13333334, 0.101960786, 1)
+2d/snap/snap_2d_transforms_to_pixel=true

@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dqtfxmrm5wkfj"]
 
-[ext_resource type="Script" uid="uid://civwg3p4gb4ro" path="res://gun.gd" id="2_dk5gl"]
+[ext_resource type="Script" uid="uid://civwg3p4gb4ro" path="res://scenes/Components/gun.gd" id="2_dk5gl"]
 [ext_resource type="Texture2D" uid="uid://cwb76yrh3eu1j" path="res://textures/player-sprites/arm-with-gun-scaled-5x.png" id="2_kw0bs"]
 
 [node name="Gun" type="Sprite2D"]
