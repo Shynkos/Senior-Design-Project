@@ -1,5 +1,7 @@
 extends Sprite2D
 
+@onready var animated_sprite = $AnimatedSprite2D
+
 var switch = false:
 	set(value):
 		switch = value
@@ -17,6 +19,7 @@ func pressed():
 	if get_parent().has_method("push_button"):
 		print("confirm")
 		get_parent().push_button(get_index())
+		animated_sprite.play("switch_on")
 
 func unpressed():
 	frame = 9
@@ -24,3 +27,4 @@ func unpressed():
 	if get_parent().has_method("push_button"):
 		print("confirm")
 		get_parent().push_button(get_index())
+		animated_sprite.play("switch_off")
