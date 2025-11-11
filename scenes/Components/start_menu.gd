@@ -12,7 +12,7 @@ func _on_resume_button_pressed():
 
 func _on_options_button_pressed():
 	visible = !visible
-	$OptionsMenu.visible = !visible
+	$OptionsMenu.visible = true
 
 
 func _on_quit_button_pressed():

@@ -1,9 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://d373lh2hft810"]
+[gd_scene load_steps=5 format=3 uid="uid://d373lh2hft810"]
 
 [ext_resource type="Script" uid="uid://jvlas10ohh" path="res://scenes/Components/options_menu.gd" id="1_liyum"]
+[ext_resource type="StyleBox" uid="uid://he2daajeqpsr" path="res://addons/Buttons/Menu.tres" id="2_07hdl"]
+[ext_resource type="FontFile" uid="uid://kk516ptcda7m" path="res://addons/Buttons/super-metroid-title.otf" id="3_mvnb6"]
+[ext_resource type="StyleBox" uid="uid://c0ya5b6jbh3ru" path="res://addons/Buttons/TextButton.tres" id="4_xa1eu"]
 
 [node name="OptionsMenu" type="CanvasLayer"]
 script = ExtResource("1_liyum")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("2_07hdl")
 
 [node name="Back Button" type="Button" parent="."]
 anchors_preset = -1
@@ -19,6 +32,18 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("3_mvnb6")
+theme_override_styles/normal = ExtResource("4_xa1eu")
+theme_override_styles/normal_mirrored = ExtResource("4_xa1eu")
+theme_override_styles/pressed = ExtResource("4_xa1eu")
+theme_override_styles/pressed_mirrored = ExtResource("4_xa1eu")
+theme_override_styles/hover = ExtResource("4_xa1eu")
+theme_override_styles/hover_mirrored = ExtResource("4_xa1eu")
+theme_override_styles/hover_pressed = ExtResource("4_xa1eu")
+theme_override_styles/hover_pressed_mirrored = ExtResource("4_xa1eu")
+theme_override_styles/disabled = ExtResource("4_xa1eu")
+theme_override_styles/disabled_mirrored = ExtResource("4_xa1eu")
+theme_override_styles/focus = ExtResource("4_xa1eu")
 text = "Back"
 icon_alignment = 1
 
@@ -32,6 +57,18 @@ offset_left = 0.47998
 offset_top = -0.240021
 offset_right = -0.480042
 offset_bottom = 0.0799866
+theme_override_fonts/font = ExtResource("3_mvnb6")
+theme_override_styles/normal = ExtResource("4_xa1eu")
+theme_override_styles/normal_mirrored = ExtResource("4_xa1eu")
+theme_override_styles/pressed = ExtResource("4_xa1eu")
+theme_override_styles/pressed_mirrored = ExtResource("4_xa1eu")
+theme_override_styles/hover = ExtResource("4_xa1eu")
+theme_override_styles/hover_mirrored = ExtResource("4_xa1eu")
+theme_override_styles/hover_pressed = ExtResource("4_xa1eu")
+theme_override_styles/hover_pressed_mirrored = ExtResource("4_xa1eu")
+theme_override_styles/disabled = ExtResource("4_xa1eu")
+theme_override_styles/disabled_mirrored = ExtResource("4_xa1eu")
+theme_override_styles/focus = ExtResource("4_xa1eu")
 text = "Control Settings"
 
 [node name="Video Settings Button" type="Button" parent="."]
@@ -44,6 +81,18 @@ offset_left = 0.47998
 offset_top = 0.160004
 offset_right = -0.480042
 offset_bottom = -0.240021
+theme_override_fonts/font = ExtResource("3_mvnb6")
+theme_override_styles/normal = ExtResource("4_xa1eu")
+theme_override_styles/normal_mirrored = ExtResource("4_xa1eu")
+theme_override_styles/pressed = ExtResource("4_xa1eu")
+theme_override_styles/pressed_mirrored = ExtResource("4_xa1eu")
+theme_override_styles/hover = ExtResource("4_xa1eu")
+theme_override_styles/hover_mirrored = ExtResource("4_xa1eu")
+theme_override_styles/hover_pressed = ExtResource("4_xa1eu")
+theme_override_styles/hover_pressed_mirrored = ExtResource("4_xa1eu")
+theme_override_styles/disabled = ExtResource("4_xa1eu")
+theme_override_styles/disabled_mirrored = ExtResource("4_xa1eu")
+theme_override_styles/focus = ExtResource("4_xa1eu")
 text = "Video Settings"
 
 [connection signal="pressed" from="Back Button" to="." method="_on_back_button_pressed"]

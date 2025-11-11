@@ -1,9 +1,23 @@
-[gd_scene load_steps=2 format=3 uid="uid://bxlfg4olb5wys"]
+[gd_scene load_steps=6 format=3 uid="uid://bxlfg4olb5wys"]
 
 [ext_resource type="Script" uid="uid://72w5clgltgjw" path="res://scenes/Components/video_menu.gd" id="1_00mv3"]
+[ext_resource type="StyleBox" uid="uid://he2daajeqpsr" path="res://addons/Buttons/Menu.tres" id="2_owit7"]
+[ext_resource type="FontFile" uid="uid://kk516ptcda7m" path="res://addons/Buttons/super-metroid-title.otf" id="4_hy6al"]
+[ext_resource type="AudioStream" uid="uid://rv5m3fi6c2se" path="res://addons/Sound/Main Menu Music.wav" id="5_hy6al"]
+[ext_resource type="StyleBox" uid="uid://c0ya5b6jbh3ru" path="res://addons/Buttons/TextButton.tres" id="5_r8f5q"]
 
 [node name="VideoMenu" type="CanvasLayer"]
 script = ExtResource("1_00mv3")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("2_owit7")
 
 [node name="Fullscreen Toggle" type="CheckButton" parent="."]
 anchors_preset = -1
@@ -11,9 +25,9 @@ anchor_left = 0.504
 anchor_top = 0.27800003
 anchor_right = 0.53800005
 anchor_bottom = 0.31100002
-offset_left = -0.11999512
+offset_left = -8.119995
 offset_top = -0.16001892
-offset_right = 0.35992432
+offset_right = -7.6400757
 offset_bottom = 8.079987
 
 [node name="Fullscreen Label" type="Label" parent="."]
@@ -26,6 +40,8 @@ offset_left = -0.36001587
 offset_top = -0.16001892
 offset_right = -0.44006348
 offset_bottom = 0.15997314
+theme_override_fonts/font = ExtResource("4_hy6al")
+theme_override_styles/normal = ExtResource("5_r8f5q")
 text = "Fullscreen"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -36,9 +52,9 @@ anchor_left = 0.504
 anchor_top = 0.347
 anchor_right = 0.53800005
 anchor_bottom = 0.39200002
-offset_left = -0.11999512
+offset_left = -7.119995
 offset_top = 0.16000366
-offset_right = 0.35992432
+offset_right = -6.6400757
 offset_bottom = -0.24002075
 
 [node name="VSync Label" type="Label" parent="."]
@@ -51,9 +67,16 @@ offset_left = -0.36001587
 offset_top = 0.16000366
 offset_right = -0.44006348
 offset_bottom = -0.24002075
+theme_override_fonts/font = ExtResource("4_hy6al")
+theme_override_styles/normal = ExtResource("5_r8f5q")
+theme_override_styles/focus = ExtResource("2_owit7")
 text = "VSync"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_hy6al")
+autoplay = true
 
 [connection signal="toggled" from="Fullscreen Toggle" to="." method="_on_fullscreen_toggle_toggled"]
 [connection signal="toggled" from="VSync Toggle" to="." method="_on_v_sync_toggle_toggled"]

@@ -1,8 +1,8 @@
-ea4bc82a6ad023ab7ee23ee620429895
-::res://::1762356923
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1762408730
 export_presets.cfg::TextFile/TextFile::-1::1762289098::0::1::::<><><>0<>0<><>::
 simple64x_tiles6.png::CompressedTexture2D/CompressedTexture2D::107469232319606055::1762289098::1762289243::1::::<><><>0<>0<>58dce6e06fb4f2673e349a7e1f1e7081<>res://.godot/imported/simple64x_tiles6.png-86cae0dfeb0e9309b5b50e6fbaf4160a.ctex::
-::res://addons/::1762289061
+::res://addons/::1762395181
 ::res://addons/Bat/::1761764794
 ::res://addons/Bat/Dead/::1762289243
 Bat_Dead_0.png::CompressedTexture2D/CompressedTexture2D::2971117700515450919::1761753573::1762289243::1::::<><><>0<>0<>701fa5576c2766646832b06c26b48782<>res://.godot/imported/Bat_Dead_0.png-fabc82a148d83d1fc05a11de4167bdd9.ctex::
@@ -21,7 +21,7 @@ Bat_Hit_1.png::CompressedTexture2D/CompressedTexture2D::3393995494445917028::176
 ::res://addons/Bat/Idle/::1762289243
 Bat_Idle_0.png::CompressedTexture2D/CompressedTexture2D::2005326001306184310::1761753573::1762289243::1::::<><><>0<>0<>e5e9ff60e5cdb34dfb6ab89970fa5069<>res://.godot/imported/Bat_Idle_0.png-6df715b0d8b3d7d85ccf812e94caa86b.ctex::
 Bat_Idle_1.png::CompressedTexture2D/CompressedTexture2D::2102295438390472210::1761753573::1762289243::1::::<><><>0<>0<>ed3d2b79ce4cfe8f829de9b1b299a490<>res://.godot/imported/Bat_Idle_1.png-3e596acf8eef26f8d581b7c6645e64b1.ctex::
-::res://addons/Buttons/::1762322937
+::res://addons/Buttons/::1762391711
 BlankButton.png::CompressedTexture2D/CompressedTexture2D::83665607435766341::1762289061::1762289243::1::::<><><>0<>0<>5a2d9088c00dbf33bd82bd910065c92c<>res://.godot/imported/BlankButton.png-c5f624e2d1010a63ae4dd96ce4282d5f.ctex::
 Buttons.png::CompressedTexture2D/CompressedTexture2D::315421994216768161::1762289061::1762289243::1::::<><><>0<>0<>437a4b5cfd95ceb2d02fdbe536c703f3<>res://.godot/imported/Buttons.png-2809df754b0e0d11aeca5dc7664ff2b4.ctex::
 Menu.png::CompressedTexture2D/CompressedTexture2D::968398646482187502::1762289061::1762289243::1::::<><><>0<>0<>0b3d3f301fe4be76271684387712e341<>res://.godot/imported/Menu.png-a70ba64f4fa24ba81bc83ae3df88c5a2.ctex::
@@ -132,19 +132,32 @@ Golem Death.png::CompressedTexture2D/CompressedTexture2D::7532779141062179144::1
 Golem Hit-Sheet.png::CompressedTexture2D/CompressedTexture2D::7024302523966241857::1761764550::1762289243::1::::<><><>0<>0<>f9b0bd213346bf18a41c64cbd538721f<>res://.godot/imported/Golem Hit-Sheet.png-f284cfeb70872f78e87bf11c475bf1fc.ctex::
 Golem Idle-Sheet.png::CompressedTexture2D/CompressedTexture2D::3993891015047641072::1761764496::1762289243::1::::<><><>0<>0<>4f59513d8d187630c4bedaa442cc7844<>res://.godot/imported/Golem Idle-Sheet.png-b236829e4a02bb82291d58c76948d0ba.ctex::
 Golem Move-Sheet.png::CompressedTexture2D/CompressedTexture2D::4465348901602583506::1761764480::1762289243::1::::<><><>0<>0<>6273358478b95faf0f5c9b1176e5f8a8<>res://.godot/imported/Golem Move-Sheet.png-f10b24b3bdd4a91a21dce49e0f40d8bd.ctex::
+::res://addons/Sound/::1762395851
+Boss Death Sound.mp3::AudioStreamMP3::2335507983590295827::1762393882::1762395190::1::::<><><>0<>0<>dce49468570f5725c9c82f501b2e09d0<>res://.godot/imported/Boss Death Sound.mp3-187a33f8fe278840d9b7a73f4577940f.mp3str::
+Boss hit 1.wav::AudioStreamWAV::811260788993179248::1762392525::1762395851::1::::<><><>0<>0<>08c42c04125c8a0ad0e6fbc8ec73612a<>res://.godot/imported/Boss hit 1.wav-01205d7994e13b47144492a62d17c6e8.sample::
+Boss Hitting the Ground.mp3::AudioStreamMP3::3798371143614569816::1762393876::1762395190::1::::<><><>0<>0<>6a694a84ece139a108b93629613dfc44<>res://.godot/imported/Boss Hitting the Ground.mp3-bc06848cba0f6bc3c7c09f822b4c744c.mp3str::
+Boss Music.wav::AudioStreamWAV::8927471120708356234::1762393016::1762395191::1::::<><><>0<>0<>74b4cea3b4ee750d4b2d16acf430ee10<>res://.godot/imported/Boss Music.wav-c4eeffa7b4e4977e1d239bb558404a77.sample::
+Confirm 1.wav::AudioStreamWAV::6623457453429235016::1762392671::1762395851::1::::<><><>0<>0<>b074ed161803d773e18a4447dd8d47aa<>res://.godot/imported/Confirm 1.wav-c0b0e27d1e5a304f6fc9139235832c7d.sample::
+Hit damage 1.wav::AudioStreamWAV::8088226227526469848::1762392635::1762395851::1::::<><><>0<>0<>143e1cacbde6610cfb22c76e483d3b93<>res://.godot/imported/Hit damage 1.wav-30e68ec64d9a4694fc70282a8b29ffe0.sample::
+Hit Sound.wav::AudioStreamWAV::2220055270289342309::1762393240::1762395190::1::::<><><>0<>0<>a20403dea2d6745e3857e139a4145826<>res://.godot/imported/Hit Sound.wav-ed190f6cb3660175d8f57d3b02d808ed.sample::
+Jump Sound.wav::AudioStreamWAV::5394391639826831596::1762393281::1762395190::1::::<><><>0<>0<>42961bd602abde7f94d13944414bbf81<>res://.godot/imported/Jump Sound.wav-ba0377e152b75b1df370cc558d579b81.sample::
+Main Menu Music.wav::AudioStreamWAV::1238406692774504852::1762393084::1762395190::1::::<><><>0<>0<>1be6e87647d4be0b1a5762940298e257<>res://.godot/imported/Main Menu Music.wav-86c81bfdea47cc7bfbd4ff0faabe1abd.sample::
+Select 1.wav::AudioStreamWAV::5906178051327783124::1762392652::1762395851::1::::<><><>0<>0<>294544bf77c726e26e90ca2758ac2f84<>res://.godot/imported/Select 1.wav-569cca7b756733679abfc1b95c0bb6a0.sample::
+Shooting Sound.wav::AudioStreamWAV::6420187721640659112::1762393313::1762395190::1::::<><><>0<>0<>ba872911b85a595f1ae2ed508477e3e5<>res://.godot/imported/Shooting Sound.wav-bb6bad7e7d7e1870207c4b127ac1405e.sample::
+Step Sound.wav::AudioStreamWAV::1515859362489495901::1762393449::1762395190::1::::<><><>0<>0<>36ce65ad93e453366f24c289ccfef6e7<>res://.godot/imported/Step Sound.wav-e012cfd0a1d70add947e4ed0f0837224.sample::
 ::res://scenes/::1762289098
-::res://scenes/Characters/::1762289098
+::res://scenes/Characters/::1762395957
 boss.gd::GDScript/GDScript::1322417076792958810::1762289098::0::1::::<>CharacterBody2D<><>0<>0<><>::
 boss.tscn::PackedScene/PackedScene::6511269754393039517::1762289098::0::1::::<><><>0<>0<><>::uid://dkb3del6y44r6::::res://textures/boss-sprites/Placeholder.jpg<>uid://s3uassyqtk2e::::res://scenes/Characters/boss.gd
-player.gd::GDScript/GDScript::6195944308966098030::1762289098::0::1::::<>CharacterBody2D<><>0<>0<><>::
+player.gd::GDScript::6195944308966098030::1762395957::0::1::::<>CharacterBody2D<><>0<>0<><>::
 player.tscn::PackedScene/PackedScene::5091726437807914045::1762289098::0::1::::<><><>0<>0<><>::uid://cujmkd7d5hao1::::res://scenes/Characters/player.gd<>uid://dqtfxmrm5wkfj::::res://scenes/Components/gun.tscn<>uid://bfijwivux4s8m::::res://textures/player-sprites/player-idle-scaled-5x.png<>uid://cr4yx7hsy8g63::::res://scenes/Components/pause_menu.tscn<>uid://72lnyc6io3ap::::res://textures/player-sprites/player-jump-scaled-5x.png<>uid://d373lh2hft810::::res://scenes/Components/options_menu.tscn<>uid://bxlfg4olb5wys::::res://scenes/Components/video_menu.tscn<>uid://bqbudpl4pyr10::::res://scenes/Components/controls_menu.tscn<>uid://dpww8k7e1acm::::res://textures/player-sprites/player-run-scaled-5x.png
-::res://scenes/Components/::1762324821
+::res://scenes/Components/::1762396130
 bullet.gd::GDScript/GDScript::1560692291401172737::1762289098::0::1::::<>Area2D<><>0<>0<><>::
 bullet.tscn::PackedScene/PackedScene::2060811832974698243::1762289098::0::1::::<><><>0<>0<><>::uid://wiamymptdxs0::::res://scenes/Components/bullet.gd<>uid://kj2wrc1dhgys::::res://textures/player-sprites/bullet.png
 button_puzzle.gd::GDScript/GDScript::850000751364420548::1762289098::0::1::::<>Node2D<><>0<>0<><>::
 button_puzzle.tscn::PackedScene/PackedScene::1344184148747697302::1762289098::0::1::::<><><>0<>0<><>::uid://md0ng0mamq0s::::res://scenes/Components/button_puzzle.gd
 controls_menu.gd::GDScript/GDScript::5239102251567219483::1762289098::0::1::::<>CanvasLayer<><>0<>0<><>::
-controls_menu.tscn::PackedScene/PackedScene::3512727063074459873::1762289098::0::1::::<><><>0<>0<><>::uid://cgv4ipot1oqsh::::res://scenes/Components/controls_menu.gd
+controls_menu.tscn::PackedScene::3512727063074459873::1762392011::0::1::::<><><>0<>0<><>::uid://cgv4ipot1oqsh::::res://scenes/Components/controls_menu.gd<>uid://he2daajeqpsr::::res://addons/Buttons/Menu.tres<>uid://kk516ptcda7m::::res://addons/Buttons/super-metroid-title.otf<>uid://c0ya5b6jbh3ru::::res://addons/Buttons/TextButton.tres
 door_close_trigger.gd::GDScript/GDScript::6368706246548914072::1762289098::0::1::::<>Area2D<><>0<>0<><>::
 door_close_trigger.tscn::PackedScene/PackedScene::2494479550219144906::1762289098::0::1::::<><><>0<>0<><>::uid://cw0bwqtyamt2w::::res://scenes/Components/door_close_trigger.gd
 ground_enemy.gd::GDScript/GDScript::6025036126872780927::1762289098::0::1::::<>CharacterBody2D<><>0<>0<><>::
@@ -154,15 +167,15 @@ gun.tscn::PackedScene/PackedScene::8321852041966670379::1762289098::0::1::::<><>
 interaction.gd::GDScript/GDScript::1960225431714802896::1762289098::0::1::::<>Area2D<><>0<>0<><>::
 interaction.tscn::PackedScene/PackedScene::5080588670493118273::1762289098::0::1::::<><><>0<>0<><>::uid://26svkgxrfq1e::::res://scenes/Components/interaction.gd
 options_menu.gd::GDScript/GDScript::584533217333973::1762289098::0::1::::<>CanvasLayer<><>0<>0<><>::
-options_menu.tscn::PackedScene/PackedScene::9192329890303223321::1762289098::0::1::::<><><>0<>0<><>::uid://jvlas10ohh::::res://scenes/Components/options_menu.gd
+options_menu.tscn::PackedScene::9192329890303223321::1762391788::0::1::::<><><>0<>0<><>::uid://jvlas10ohh::::res://scenes/Components/options_menu.gd<>uid://he2daajeqpsr::::res://addons/Buttons/Menu.tres<>uid://kk516ptcda7m::::res://addons/Buttons/super-metroid-title.otf<>uid://c0ya5b6jbh3ru::::res://addons/Buttons/TextButton.tres
 pause_menu.gd::GDScript/GDScript::4115195109711224167::1762289098::0::1::::<>CanvasLayer<><>0<>0<><>::
-pause_menu.tscn::PackedScene/PackedScene::6027418637598744154::1762289098::0::1::::<><><>0<>0<><>::uid://byvowrr4v34oh::::res://scenes/Components/pause_menu.gd
+pause_menu.tscn::PackedScene::6027418637598744154::1762391594::0::1::::<><><>0<>0<><>::uid://byvowrr4v34oh::::res://scenes/Components/pause_menu.gd<>uid://he2daajeqpsr::::res://addons/Buttons/Menu.tres<>uid://kk516ptcda7m::::res://addons/Buttons/super-metroid-title.otf<>uid://c0ya5b6jbh3ru::::res://addons/Buttons/TextButton.tres
 spike.gd::GDScript/GDScript::5606568628015131562::1762289098::0::1::::<>Node2D<><>0<>0<><>::
 spike.tscn::PackedScene/PackedScene::5036900948509228034::1762289098::0::1::::<><><>0<>0<><>::uid://cl44mpkc2m4da::::res://scenes/Components/spike.gd<>uid://dkb3del6y44r6::::res://textures/boss-sprites/Placeholder.jpg
-start_menu.gd::GDScript/GDScript::2426735165286792930::1762289098::0::1::::<>CanvasLayer<><>0<>0<><>::
-start_menu.tscn::PackedScene::8064958475817492065::1762324821::0::1::::<><><>0<>0<><>::uid://batr8drh5unao::::res://scenes/Components/start_menu.gd<>uid://kk516ptcda7m::::res://addons/Buttons/super-metroid-title.otf<>uid://d373lh2hft810::::res://scenes/Components/options_menu.tscn<>uid://c0ya5b6jbh3ru::::res://addons/Buttons/TextButton.tres<>uid://bxlfg4olb5wys::::res://scenes/Components/video_menu.tscn<>uid://bqbudpl4pyr10::::res://scenes/Components/controls_menu.tscn<>uid://he2daajeqpsr::::res://addons/Buttons/Menu.tres
+start_menu.gd::GDScript::2426735165286792930::1762359804::0::1::::<>CanvasLayer<><>0<>0<><>::
+start_menu.tscn::PackedScene::8064958475817492065::1762396130::0::1::::<><><>0<>0<><>::uid://batr8drh5unao::::res://scenes/Components/start_menu.gd<>uid://kk516ptcda7m::::res://addons/Buttons/super-metroid-title.otf<>uid://d373lh2hft810::::res://scenes/Components/options_menu.tscn<>uid://c0ya5b6jbh3ru::::res://addons/Buttons/TextButton.tres<>uid://bxlfg4olb5wys::::res://scenes/Components/video_menu.tscn<>uid://bqbudpl4pyr10::::res://scenes/Components/controls_menu.tscn<>uid://he2daajeqpsr::::res://addons/Buttons/Menu.tres
 video_menu.gd::GDScript/GDScript::2303170665762274472::1762289098::0::1::::<>CanvasLayer<><>0<>0<><>::
-video_menu.tscn::PackedScene/PackedScene::4023788087696512506::1762289098::0::1::::<><><>0<>0<><>::uid://72w5clgltgjw::::res://scenes/Components/video_menu.gd
+video_menu.tscn::PackedScene::4023788087696512506::1762395296::0::1::::<><><>0<>0<><>::uid://72w5clgltgjw::::res://scenes/Components/video_menu.gd<>uid://he2daajeqpsr::::res://addons/Buttons/Menu.tres<>uid://kk516ptcda7m::::res://addons/Buttons/super-metroid-title.otf<>uid://rv5m3fi6c2se::::res://addons/Sound/Main Menu Music.wav<>uid://c0ya5b6jbh3ru::::res://addons/Buttons/TextButton.tres
 ::res://scenes/Levels/::1762289300
 RoomOneTester.tscn::PackedScene/PackedScene::4066378546156261267::1762289300::0::1::::<><><>0<>0<><>::uid://wdeyd68ttq5p::::res://textures/simple64x_tiles6.png<>uid://cesp8xbn0fvnx::::res://scenes/Characters/player.tscn<>uid://cglb1282nj8my::::res://scenes/Objects/button.tscn<>uid://tfertef25w1k::::res://scenes/Components/button_puzzle.tscn<>uid://bbslyjc86f5es::::res://scenes/Components/door_close_trigger.tscn<>uid://cj5fq7otlfpul::::res://scenes/Components/ground_enemy.tscn
 RoughMap.tscn::PackedScene/PackedScene::3126999221912541034::1762289098::0::1::::<><><>0<>0<><>::uid://wdeyd68ttq5p::::res://textures/simple64x_tiles6.png<>uid://fttojcthy02h::::res://textures/Rat_Attack.png<>uid://btbvigs1pewuc::::res://textures/Bat_Full.png

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://8jlqfn6nr3ql"
+path="res://.godot/imported/Boss Death Sound.mp3-187a33f8fe278840d9b7a73f4577940f.mp3str"
+
+[deps]
+
+source_file="res://addons/Sound/Boss Death Sound.mp3"
+dest_files=["res://.godot/imported/Boss Death Sound.mp3-187a33f8fe278840d9b7a73f4577940f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
