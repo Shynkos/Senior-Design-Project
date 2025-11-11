@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://cesp8xbn0fvnx"]
+[gd_scene load_steps=29 format=3 uid="uid://cesp8xbn0fvnx"]
 
 [ext_resource type="Script" uid="uid://cujmkd7d5hao1" path="res://scenes/Characters/player.gd" id="1_g2els"]
 [ext_resource type="Script" uid="uid://b4twkyruacspk" path="res://scenes/Characters/player_hitbox.gd" id="2_myi3t"]

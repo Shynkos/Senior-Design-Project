@@ -123,7 +123,7 @@ tile_map_data = PackedByteArray("AAD//wAAAQABAAEAAAAAAAAAAQABAAEAAAABAAAAAQABAAE
 tile_set = SubResource("TileSet_yib5h")
 script = ExtResource("2_jg12w")
 
-[node name="Boss" parent="." node_paths=PackedStringArray("Player") groups=["Enemies"] instance=ExtResource("2_rn3pl")]
+[node name="Boss" parent="." node_paths=PackedStringArray("Player") instance=ExtResource("2_rn3pl")]
 texture_filter = 1
 position = Vector2(1092, -44)
 scale = Vector2(0.68, 0.68)
@@ -279,3 +279,5 @@ flip_v = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 script = ExtResource("10_3rtii")
+
+[connection signal="attack1" from="Boss" to="Player" method="_on_boss_attack_1"]

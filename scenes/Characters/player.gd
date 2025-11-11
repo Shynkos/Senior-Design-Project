@@ -17,7 +17,7 @@ func Attack(delta):
 	get_node("Gun").fire(velocity, delta)
 
 
-func _process(_delta):
+func _process(delta):
 	if Input.is_action_just_pressed("Pause") and !$ControlsMenu.visible and !$VideoMenu.visible:
 		$PauseMenu.visible = !$PauseMenu.visible
 	
@@ -99,10 +99,6 @@ func _on_video_menu_back():
 
 func _on_options_menu_video():
 	$VideoMenu.visible = visible
-
-
-func test():
-	print("Test")
 
 
 func _on_boss_attack_1():

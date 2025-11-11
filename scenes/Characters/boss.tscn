@@ -124,7 +124,9 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Boss" type="CharacterBody2D"]
+[node name="Boss" type="CharacterBody2D" groups=["Enemies"]]
+collision_layer = 17
+collision_mask = 25
 motion_mode = 1
 script = ExtResource("1_b1njl")
 

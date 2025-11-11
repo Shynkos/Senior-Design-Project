@@ -3,7 +3,7 @@ extends CharacterBody2D
 @onready var animated_sprite = $AnimatedSprite2D
 
 signal attack1
-var health = 100
+@export var health: int = 1000
 var speed = 100
 @export var Player: Node2D
 @onready var nav = $NavigationAgent2D as NavigationAgent2D
@@ -47,3 +47,15 @@ func _on_timer_timeout():
 func _on_spike_player_entered(body: CharacterBody2D):
 	if body == Player:
 		print("Hit")
+
+
+#damage system
+func take_damage(amount):
+	#get damage animation
+	health -= amount
+	if health <= 0:
+		die()
+
+func die():
+	#get death animation
+	queue_free()
