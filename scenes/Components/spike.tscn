@@ -14,18 +14,16 @@ gravity = Vector3(0, -20, 0)
 scale_min = 9.7
 scale_max = 15.96
 
-[node name="Spike" type="Node2D"]
+[node name="Spike" type="CharacterBody2D" groups=["Enemies"]]
 script = ExtResource("1_dvbgm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_ekcwk")
 
 [node name="SpikeTexture" type="Sprite2D" parent="."]
 visible = false
 scale = Vector2(0.24499997, 0.05)
 texture = ExtResource("1_ekcwk")
-
-[node name="SpikeHitbox" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeHitbox"]
-shape = SubResource("RectangleShape2D_ekcwk")
 
 [node name="Particles" type="GPUParticles2D" parent="."]
 position = Vector2(0, 10)
@@ -42,6 +40,5 @@ autostart = true
 wait_time = 2.0
 autostart = true
 
-[connection signal="body_entered" from="SpikeHitbox" to="." method="_on_area_2d_body_entered"]
 [connection signal="timeout" from="SelfDestruct" to="." method="_on_self_destruct_timeout"]
 [connection signal="timeout" from="ParticleTimer" to="." method="_on_particle_timer_timeout"]

@@ -1,6 +1,6 @@
-TextureRect
-CanvasLayer
 CharacterBody2D
+CanvasLayer
+TextureRect
 CollisionShape2D
 Area2D
 Timer
@@ -12,9 +12,3 @@ Node
 CollisionShape2D
 Area2D
 Camera2D
-Sprite2D
-StaticBody2D
-Node2D
-Parallax2D
-TileMapLayer
-CollisionShape2D

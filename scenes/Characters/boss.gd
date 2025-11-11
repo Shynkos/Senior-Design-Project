@@ -52,6 +52,8 @@ func _on_spike_player_entered(body: CharacterBody2D):
 #damage system
 func take_damage(amount):
 	#get damage animation
+	var nodes = [$AnimatedSprite2D]
+	flash(nodes)
 	health -= amount
 	if health <= 0:
 		die()
@@ -59,3 +61,12 @@ func take_damage(amount):
 func die():
 	#get death animation
 	queue_free()
+
+func flash(nodes):
+	var tween = create_tween()
+	tween.tween_method(set_flash_value.bind(nodes), 0.0, 1.0, 0.1).set_trans(Tween.TRANS_QUAD)
+	tween.tween_method(set_flash_value.bind(nodes), 1.0, 0.0, 0.4).set_trans(Tween.TRANS_QUAD)
+
+func set_flash_value(value: float, nodes):
+	for node in nodes:
+		node.material.set_shader_parameter('Progress', value)

@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://cffh7tcdkvckp"]
+
+[ext_resource type="Script" uid="uid://dvh1m4p5eyo46" path="res://scenes/Components/game_over_menu.gd" id="1_k6ycs"]
+
+[node name="GameOverMenu" type="CanvasLayer"]
+script = ExtResource("1_k6ycs")
+
+[node name="Respawn Button" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.35900003
+anchor_top = 0.27800003
+anchor_right = 0.64100003
+anchor_bottom = 0.32200003
+offset_left = 0.47998047
+offset_top = -0.16001892
+offset_right = -0.4800415
+offset_bottom = 0.15997314
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Respawn
+"
+icon_alignment = 1
+
+[node name="Quit Button" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.35900003
+anchor_top = 0.347
+anchor_right = 0.64100003
+anchor_bottom = 0.39200002
+offset_left = 0.47998047
+offset_top = 0.16000366
+offset_right = -0.4800415
+offset_bottom = -0.24002075
+text = "Quit to Menu"
+
+[connection signal="pressed" from="Respawn Button" to="." method="_on_respawn_button_pressed"]
+[connection signal="pressed" from="Quit Button" to="." method="_on_quit_button_pressed"]
