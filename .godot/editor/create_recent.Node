@@ -1,6 +1,6 @@
+TileMapLayer
 AnimatedSprite2D
 Sprite2D
-TileMapLayer
 CharacterBody2D
 CollisionShape2D
 Node2D
