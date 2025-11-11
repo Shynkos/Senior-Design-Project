@@ -1,6 +1,19 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 res://addons/Buttons
 =======
 res://scenes/Levels
 >>>>>>> CoBranch
+=======
+res://scenes/Background
+res://textures
+<<<<<<< HEAD
+=======
+res://scenes/Levels
+>>>>>>> CoBranch
+=======
+res://scenes/Components
+res://scenes/Characters
+>>>>>>> ChristopherBranch
+>>>>>>> main
 res://

@@ -4,11 +4,13 @@ extends CanvasLayer
 signal back
 signal controls
 signal video
+signal pause
 
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("Pause") and visible == true:
 		visible = !visible
+		pause.emit()
 
 
 func _on_back_button_pressed():

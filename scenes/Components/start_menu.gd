@@ -40,4 +40,4 @@ func _on_options_menu_video():
 
 
 func _on_play_button_pressed():
-	get_tree().change_scene_to_file("res://scenes/Levels/RoomOneTester.tscn")
+	get_tree().change_scene_to_file("res://scenes/Levels/RoomOne.tscn")

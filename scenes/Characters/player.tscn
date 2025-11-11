@@ -1,6 +1,7 @@
-[gd_scene load_steps=29 format=3 uid="uid://cesp8xbn0fvnx"]
+[gd_scene load_steps=31 format=3 uid="uid://cesp8xbn0fvnx"]
 
 [ext_resource type="Script" uid="uid://cujmkd7d5hao1" path="res://scenes/Characters/player.gd" id="1_g2els"]
+[ext_resource type="PackedScene" uid="uid://dsmyypjk2bfv7" path="res://scenes/Components/hud.tscn" id="2_vvg2b"]
 [ext_resource type="Shader" uid="uid://c6ybxh4tj0h76" path="res://scenes/Components/flash.gdshader" id="3_myi3t"]
 [ext_resource type="PackedScene" uid="uid://dqtfxmrm5wkfj" path="res://scenes/Components/gun.tscn" id="3_qhqgy"]
 [ext_resource type="Texture2D" uid="uid://bfijwivux4s8m" path="res://textures/player-sprites/player-idle-scaled-5x.png" id="7_np5j3"]
@@ -10,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bxlfg4olb5wys" path="res://scenes/Components/video_menu.tscn" id="9_np5j3"]
 [ext_resource type="PackedScene" uid="uid://bqbudpl4pyr10" path="res://scenes/Components/controls_menu.tscn" id="9_ur7pv"]
 [ext_resource type="Texture2D" uid="uid://dpww8k7e1acm" path="res://textures/player-sprites/player-run-scaled-5x.png" id="9_vvg2b"]
+[ext_resource type="PackedScene" uid="uid://cffh7tcdkvckp" path="res://scenes/Components/game_over_menu.tscn" id="12_r13nr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
 size = Vector2(42, 128)
@@ -144,34 +146,48 @@ collision_layer = 0
 script = ExtResource("1_g2els")
 metadata/_edit_vertical_guides_ = [1225.0]
 
+[node name="HUD" parent="." instance=ExtResource("2_vvg2b")]
+process_mode = 1
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+process_mode = 1
 shape = SubResource("RectangleShape2D_g2els")
 
 [node name="Gun" parent="." instance=ExtResource("3_qhqgy")]
+process_mode = 1
 position = Vector2(-15, -14)
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+process_mode = 1
 texture_filter = 1
 material = SubResource("ShaderMaterial_vvg2b")
 position = Vector2(1, -3)
 scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_r13nr")
 animation = &"run"
-frame_progress = 0.77807015
 
 [node name="PauseMenu" parent="." instance=ExtResource("7_smehm")]
+process_mode = 3
 visible = false
 
 [node name="OptionsMenu" parent="." instance=ExtResource("8_ur7pv")]
+process_mode = 3
 visible = false
 
 [node name="ControlsMenu" parent="." instance=ExtResource("9_ur7pv")]
+process_mode = 3
 visible = false
 
 [node name="VideoMenu" parent="." instance=ExtResource("9_np5j3")]
+process_mode = 3
+visible = false
+
+[node name="GameOverMenu" parent="." instance=ExtResource("12_r13nr")]
+process_mode = 3
 visible = false
 
 [node name="Hurtbox" type="Area2D" parent="."]
+process_mode = 1
 collision_layer = 16
 collision_mask = 32
 
@@ -180,6 +196,7 @@ position = Vector2(1.5, 0)
 shape = SubResource("RectangleShape2D_r13nr")
 
 [node name="Timers" type="Node" parent="."]
+process_mode = 1
 
 [node name="InvulnTimer" type="Timer" parent="Timers"]
 wait_time = 0.25
@@ -191,8 +208,10 @@ wait_time = 0.15
 one_shot = true
 
 [connection signal="options" from="PauseMenu" to="." method="_on_pause_menu_options"]
+[connection signal="pause" from="PauseMenu" to="." method="_on_pause_menu_pause"]
 [connection signal="back" from="OptionsMenu" to="." method="_on_options_menu_back"]
 [connection signal="controls" from="OptionsMenu" to="." method="_on_options_menu_controls"]
+[connection signal="pause" from="OptionsMenu" to="." method="_on_options_menu_pause"]
 [connection signal="video" from="OptionsMenu" to="." method="_on_options_menu_video"]
 [connection signal="back" from="ControlsMenu" to="." method="_on_controls_menu_back"]
 [connection signal="back" from="VideoMenu" to="." method="_on_video_menu_back"]
