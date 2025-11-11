@@ -1,5 +1,5 @@
 63f7b34db8d8cdea90c76aacccf841ec
-::res://::1762891774
+::res://::1762894767
 export_presets.cfg::TextFile::-1::1762294040::0::1::::<><><>0<>0<><>::
 simple64x_tiles6.png::CompressedTexture2D::107469232319606055::1761054039::1761054039::1::::<><><>0<>0<>88682e6629aa53a0318c9bfafbbe8950<>res://.godot/imported/simple64x_tiles6.png-86cae0dfeb0e9309b5b50e6fbaf4160a.ctex::
 ::res://addons/::1762294040
@@ -127,15 +127,16 @@ Golem Idle-Sheet_scaled_4x.png::CompressedTexture2D::3228195559625243506::176281
 Golem Move-Sheet.png::CompressedTexture2D::4465348901602583506::1762294040::1762811498::1::::<><><>0<>0<>e2d3e271ef494f4895d202590b21b9b3<>res://.godot/imported/Golem Move-Sheet.png-f10b24b3bdd4a91a21dce49e0f40d8bd.ctex::
 Golem Move-Sheet_scaled_4x.png::CompressedTexture2D::1330489831660509863::1762811543::1762811543::1::::<><><>0<>0<>f218aaf877682077d69f28e3c6c73409<>res://.godot/imported/Golem Move-Sheet_scaled_4x.png-30d9f022991e66b3d18458135beb9365.ctex::
 ::res://scenes/::1762811543
-::res://scenes/Background/::1762813772
-2.png::CompressedTexture2D::6767506528134694516::1762813771::1762813772::1::::<><><>0<>0<>6eb8cd71e186870b4cdc6fd9758ecc0a<>res://.godot/imported/2.png-45df078ef658e6472245520983be7d17.ctex::
-3.png::CompressedTexture2D::6419450490226768518::1762813771::1762813772::1::::<><><>0<>0<>b791121230f44630f40383f146b7bb4c<>res://.godot/imported/3.png-454571951d83c65848e355303fc57051.ctex::
-4.png::CompressedTexture2D::4912155067803063209::1762813771::1762813772::1::::<><><>0<>0<>f3fd05a507111de4611d806542b740e6<>res://.godot/imported/4.png-7764f0f8e77f75bbf5208798a198fbea.ctex::
-5.png::CompressedTexture2D::8129119332475922723::1762813771::1762813772::1::::<><><>0<>0<>9c8546fe25101df9c26d29288f755fc1<>res://.godot/imported/5.png-d33257fc08844a2bbf67e5980863e292.ctex::
+::res://scenes/Background/::1762894767
 Layer_1.png::CompressedTexture2D::8746569982519181789::1762811543::1762811566::1::::<><><>0<>0<>a87d2ef78fcada16a4700d9e9a0ead87<>res://.godot/imported/Layer_1.png-dc8a6b40f2cb7183b63a2ba2ed391642.ctex::
 Layer_2.png::CompressedTexture2D::6137054941355092528::1762811543::1762811566::1::::<><><>0<>0<>100bd7e5c614576d63c3f98c9aeff9c2<>res://.godot/imported/Layer_2.png-7e60b0baa5231c1a52558594a7ac7685.ctex::
 Layer_3.png::CompressedTexture2D::7555500119443982252::1762811543::1762811566::1::::<><><>0<>0<>fd74e4b94f6e956ee92b147d3a0c6765<>res://.godot/imported/Layer_3.png-42a1a67f909f6ba76421105dbab97af9.ctex::
 Layer_4.png::CompressedTexture2D::7901912514549821876::1762811543::1762811566::1::::<><><>0<>0<>bcb20270ff3e0c79432dc291b2c6dc02<>res://.godot/imported/Layer_4.png-8ad62ba2a4fe4dfbbe8c3a7a2e08aa2c.ctex::
+outside-city-1.png::CompressedTexture2D::1818386445733897249::1762894660::1762894740::1::::<><><>0<>0<>68e69b97d8217c5b179a771bc65b7362<>res://.godot/imported/outside-city-1.png-2bac7517b2082e783790214affafccdf.ctex::
+outside-city-2.png::CompressedTexture2D::6767506528134694516::1762813771::1762894750::1::::<><><>0<>0<>c72822edfd7653e144333104a6c8829d<>res://.godot/imported/outside-city-2.png-34bde1a32cf9010f5c32c6c705ea73f6.ctex::
+outside-city-3.png::CompressedTexture2D::6419450490226768518::1762813771::1762894756::1::::<><><>0<>0<>e2d21ad2620945fcdede9e26f6e48d2c<>res://.godot/imported/outside-city-3.png-7066fbc7a19da064cbf92435ab9994b1.ctex::
+outside-city-4.png::CompressedTexture2D::4912155067803063209::1762813771::1762894761::1::::<><><>0<>0<>552f06e14ffd8812f8060eae2067fe66<>res://.godot/imported/outside-city-4.png-60ec42218e8546b8642ce1dff8b3e76a.ctex::
+outside-city-5.png::CompressedTexture2D::8129119332475922723::1762813771::1762894767::1::::<><><>0<>0<>8a71b69017cbb62fe1432803aef6c444<>res://.godot/imported/outside-city-5.png-dd031ea1bf60a380ec5ddc05a89b0d88.ctex::
 ::res://scenes/Characters/::1762890112
 boss.gd::GDScript::1322417076792958810::1762811543::0::1::::<>CharacterBody2D<><>0<>0<><>::
 boss.tscn::PackedScene::6511269754393039517::1762811544::0::1::::<><><>0<>0<><>::uid://dkb3del6y44r6::::res://textures/boss-sprites/Placeholder.jpg<>uid://s3uassyqtk2e::::res://scenes/Characters/boss.gd<>uid://bl8056cb05ql3::::res://addons/Heart Golem/Golem Idle-Sheet_scaled_4x.png<>uid://s7q8c7kva1ff::::res://addons/Heart Golem/Golem Move-Sheet_scaled_4x.png
@@ -168,22 +169,23 @@ start_menu.gd::GDScript::2426735165286792930::1762294040::0::1::::<>CanvasLayer<
 start_menu.tscn::PackedScene::8064958475817492065::1762294040::0::1::::<><><>0<>0<><>::uid://batr8drh5unao::::res://scenes/Components/start_menu.gd<>uid://d373lh2hft810::::res://scenes/Components/options_menu.tscn<>uid://bxlfg4olb5wys::::res://scenes/Components/video_menu.tscn<>uid://bqbudpl4pyr10::::res://scenes/Components/controls_menu.tscn
 video_menu.gd::GDScript::2303170665762274472::1762294040::0::1::::<>CanvasLayer<><>0<>0<><>::
 video_menu.tscn::PackedScene::4023788087696512506::1762294040::0::1::::<><><>0<>0<><>::uid://72w5clgltgjw::::res://scenes/Components/video_menu.gd
-::res://scenes/Levels/::1762891652
+::res://scenes/Levels/::1762894767
 damage_test.tscn::PackedScene::2878672282925394416::1762890112::0::1::::<><><>0<>0<><>::uid://cesp8xbn0fvnx::::res://scenes/Characters/player.tscn<>uid://cj5fq7otlfpul::::res://scenes/Components/ground_enemy.tscn<>uid://bk1fe0lmeejyy::::res://scenes/Components/camera_2d.gd
 ground.gd::GDScript::4135559537678041972::1762890112::0::1::::<>TileMapLayer<><>0<>0<><>::
 RoomOne.tscn::PackedScene::196470433427384067::1762890112::0::1::::<><><>0<>0<><>::uid://by6kcc7gu136w::::res://scenes/Levels/ground.gd<>uid://cy1dwq0ok3w3n::::res://scenes/Characters/boss.tscn<>uid://dmh0bkaltdbmb::::res://textures/red-tileset.png<>uid://cesp8xbn0fvnx::::res://scenes/Characters/player.tscn<>uid://dkt0lynmrdtd1::::res://scenes/Background/Layer_4.png<>uid://dfv68optb2a6g::::res://scenes/Background/Layer_3.png<>uid://cto3nsm1x5tf1::::res://scenes/Background/Layer_2.png<>uid://dwu5y2tacvuhx::::res://scenes/Background/Layer_1.png<>uid://ca1wujfdn4qvd::::res://textures/iu_1059916_7908026.png<>uid://bk1fe0lmeejyy::::res://scenes/Components/camera_2d.gd
 RoomOneTester.tscn::PackedScene::4066378546156261267::1762811544::0::1::::<><><>0<>0<><>::uid://wdeyd68ttq5p::::res://textures/simple64x_tiles6.png<>uid://cesp8xbn0fvnx::::res://scenes/Characters/player.tscn<>uid://cglb1282nj8my::::res://scenes/Objects/button.tscn<>uid://tfertef25w1k::::res://scenes/Components/button_puzzle.tscn<>uid://bbslyjc86f5es::::res://scenes/Components/door_close_trigger.tscn<>uid://cj5fq7otlfpul::::res://scenes/Components/ground_enemy.tscn<>uid://cy1dwq0ok3w3n::::res://scenes/Characters/boss.tscn
-RoomTwo.tscn::PackedScene::2429597214963308418::1762891652::0::1::::<><><>0<>0<><>::uid://bkf2na6ol5j0y::::res://textures/Tile_28(1).png<>uid://d0k172mksm8k5::::res://textures/broken-city-tileset.png<>uid://hhdim3xedh4::::res://textures/exclusion-zone-redder.png<>uid://cesp8xbn0fvnx::::res://scenes/Characters/player.tscn<>uid://c3oh3xnwvwy17::::res://scenes/Background/2.png<>uid://cglb1282nj8my::::res://scenes/Objects/button.tscn<>uid://cxpvn85xty031::::res://scenes/Background/3.png<>uid://ust50y1fm8s2::::res://textures/levers.png<>uid://cb8qqguf8qrm4::::res://scenes/Background/4.png<>uid://dn22n4lj3ubgt::::res://scenes/Background/5.png<>uid://dmxq5to63k3e::::res://textures/car.png<>uid://bk1fe0lmeejyy::::res://scenes/Components/camera_2d.gd
+RoomTwo.tscn::PackedScene::2429597214963308418::1762894767::0::1::::<><><>0<>0<><>::uid://d0k172mksm8k5::::res://textures/broken-city-tileset.png<>uid://hhdim3xedh4::::res://textures/exclusion-zone-redder.png<>uid://cesp8xbn0fvnx::::res://scenes/Characters/player.tscn<>uid://c3oh3xnwvwy17::::res://scenes/Background/outside-city-2.png<>uid://cglb1282nj8my::::res://scenes/Objects/button.tscn<>uid://cxpvn85xty031::::res://scenes/Background/outside-city-3.png<>uid://ust50y1fm8s2::::res://textures/levers.png<>uid://dn22n4lj3ubgt::::res://scenes/Background/outside-city-5.png<>uid://053takskkb4t::::res://scenes/Background/outside-city-1.png<>uid://dmxq5to63k3e::::res://textures/car.png<>uid://bk1fe0lmeejyy::::res://scenes/Components/camera_2d.gd
 RoughMap.tscn::PackedScene::3126999221912541034::1761338817::0::1::::<><><>0<>0<><>::uid://wdeyd68ttq5p::::res://textures/simple64x_tiles6.png<>uid://fttojcthy02h::::res://textures/Rat_Attack.png<>uid://btbvigs1pewuc::::res://textures/Bat_Full.png
 temp_level.tscn::PackedScene::2829642378158083062::1761338817::0::1::::<><><>0<>0<><>::uid://cesp8xbn0fvnx::::res://scenes/Characters/player.tscn<>uid://c532unsw2rpsd::::res://textures/Placeholder.jpg
 tile_map_layer.tscn::PackedScene::1977415680918969263::1761338817::0::1::::<><><>0<>0<><>::uid://wdeyd68ttq5p::::res://textures/simple64x_tiles6.png<>uid://tfertef25w1k::::res://scenes/Components/button_puzzle.tscn<>uid://cglb1282nj8my::::res://scenes/Objects/button.tscn<>uid://cesp8xbn0fvnx::::res://scenes/Characters/player.tscn
 ::res://scenes/Objects/::1762868492
 button.gd::GDScript::8930117429047585755::1762868422::0::1::::<>Sprite2D<><>0<>0<><>::
 button.tscn::PackedScene::5216791202496868460::1762868492::0::1::::<><><>0<>0<><>::uid://d0h2y2emtjbr4::::res://scenes/Objects/button.gd<>uid://ust50y1fm8s2::::res://textures/levers.png<>uid://cencs2n22lgll::::res://scenes/Components/interaction.tscn
-::res://textures/::1762869847
+::res://textures/::1762894653
 Bat_Full.png::CompressedTexture2D::3723362777917240786::1761338817::1762811566::1::::<><><>0<>0<>69429fde928283997495fbc123638cc2<>res://.godot/imported/Bat_Full.png-2f6021cfe26264bedb857a1de4fee564.ctex::
 broken-city-tileset.png::CompressedTexture2D::8936264143934620598::1762869840::1762869847::1::::<><><>0<>0<>97c4743804259f6d42e10b5725d41350<>res://.godot/imported/broken-city-tileset.png-3db02b27de8da9a3361b898833d6f542.ctex::
 car.png::CompressedTexture2D::236765733229345076::1762822451::1762822456::1::::<><><>0<>0<>40fc012a8fe61b57c648a92310bbdd72<>res://.godot/imported/car.png-2b189d0a2a6dac96bd0faa10a80e32cc.ctex::
+city-background.png::CompressedTexture2D::4439378288303696498::1762894214::1762894227::1::::<><><>0<>0<>99ad19e7494bd311ce373645f41bf205<>res://.godot/imported/city-background.png-38534920c2988c366c08257082fd88ab.ctex::
 exclusion-zone-redder.png::CompressedTexture2D::14881460637041063::1762821250::1762821251::1::::<><><>0<>0<>83c06b33f76330271125f544fcb9110f<>res://.godot/imported/exclusion-zone-redder.png-83c3fe76e731e2567d9d6d24e0af5e66.ctex::
 ground-enemy.png::CompressedTexture2D::3842158969420301885::1761693077::1762294053::1::::<><><>0<>0<>7c789671642bbb6fe8604c4fff4b8711<>res://.godot/imported/ground-enemy.png-28cb8d2c92f491c721db1ab2356d3f18.ctex::
 icon.svg::CompressedTexture2D::680048851751464912::1761338817::1762811566::1::::<><><>0<>0<>4be9c45802279c0ee937ffff57abf498<>res://.godot/imported/icon.svg-3540dd99eafb6c4e602e8c59cee418fa.ctex::
@@ -194,7 +196,6 @@ platform.png::CompressedTexture2D::2702314425639466046::1761338817::1762811566::
 Rat_Attack.png::CompressedTexture2D::391346496167889681::1761338817::1762811566::1::::<><><>0<>0<>13024700d7958e845ee90594f9b29c85<>res://.godot/imported/Rat_Attack.png-fc1076d0a1c647a47f78056cc9291052.ctex::
 red-tileset.png::CompressedTexture2D::8017499055385977669::1762811544::1762811566::1::::<><><>0<>0<>43de07c011ff1392ddda6f9abd269cd3<>res://.godot/imported/red-tileset.png-ea9cf8dd07705df57d1142352859afe4.ctex::
 simple64x_tiles6.png::CompressedTexture2D::1550633627308188147::1761338817::1762811566::1::::<><><>0<>0<>77a2469405c33ab5b25d59e0b0c5f5d7<>res://.godot/imported/simple64x_tiles6.png-972a77a8df80ea537d577e74b1c8ef9f.ctex::
-Tile_28(1).png::CompressedTexture2D::3100293631510104878::1762819001::1762819002::1::::<><><>0<>0<>bb04bafaaa13229d84ad0352aca867e0<>res://.godot/imported/Tile_28(1).png-5dac33c5b35607c35d676e2e88920946.ctex::
 ::res://textures/boss-sprites/::1762294040
 Placeholder.jpg::CompressedTexture2D::7864920526920855773::1762294040::1762294040::1::::<><><>0<>0<>2851ae655ccbf7ac1f55de90f6b661ed<>res://.godot/imported/Placeholder.jpg-a9e5226390eac0787a3ddf4a9001c23a.ctex::
 ::res://textures/player-sprites/::1762890143

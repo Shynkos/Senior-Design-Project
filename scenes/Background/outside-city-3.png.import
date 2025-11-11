@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bkf2na6ol5j0y"
-path="res://.godot/imported/Tile_28(1).png-5dac33c5b35607c35d676e2e88920946.ctex"
+uid="uid://cxpvn85xty031"
+path="res://.godot/imported/outside-city-3.png-7066fbc7a19da064cbf92435ab9994b1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://textures/Tile_28(1).png"
-dest_files=["res://.godot/imported/Tile_28(1).png-5dac33c5b35607c35d676e2e88920946.ctex"]
+source_file="res://scenes/Background/outside-city-3.png"
+dest_files=["res://.godot/imported/outside-city-3.png-7066fbc7a19da064cbf92435ab9994b1.ctex"]
 
 [params]
 
