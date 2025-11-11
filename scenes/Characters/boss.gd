@@ -3,8 +3,8 @@ extends CharacterBody2D
 @onready var animated_sprite = $AnimatedSprite2D
 
 signal attack1
-var health = 100
-var speed = 0
+@export var health: int = 1000
+var speed = 100
 @export var Player: Node2D
 @onready var nav = $NavigationAgent2D as NavigationAgent2D
 
@@ -35,7 +35,7 @@ func pathfinding():
 
 
 func _on_timer_timeout():
-	speed = 0
+	speed = 100
 	var random = randi_range(1, 5)
 	
 	if random == 1:
@@ -47,3 +47,26 @@ func _on_timer_timeout():
 func _on_spike_player_entered(body: CharacterBody2D):
 	if body == Player:
 		print("Hit")
+
+
+#damage system
+func take_damage(amount):
+	#get damage animation
+	var nodes = [$AnimatedSprite2D]
+	flash(nodes)
+	health -= amount
+	if health <= 0:
+		die()
+
+func die():
+	#get death animation
+	queue_free()
+
+func flash(nodes):
+	var tween = create_tween()
+	tween.tween_method(set_flash_value.bind(nodes), 0.0, 1.0, 0.1).set_trans(Tween.TRANS_QUAD)
+	tween.tween_method(set_flash_value.bind(nodes), 1.0, 0.0, 0.4).set_trans(Tween.TRANS_QUAD)
+
+func set_flash_value(value: float, nodes):
+	for node in nodes:
+		node.material.set_shader_parameter('Progress', value)

@@ -1,7 +1,7 @@
-[gd_scene load_steps=22 format=3 uid="uid://cy1dwq0ok3w3n"]
+[gd_scene load_steps=23 format=3 uid="uid://cy1dwq0ok3w3n"]
 
-[ext_resource type="Texture2D" uid="uid://dkb3del6y44r6" path="res://textures/boss-sprites/Placeholder.jpg" id="1_ademu"]
 [ext_resource type="Script" uid="uid://s3uassyqtk2e" path="res://scenes/Characters/boss.gd" id="1_b1njl"]
+[ext_resource type="Shader" uid="uid://c6ybxh4tj0h76" path="res://scenes/Components/flash.gdshader" id="2_4j6or"]
 [ext_resource type="Texture2D" uid="uid://bl8056cb05ql3" path="res://addons/Heart Golem/Golem Idle-Sheet_scaled_4x.png" id="3_4j6or"]
 [ext_resource type="Texture2D" uid="uid://s7q8c7kva1ff" path="res://addons/Heart Golem/Golem Move-Sheet_scaled_4x.png" id="4_4j6or"]
 
@@ -12,6 +12,11 @@ size = Vector2(799.9999, 599.9999)
 vertices = PackedVector2Array(70, 50, -70, 50, -70, -50, 70, -50)
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(-80, 60, 80, 60, 80, -60, -80, -60)])
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4j6or"]
+shader = ExtResource("2_4j6or")
+shader_parameter/Color = Color(0, 0, 0, 0)
+shader_parameter/Progress = 0.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_svpei"]
 atlas = ExtResource("3_4j6or")
@@ -124,14 +129,11 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="Boss" type="CharacterBody2D"]
+[node name="Boss" type="CharacterBody2D" groups=["Enemies"]]
+collision_layer = 96
+collision_mask = 25
 motion_mode = 1
 script = ExtResource("1_b1njl")
-
-[node name="BossTexture" type="Sprite2D" parent="."]
-visible = false
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("1_ademu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -3.8146973e-06)
@@ -148,6 +150,7 @@ navigation_polygon = SubResource("NavigationPolygon_b1njl")
 autostart = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+material = SubResource("ShaderMaterial_4j6or")
 position = Vector2(0, -49)
 sprite_frames = SubResource("SpriteFrames_bn40l")
 animation = &"move"
