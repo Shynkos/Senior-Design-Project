@@ -1,4 +1,4 @@
-[gd_scene load_steps=41 format=4 uid="uid://bau6d1rdt2acw"]
+[gd_scene load_steps=42 format=4 uid="uid://bau6d1rdt2acw"]
 
 [ext_resource type="Texture2D" uid="uid://bkf2na6ol5j0y" path="res://textures/Tile_28(1).png" id="2_j0h4h"]
 [ext_resource type="Texture2D" uid="uid://d0k172mksm8k5" path="res://textures/broken-city-tileset.png" id="2_j7b3c"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://cb8qqguf8qrm4" path="res://scenes/Background/4.png" id="5_g51ub"]
 [ext_resource type="Texture2D" uid="uid://dn22n4lj3ubgt" path="res://scenes/Background/5.png" id="6_x4qyc"]
 [ext_resource type="Texture2D" uid="uid://dmxq5to63k3e" path="res://textures/car.png" id="9_x4qyc"]
+[ext_resource type="Script" uid="uid://bk1fe0lmeejyy" path="res://scenes/Components/camera_2d.gd" id="12_7jivy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_x06qh"]
 texture = ExtResource("3_g51ub")
@@ -1252,6 +1253,9 @@ visible = false
 visibility_layer = 512
 scale = Vector2(1.3727647, 1.3727647)
 texture = ExtResource("6_x4qyc")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+script = ExtResource("12_7jivy")
 
 [editable path="Button2"]
 [editable path="Button3"]
