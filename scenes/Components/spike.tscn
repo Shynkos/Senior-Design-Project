@@ -14,7 +14,7 @@ gravity = Vector3(0, -20, 0)
 scale_min = 9.7
 scale_max = 15.96
 
-[node name="Spike" type="CharacterBody2D" groups=["Enemies"]]
+[node name="Spike" type="Node2D" groups=["Enemies"]]
 script = ExtResource("1_dvbgm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
