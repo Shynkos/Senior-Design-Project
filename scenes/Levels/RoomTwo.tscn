@@ -1432,6 +1432,9 @@ doorTile = Vector2i(3, 11)
 [node name="PurpleSwitch" parent="ButtonPuzzle" instance=ExtResource("4_7jivy")]
 position = Vector2(-393, -347)
 
+[node name="Interaction" parent="ButtonPuzzle/PurpleSwitch" index="0"]
+collision_mask = 8
+
 [node name="AnimatedSprite2D" parent="ButtonPuzzle/PurpleSwitch" index="1"]
 sprite_frames = SubResource("SpriteFrames_r5d0v")
 
@@ -1441,17 +1444,26 @@ position = Vector2(-985, -251)
 [node name="BlueSwitch" parent="ButtonPuzzle" instance=ExtResource("4_7jivy")]
 position = Vector2(-72.99994, -186.00003)
 
+[node name="Interaction" parent="ButtonPuzzle/BlueSwitch" index="0"]
+collision_mask = 8
+
 [node name="AnimatedSprite2D" parent="ButtonPuzzle/BlueSwitch" index="1"]
 sprite_frames = SubResource("SpriteFrames_ghqlj")
 
 [node name="GreenSwitch" parent="ButtonPuzzle" instance=ExtResource("4_7jivy")]
 position = Vector2(-1257, -410)
 
+[node name="Interaction" parent="ButtonPuzzle/GreenSwitch" index="0"]
+collision_mask = 8
+
 [node name="AnimatedSprite2D" parent="ButtonPuzzle/GreenSwitch" index="1"]
 sprite_frames = SubResource("SpriteFrames_1lp4s")
 
 [node name="RedSwitch" parent="ButtonPuzzle" instance=ExtResource("4_7jivy")]
 position = Vector2(103, -490)
+
+[node name="Interaction" parent="ButtonPuzzle/RedSwitch" index="0"]
+collision_mask = 8
 
 [node name="AnimatedSprite2D" parent="ButtonPuzzle/RedSwitch" index="1"]
 sprite_frames = SubResource("SpriteFrames_mwuiy")
@@ -1486,7 +1498,6 @@ texture = ExtResource("6_ukldd")
 visibility_layer = 3
 position = Vector2(67.00001, -28.000004)
 scale = Vector2(0.4327524, 0.4327524)
-collision_mask = 5
 
 [node name="Car" type="CharacterBody2D" parent="."]
 position = Vector2(0, 1.5258789e-05)
