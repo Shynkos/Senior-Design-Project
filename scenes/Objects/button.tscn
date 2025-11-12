@@ -93,7 +93,9 @@ scale = Vector2(0.3, 0.3)
 script = ExtResource("2_vxja4")
 
 [node name="Interaction" parent="." instance=ExtResource("3_vxja4")]
-scale = Vector2(8, 8)
+scale = Vector2(8.5, 8.5)
+collision_layer = 4
+collision_mask = 0
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_h8hes")
