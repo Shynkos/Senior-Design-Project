@@ -143,7 +143,6 @@ size = Vector2(47, 128)
 [node name="Player" type="CharacterBody2D"]
 texture_filter = 1
 collision_layer = 0
-collision_mask = 5
 script = ExtResource("1_g2els")
 metadata/_edit_vertical_guides_ = [1225.0]
 
@@ -167,26 +166,6 @@ scale = Vector2(0.8, 0.8)
 sprite_frames = SubResource("SpriteFrames_r13nr")
 animation = &"run"
 
-[node name="PauseMenu" parent="." instance=ExtResource("7_smehm")]
-process_mode = 3
-visible = false
-
-[node name="OptionsMenu" parent="." instance=ExtResource("8_ur7pv")]
-process_mode = 3
-visible = false
-
-[node name="ControlsMenu" parent="." instance=ExtResource("9_ur7pv")]
-process_mode = 3
-visible = false
-
-[node name="VideoMenu" parent="." instance=ExtResource("9_np5j3")]
-process_mode = 3
-visible = false
-
-[node name="GameOverMenu" parent="." instance=ExtResource("12_r13nr")]
-process_mode = 3
-visible = false
-
 [node name="Hurtbox" type="Area2D" parent="."]
 process_mode = 1
 collision_layer = 16
@@ -208,12 +187,43 @@ process_callback = 0
 wait_time = 0.15
 one_shot = true
 
-[connection signal="options" from="PauseMenu" to="." method="_on_pause_menu_options"]
-[connection signal="pause" from="PauseMenu" to="." method="_on_pause_menu_pause"]
-[connection signal="back" from="OptionsMenu" to="." method="_on_options_menu_back"]
-[connection signal="controls" from="OptionsMenu" to="." method="_on_options_menu_controls"]
-[connection signal="pause" from="OptionsMenu" to="." method="_on_options_menu_pause"]
-[connection signal="video" from="OptionsMenu" to="." method="_on_options_menu_video"]
-[connection signal="back" from="ControlsMenu" to="." method="_on_controls_menu_back"]
-[connection signal="back" from="VideoMenu" to="." method="_on_video_menu_back"]
+[node name="Menus" type="Node" parent="."]
+
+[node name="PauseMenu" parent="Menus" instance=ExtResource("7_smehm")]
+process_mode = 3
+visible = false
+
+[node name="OptionsMenu" parent="Menus" instance=ExtResource("8_ur7pv")]
+process_mode = 3
+visible = false
+
+[node name="ControlsMenu" parent="Menus" instance=ExtResource("9_ur7pv")]
+process_mode = 3
+visible = false
+
+[node name="VideoMenu" parent="Menus" instance=ExtResource("9_np5j3")]
+process_mode = 3
+visible = false
+
+[node name="GameOverMenu" parent="Menus" instance=ExtResource("12_r13nr")]
+process_mode = 3
+visible = false
+
+[node name="InteractionBox" type="Area2D" parent="."]
+process_mode = 1
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionBox"]
+position = Vector2(1.5, 0)
+shape = SubResource("RectangleShape2D_r13nr")
+
 [connection signal="body_entered" from="Hurtbox" to="." method="_on_hurtbox_body_entered"]
+[connection signal="options" from="Menus/PauseMenu" to="." method="_on_pause_menu_options"]
+[connection signal="pause" from="Menus/PauseMenu" to="." method="_on_pause_menu_pause"]
+[connection signal="back" from="Menus/OptionsMenu" to="." method="_on_options_menu_back"]
+[connection signal="controls" from="Menus/OptionsMenu" to="." method="_on_options_menu_controls"]
+[connection signal="pause" from="Menus/OptionsMenu" to="." method="_on_options_menu_pause"]
+[connection signal="video" from="Menus/OptionsMenu" to="." method="_on_options_menu_video"]
+[connection signal="back" from="Menus/ControlsMenu" to="." method="_on_controls_menu_back"]
+[connection signal="back" from="Menus/VideoMenu" to="." method="_on_video_menu_back"]

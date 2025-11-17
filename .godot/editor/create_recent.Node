@@ -1,6 +1,8 @@
+CollisionShape2D
+Node
+Area2D
 TileMapLayer
 CanvasLayer
-CollisionShape2D
 Sprite2D
 Parallax2D
 ParallaxBackground

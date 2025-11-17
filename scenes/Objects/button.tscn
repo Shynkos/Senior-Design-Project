@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://d0h2y2emtjbr4" path="res://scenes/Objects/button.gd" id="2_vxja4"]
 [ext_resource type="Texture2D" uid="uid://ust50y1fm8s2" path="res://textures/levers.png" id="3_0a2m2"]
-[ext_resource type="PackedScene" uid="uid://cencs2n22lgll" path="res://scenes/Components/interaction.tscn" id="3_vxja4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yuep2"]
+size = Vector2(53.333332, 163.33333)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0a2m2"]
 atlas = ExtResource("3_0a2m2")
@@ -88,15 +90,15 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Button" type="Sprite2D"]
-scale = Vector2(0.3, 0.3)
-script = ExtResource("2_vxja4")
-
-[node name="Interaction" parent="." instance=ExtResource("3_vxja4")]
-scale = Vector2(8.5, 8.5)
+[node name="Button" type="Area2D"]
 collision_layer = 4
 collision_mask = 0
+script = ExtResource("2_vxja4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_yuep2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-7.947286e-07, 38.333332)
 sprite_frames = SubResource("SpriteFrames_h8hes")
 animation = &"switch_on"
