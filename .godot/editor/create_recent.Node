@@ -1,7 +1,7 @@
+Sprite2D
 TileMapLayer
 CanvasLayer
 CollisionShape2D
-Sprite2D
 Parallax2D
 ParallaxBackground
 AudioStreamPlayer2D

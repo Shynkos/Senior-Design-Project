@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bxlfg4olb5wys"]
+[gd_scene load_steps=5 format=3 uid="uid://bxlfg4olb5wys"]
 
 [ext_resource type="Script" uid="uid://72w5clgltgjw" path="res://scenes/Components/video_menu.gd" id="1_00mv3"]
 [ext_resource type="StyleBox" uid="uid://he2daajeqpsr" path="res://addons/Buttons/Menu.tres" id="2_owit7"]
 [ext_resource type="FontFile" uid="uid://kk516ptcda7m" path="res://addons/Buttons/super-metroid-title.otf" id="4_hy6al"]
-[ext_resource type="AudioStream" uid="uid://rv5m3fi6c2se" path="res://addons/Sound/Main Menu Music.wav" id="5_hy6al"]
 [ext_resource type="StyleBox" uid="uid://c0ya5b6jbh3ru" path="res://addons/Buttons/TextButton.tres" id="5_r8f5q"]
 
 [node name="VideoMenu" type="CanvasLayer"]
@@ -73,10 +72,6 @@ theme_override_styles/focus = ExtResource("2_owit7")
 text = "VSync"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("5_hy6al")
-autoplay = true
 
 [connection signal="toggled" from="Fullscreen Toggle" to="." method="_on_fullscreen_toggle_toggled"]
 [connection signal="toggled" from="VSync Toggle" to="." method="_on_v_sync_toggle_toggled"]
