@@ -15,7 +15,7 @@ func _ready():
 	update_labels()
 
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("Pause") and visible:
 		visible = !visible
 		back.emit()
@@ -59,5 +59,10 @@ func _on_jump_pressed():
 	rebind_action("Jump")
 
 
-func _on_interact_pressed() -> void:
+func _on_interact_pressed():
 	rebind_action("Interact")
+
+
+func _on_back_button_pressed():
+	visible = !visible
+	back.emit()

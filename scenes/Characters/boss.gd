@@ -1,11 +1,11 @@
 extends CharacterBody2D
 
-@onready var animated_sprite = $AnimatedSprite2D
 
 signal attack1
-@export var health: int = 1000
 var speed = 100
 @export var Player: Node2D
+@export var health: int = 1000
+@onready var animated_sprite = $AnimatedSprite2D
 @onready var nav = $NavigationAgent2D as NavigationAgent2D
 
 
@@ -15,6 +15,7 @@ func _physics_process(_delta):
 	pathfinding()
 	move_and_slide()
 	handle_movement_animation(direction)
+
 
 func handle_movement_animation(dir):
 	if !velocity:
@@ -30,6 +31,7 @@ func toggle_flip_sprite(dir):
 	if dir > 0: # moving right
 		animated_sprite.flip_h = true
 
+
 func pathfinding():
 	nav.target_position = Player.global_position
 
@@ -44,11 +46,6 @@ func _on_timer_timeout():
 		attack1.emit()
 
 
-func _on_spike_player_entered(body: CharacterBody2D):
-	if body == Player:
-		print("Hit")
-
-
 #damage system
 func take_damage(amount):
 	#get damage animation
@@ -58,14 +55,17 @@ func take_damage(amount):
 	if health <= 0:
 		die()
 
+
 func die():
 	#get death animation
 	queue_free()
+
 
 func flash(nodes):
 	var tween = create_tween()
 	tween.tween_method(set_flash_value.bind(nodes), 0.0, 1.0, 0.1).set_trans(Tween.TRANS_QUAD)
 	tween.tween_method(set_flash_value.bind(nodes), 1.0, 0.0, 0.4).set_trans(Tween.TRANS_QUAD)
+
 
 func set_flash_value(value: float, nodes):
 	for node in nodes:

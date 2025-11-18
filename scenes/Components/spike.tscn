@@ -14,7 +14,9 @@ gravity = Vector3(0, -20, 0)
 scale_min = 9.7
 scale_max = 15.96
 
-[node name="Spike" type="Node2D" groups=["Enemies"]]
+[node name="Spike" type="CharacterBody2D" groups=["Attack"]]
+collision_layer = 96
+collision_mask = 25
 script = ExtResource("1_dvbgm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -33,12 +35,21 @@ speed_scale = 3.0
 process_material = SubResource("ParticleProcessMaterial_dvbgm")
 
 [node name="SelfDestruct" type="Timer" parent="."]
-wait_time = 5.0
+wait_time = 3.0
 autostart = true
 
 [node name="ParticleTimer" type="Timer" parent="."]
 wait_time = 2.0
 autostart = true
 
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 25
+collision_mask = 96
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_ekcwk")
+
 [connection signal="timeout" from="SelfDestruct" to="." method="_on_self_destruct_timeout"]
 [connection signal="timeout" from="ParticleTimer" to="." method="_on_particle_timer_timeout"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
