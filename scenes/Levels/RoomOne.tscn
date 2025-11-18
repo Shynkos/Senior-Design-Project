@@ -125,7 +125,7 @@ script = ExtResource("2_jg12w")
 
 [node name="Boss" parent="." node_paths=PackedStringArray("Player") instance=ExtResource("2_rn3pl")]
 texture_filter = 1
-position = Vector2(1093, -43.000015)
+position = Vector2(324.00012, -41)
 scale = Vector2(0.68, 0.68)
 collision_mask = 2
 Player = NodePath("../Player")
