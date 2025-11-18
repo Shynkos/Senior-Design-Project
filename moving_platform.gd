@@ -18,7 +18,7 @@ func _process(delta: float) -> void:
 					animation.play("move")
 			else:
 				if animation.is_playing():
-					animation.stop()
+					animation.pause()
 		else:
 			if timer.time_left>0.0:
 				path.progress += speed

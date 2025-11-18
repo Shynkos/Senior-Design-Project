@@ -1,10 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://twj8hfw5igdh"]
+[gd_scene load_steps=7 format=3 uid="uid://d2keaoxf2jxis"]
 
-[ext_resource type="Script" uid="uid://ybnpjpssshqv" path="res://moving_platform.gd" id="1_gr4dc"]
-[ext_resource type="Texture2D" uid="uid://bx0jqg72hrvm2" path="res://addons/Platform/platform0.png" id="2_dncht"]
+[ext_resource type="Script" uid="uid://ybnpjpssshqv" path="res://moving_platform.gd" id="1_p54xb"]
+[ext_resource type="Texture2D" uid="uid://c8yrmadmkq4pv" path="res://addons/Platform/platform2.png" id="2_p54xb"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j3qy2"]
-size = Vector2(563.6366, 55)
+size = Vector2(959, 55)
 
 [sub_resource type="Animation" id="Animation_rdvr2"]
 length = 0.001
@@ -45,7 +45,7 @@ _data = {
 }
 
 [node name="MovingPlatform" type="Path2D"]
-script = ExtResource("1_gr4dc")
+script = ExtResource("1_p54xb")
 
 [node name="PathFollow2D" type="PathFollow2D" parent="."]
 rotates = false
@@ -56,10 +56,10 @@ remote_path = NodePath("../../AnimatableBody2D")
 [node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
 
 [node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D"]
-texture = ExtResource("2_dncht")
+texture = ExtResource("2_p54xb")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
-position = Vector2(-0.5, 39.5)
+position = Vector2(0.5, 39.5)
 shape = SubResource("RectangleShape2D_j3qy2")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

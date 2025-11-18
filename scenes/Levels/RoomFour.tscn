@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://dbyfraw2ukyj3"]
+[gd_scene load_steps=33 format=4 uid="uid://dbyfraw2ukyj3"]
 
 [ext_resource type="Texture2D" uid="uid://dsgojcd0u7xvd" path="res://textures/exclusion-zone-darker.png" id="1_mtubk"]
 [ext_resource type="Texture2D" uid="uid://wdeyd68ttq5p" path="res://textures/simple64x_tiles6.png" id="3_kg01d"]
@@ -11,8 +11,10 @@
 [ext_resource type="Texture2D" uid="uid://ca1wujfdn4qvd" path="res://textures/iu_1059916_7908026.png" id="9_r47is"]
 [ext_resource type="Script" uid="uid://bk1fe0lmeejyy" path="res://scenes/Components/camera_2d.gd" id="10_sb27g"]
 [ext_resource type="Texture2D" uid="uid://pntn6c8yt7xe" path="res://textures/cave-tileset(2).png" id="12_mtubk"]
+[ext_resource type="PackedScene" uid="uid://bjinloabaua12" path="res://scenes/Components/moving_platformBigger.tscn" id="13_fa3fu"]
 [ext_resource type="PackedScene" uid="uid://dfptla48wia43" path="res://scenes/Objects/TimerButton.tscn" id="13_j25dm"]
 [ext_resource type="PackedScene" uid="uid://twj8hfw5igdh" path="res://scenes/Components/moving_platform.tscn" id="13_p5dks"]
+[ext_resource type="PackedScene" uid="uid://d2keaoxf2jxis" path="res://scenes/Components/moving_platformBiggest.tscn" id="14_22bu4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_c8dmw"]
 texture = ExtResource("1_mtubk")
@@ -5487,6 +5489,42 @@ _data = {
 }
 point_count = 2
 
+[sub_resource type="Curve2D" id="Curve2D_c8dmw"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -6.0600586, -6.060425, 0, 0, 0, 0, 3630.303, -6.060425)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_r47is"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0.00048828125, 0, 0, 0, 0, -1678.7877, -1684.8477)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_sb27g"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -6.0605927, -6.060547, 0, 0, 0, 0, 2666.6665, -12.121094)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_yeuew"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 12.121094, -12.120117, 0, 0, 0, 0, -2309.0908, -18.180664)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_pwj8i"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0.00048828125, 0, 0, 0, 0, 6.060547, -1709.0898)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_wx5od"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -6.0603027, -12.120117, 0, 0, 0, 0, -1696.9692, -1690.9082)
+}
+point_count = 2
+
 [node name="RoomFour" type="Node2D"]
 
 [node name="Background" type="TileMapLayer" parent="."]
@@ -5691,6 +5729,48 @@ script = ExtResource("10_sb27g")
 position = Vector2(-1633.0001, -267)
 scale = Vector2(0.165, 0.164)
 curve = SubResource("Curve2D_j25dm")
+loop = false
+timer = NodePath("../../TimerButton/PlatformTimer")
+
+[node name="MovingPlatform2" parent="Platforms" node_paths=PackedStringArray("timer") instance=ExtResource("13_p5dks")]
+position = Vector2(-760.00006, -305.00003)
+scale = Vector2(0.165, 0.165)
+curve = SubResource("Curve2D_c8dmw")
+loop = false
+timer = NodePath("../../TimerButton/PlatformTimer")
+
+[node name="MovingPlatform3" parent="Platforms" node_paths=PackedStringArray("timer") instance=ExtResource("13_fa3fu")]
+position = Vector2(136, -567.00006)
+scale = Vector2(0.165, 0.165)
+curve = SubResource("Curve2D_r47is")
+loop = false
+timer = NodePath("../../TimerButton/PlatformTimer")
+
+[node name="MovingPlatform4" parent="Platforms" node_paths=PackedStringArray("timer") instance=ExtResource("13_p5dks")]
+position = Vector2(20.999998, -926)
+scale = Vector2(0.165, 0.165)
+curve = SubResource("Curve2D_sb27g")
+loop = false
+timer = NodePath("../../TimerButton/PlatformTimer")
+
+[node name="MovingPlatform5" parent="Platforms" node_paths=PackedStringArray("timer") instance=ExtResource("13_fa3fu")]
+position = Vector2(430.00003, -1166.0001)
+scale = Vector2(0.165, 0.165)
+curve = SubResource("Curve2D_yeuew")
+loop = false
+timer = NodePath("../../TimerButton/PlatformTimer")
+
+[node name="MovingPlatform6" parent="Platforms" node_paths=PackedStringArray("timer") instance=ExtResource("14_22bu4")]
+position = Vector2(-177, -1189.0001)
+scale = Vector2(0.165, 0.165)
+curve = SubResource("Curve2D_pwj8i")
+loop = false
+timer = NodePath("../../TimerButton/PlatformTimer")
+
+[node name="MovingPlatform7" parent="Platforms" node_paths=PackedStringArray("timer") instance=ExtResource("13_p5dks")]
+position = Vector2(-437.00003, -1381.0001)
+scale = Vector2(0.165, 0.165)
+curve = SubResource("Curve2D_wx5od")
 loop = false
 timer = NodePath("../../TimerButton/PlatformTimer")
 
