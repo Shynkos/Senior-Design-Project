@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://bda2xftdmq0xt"]
+[gd_scene load_steps=30 format=4 uid="uid://bda2xftdmq0xt"]
 
 [ext_resource type="Texture2D" uid="uid://dsgojcd0u7xvd" path="res://textures/exclusion-zone-darker.png" id="1_mtubk"]
 [ext_resource type="Texture2D" uid="uid://wdeyd68ttq5p" path="res://textures/simple64x_tiles6.png" id="3_kg01d"]
@@ -5483,8 +5483,30 @@ physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_p5dks")
 
 [sub_resource type="Curve2D" id="Curve2D_j25dm"]
+resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 0.0009765625, 6.097534, 0, 0, 0, 0, 0.0009765625, -1670.7317)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_fa3fu"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -24.242188, 6.060669, 0, 0, 0, 0, 3466.6665, 6.060669)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_22bu4"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 2006.0604, 775.75757, 0, 0, 0, 0, 381.8181, -860.60596)
+}
+point_count = 2
+
+[sub_resource type="Curve2D" id="Curve2D_c8dmw"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -466.66663, -42.42383, 0, 0, 0, 0, 2109.0908, -42.42383)
 }
 point_count = 2
 
@@ -5692,8 +5714,45 @@ script = ExtResource("10_sb27g")
 
 [node name="MovingPlatform" parent="Platforms" node_paths=PackedStringArray("timer") instance=ExtResource("13_p5dks")]
 position = Vector2(-1633.0001, -267)
-scale = Vector2(0.165, 0.164)
+scale = Vector2(0.165, 0.165)
 curve = SubResource("Curve2D_j25dm")
+loop = false
+timer = NodePath("../../TimerButton/PlatformTimer")
+
+[node name="MovingPlatform2" parent="Platforms" node_paths=PackedStringArray("timer") instance=ExtResource("13_p5dks")]
+position = Vector2(-741, -305)
+scale = Vector2(0.165, 0.165)
+curve = SubResource("Curve2D_fa3fu")
+loop = false
+speed = 1.5
+timer = NodePath("../../TimerButton/PlatformTimer")
+
+[node name="PathFollow2D" parent="Platforms/MovingPlatform2" index="0"]
+position = Vector2(-24.242188, 6.060669)
+
+[node name="AnimatableBody2D" parent="Platforms/MovingPlatform2" index="1"]
+position = Vector2(-24.242188, 6.060669)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="MovingPlatform3" parent="Platforms" node_paths=PackedStringArray("timer") instance=ExtResource("13_p5dks")]
+position = Vector2(-200, -700)
+scale = Vector2(0.165, 0.165)
+curve = SubResource("Curve2D_22bu4")
+loop = false
+speed = 1.5
+timer = NodePath("../../TimerButton/PlatformTimer")
+
+[node name="PathFollow2D" parent="Platforms/MovingPlatform3" index="0"]
+position = Vector2(2006.0604, 775.75757)
+
+[node name="AnimatableBody2D" parent="Platforms/MovingPlatform3" index="1"]
+position = Vector2(2006.0603, 775.75757)
+scale = Vector2(0.99999994, 0.99999994)
+
+[node name="MovingPlatform5" parent="Platforms" node_paths=PackedStringArray("timer") instance=ExtResource("13_p5dks")]
+position = Vector2(112, -921)
+scale = Vector2(0.165, 0.165)
+curve = SubResource("Curve2D_c8dmw")
 loop = false
 timer = NodePath("../../TimerButton/PlatformTimer")
 
@@ -5713,3 +5772,6 @@ PlayerPos = Vector2(1815, -29)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorArea2D"]
 position = Vector2(-29.5, -20)
 shape = SubResource("RectangleShape2D_fa3fu")
+
+[editable path="Platforms/MovingPlatform2"]
+[editable path="Platforms/MovingPlatform3"]
