@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://s7q8c7kva1ff" path="res://addons/Heart Golem/Golem Move-Sheet_scaled_4x.png" id="4_4j6or"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ademu"]
-size = Vector2(799.9999, 599.9999)
+size = Vector2(609.99994, 884.99994)
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_b1njl"]
 vertices = PackedVector2Array(70, 50, -70, 50, -70, -50, 70, -50)
@@ -136,7 +136,7 @@ motion_mode = 1
 script = ExtResource("1_b1njl")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -3.8146973e-06)
+position = Vector2(0, -28.500002)
 scale = Vector2(0.2, 0.2)
 shape = SubResource("RectangleShape2D_ademu")
 

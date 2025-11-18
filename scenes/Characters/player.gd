@@ -29,7 +29,7 @@ func _ready() -> void:
 			velocity.y = jump_vel
 		RoomChangeGlobal.Activate = false
 
-func _input(event):
+func _input(_event):
 	if Input.is_action_just_pressed("Pause") and !$Menus/ControlsMenu.visible and !$Menus/VideoMenu.visible and !$Menus/GameOverMenu.visible:
 		get_tree().paused = true
 		$Menus/PauseMenu.visible = !$Menus/PauseMenu.visible
@@ -45,6 +45,10 @@ func _input(event):
 	
 
 func _process(delta):
+	if Input.is_action_just_pressed("Pause") and !$ControlsMenu.visible and !$VideoMenu.visible and !$GameOverMenu.visible:
+		get_tree().paused = true
+		$PauseMenu.visible = !$PauseMenu.visible
+	
 	# register attacks
 	if not is_hit:
 		if Input.is_action_just_pressed("Fire"):
@@ -89,8 +93,9 @@ func take_damage(source: Node2D):
 		
 
 func death():
-	$Menus/GameOverMenu.visible = true
 	is_dead = true
+	$Menus/GameOverMenu.visible = true
+	$Menus/GameOverMenu.visible = true
 
 
 func _physics_process(delta):
@@ -174,6 +179,7 @@ func _on_video_menu_back():
 
 func _on_options_menu_video():
 	$Menus/VideoMenu.visible = true
+	$Menus/OptionsMenu.visible = true
 
 
 func _on_pause_menu_pause():
@@ -183,7 +189,7 @@ func _on_pause_menu_pause():
 func _on_options_menu_pause():
 	$Menus/PauseMenu.visible = true
 
-	
+
 func _on_boss_attack_1():
 	var spikes = SpikeScene.instantiate()
 	spikes.position.x = position.x
