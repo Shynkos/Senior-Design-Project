@@ -1,31 +1,17 @@
 res://scenes/Components
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
 res://addons/Platform
 res://
 res://textures
->>>>>>> CoBranch
 <<<<<<< HEAD
 <<<<<<< HEAD
 res://scenes/Background
 =======
 >>>>>>> evelyn
-<<<<<<< HEAD
->>>>>>> main
-res://textures
 res://scenes/Background
 <<<<<<< HEAD
-<<<<<<< HEAD
-res://addons/Buttons
 =======
+res://scenes/Levels
 >>>>>>> CoBranch
 =======
-=======
->>>>>>> CoBranch
-<<<<<<< HEAD
-=======
->>>>>>> CoBranch
-=======
+res://scenes/Characters
 >>>>>>> ChristopherBranch

@@ -125,14 +125,14 @@ script = ExtResource("2_jg12w")
 
 [node name="Boss" parent="." node_paths=PackedStringArray("Player") instance=ExtResource("2_rn3pl")]
 texture_filter = 1
-position = Vector2(163.00012, -38.000004)
+position = Vector2(1092, -44)
 scale = Vector2(0.68, 0.68)
 collision_mask = 2
 Player = NodePath("../Player")
 
 [node name="Player" parent="." instance=ExtResource("3_jg12w")]
 visibility_layer = 3
-position = Vector2(1815, -29)
+position = Vector2(67.00001, -28.000004)
 scale = Vector2(0.4327524, 0.4327524)
 
 [node name="Parallax" type="Node2D" parent="."]
