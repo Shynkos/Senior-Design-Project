@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("Pause") and !$ControlsMenu.visible and !$VideoMenu.visible:
 		visible = true
 
@@ -40,4 +40,4 @@ func _on_options_menu_video():
 
 
 func _on_play_button_pressed():
-	get_tree().change_scene_to_file("res://scenes/Levels/RoomOne.tscn")
+	get_tree().change_scene_to_file("res://scenes/Levels/RoomTut.tscn")
