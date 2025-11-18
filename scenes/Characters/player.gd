@@ -45,6 +45,13 @@ func _input(event):
 	
 
 func _process(delta):
+<<<<<<< HEAD
+=======
+	if Input.is_action_just_pressed("Pause") and !$ControlsMenu.visible and !$VideoMenu.visible and !$GameOverMenu.visible:
+		get_tree().paused = true
+		$PauseMenu.visible = !$PauseMenu.visible
+	
+>>>>>>> AE
 	# register attacks
 	if not is_hit:
 		if Input.is_action_just_pressed("Fire"):
@@ -66,6 +73,7 @@ func _on_hurtbox_body_entered(body: Node2D):
 
 
 func take_damage(source: Node2D):
+<<<<<<< HEAD
 	PlayerGlobal.Health -= 1
 	if PlayerGlobal.Health == 0:
 		# decrease healthbar
@@ -74,6 +82,16 @@ func take_damage(source: Node2D):
 		#player dies
 		death()
 	elif PlayerGlobal.Health > 0:
+=======
+	health -= 1
+	if health == 0:
+		# decrease healthbar
+		$HUD.hearts[health].visible = false
+		
+		#player dies
+		death()
+	elif health > 0:
+>>>>>>> AE
 		var direction = sign(global_position.x - source.global_position.x)
 		
 		knockback_velocity = Vector2(300 * direction, -400)
@@ -81,7 +99,11 @@ func take_damage(source: Node2D):
 		is_hit = true
 		
 		#decrease healthbar
+<<<<<<< HEAD
 		$HUD.hearts[PlayerGlobal.Health].visible = false
+=======
+		$HUD.hearts[health].visible = false
+>>>>>>> AE
 		
 		$Timers/InvulnTimer.start()
 		flash([$AnimatedSprite2D])
@@ -89,13 +111,21 @@ func take_damage(source: Node2D):
 		
 
 func death():
+<<<<<<< HEAD
 	$Menus/GameOverMenu.visible = true
 	is_dead = true
+=======
+	$GameOverMenu.visible = true
+>>>>>>> AE
 
 
 func _physics_process(delta):
 	#cleaning up
+<<<<<<< HEAD
 	if is_hit or is_dead:
+=======
+	if is_hit:
+>>>>>>> AE
 		handle_knockback(delta)
 	else:
 		handle_movement(delta)
@@ -153,6 +183,7 @@ func toggle_flip_sprite(dir):
 
 
 func _on_pause_menu_options():
+<<<<<<< HEAD
 	$Menus/OptionsMenu.visible = true
 
 
@@ -174,6 +205,29 @@ func _on_video_menu_back():
 
 func _on_options_menu_video():
 	$Menus/VideoMenu.visible = true
+=======
+	$OptionsMenu.visible = true
+
+
+func _on_options_menu_back():
+	$PauseMenu.visible = true
+
+
+func _on_options_menu_controls():
+	$ControlsMenu.visible = true
+
+
+func _on_controls_menu_back():
+	$OptionsMenu.visible = true
+
+
+func _on_video_menu_back():
+	$OptionsMenu.visible = true
+
+
+func _on_options_menu_video():
+	$VideoMenu.visible = true
+>>>>>>> AE
 
 
 func _on_pause_menu_pause():
@@ -181,7 +235,11 @@ func _on_pause_menu_pause():
 
 
 func _on_options_menu_pause():
+<<<<<<< HEAD
 	$Menus/PauseMenu.visible = true
+=======
+	$PauseMenu.visible = true
+>>>>>>> AE
 
 	
 func _on_boss_attack_1():
