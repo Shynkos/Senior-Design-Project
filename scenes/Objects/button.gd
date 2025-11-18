@@ -2,6 +2,7 @@ extends Area2D
 
 @onready var animated_sprite = $AnimatedSprite2D
 
+
 var switch = false:
 	set(value):
 		switch = value
@@ -9,6 +10,9 @@ var switch = false:
 			pressed()
 		else:
 			unpressed()
+
+func _ready():
+	add_to_group("Interactable")
 
 func interact():
 	switch = not switch

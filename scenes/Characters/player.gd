@@ -40,6 +40,7 @@ func _input(event):
 		print("interact")
 		for n in $InteractionBox.get_overlapping_areas():
 			if n.is_in_group("Interactable"):
+				print("pushed")
 				n.interact()
 	
 
