@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://dsmyypjk2bfv7"]
 
 [ext_resource type="Script" uid="uid://d0jqwipurr7c2" path="res://scenes/Components/hud.gd" id="1_6fxr0"]
-[ext_resource type="Texture2D" uid="uid://dkb3del6y44r6" path="res://textures/boss-sprites/Placeholder.jpg" id="1_i7bmj"]
+[ext_resource type="Texture2D" uid="uid://dappvrjm87uft" path="res://textures/HealthIcon.png" id="2_6fxr0"]
 
 [node name="HUD" type="CanvasLayer"]
 script = ExtResource("1_6fxr0")
@@ -13,11 +13,11 @@ anchor_left = 0.014
 anchor_top = 0.90300006
 anchor_right = 0.629
 anchor_bottom = 0.97200006
-offset_left = 737.08
-offset_top = -0.16003418
-offset_right = -0.11999512
-offset_bottom = 0.15997314
-texture = ExtResource("1_i7bmj")
+offset_left = 670.08
+offset_top = -42.160034
+offset_right = -21.119995
+offset_bottom = -1.8400269
+texture = ExtResource("2_6fxr0")
 expand_mode = 1
 
 [node name="Health6" type="TextureRect" parent="."]
@@ -27,11 +27,11 @@ anchor_left = 0.014
 anchor_top = 0.90300006
 anchor_right = 0.629
 anchor_bottom = 0.97200006
-offset_left = 614.08
-offset_top = -0.16003418
-offset_right = -123.119995
-offset_bottom = 0.15997314
-texture = ExtResource("1_i7bmj")
+offset_left = 558.08
+offset_top = -42.160034
+offset_right = -133.12
+offset_bottom = -1.8400269
+texture = ExtResource("2_6fxr0")
 expand_mode = 1
 
 [node name="Health5" type="TextureRect" parent="."]
@@ -40,11 +40,11 @@ anchor_left = 0.014
 anchor_top = 0.90300006
 anchor_right = 0.629
 anchor_bottom = 0.97200006
-offset_left = 491.08
-offset_top = -0.16003418
-offset_right = -246.12
-offset_bottom = 0.15997314
-texture = ExtResource("1_i7bmj")
+offset_left = 446.08
+offset_top = -42.160034
+offset_right = -245.12
+offset_bottom = -1.8400269
+texture = ExtResource("2_6fxr0")
 expand_mode = 1
 
 [node name="Health4" type="TextureRect" parent="."]
@@ -53,11 +53,11 @@ anchor_left = 0.014
 anchor_top = 0.90300006
 anchor_right = 0.629
 anchor_bottom = 0.97200006
-offset_left = 368.08
-offset_top = -0.16003418
-offset_right = -369.12
+offset_left = 334.08
+offset_top = -42.160034
+offset_right = -357.12
 offset_bottom = 0.15997314
-texture = ExtResource("1_i7bmj")
+texture = ExtResource("2_6fxr0")
 expand_mode = 1
 
 [node name="Health3" type="TextureRect" parent="."]
@@ -66,11 +66,11 @@ anchor_left = 0.014
 anchor_top = 0.90300006
 anchor_right = 0.63000005
 anchor_bottom = 0.97200006
-offset_left = 245.08
-offset_top = -0.16003418
-offset_right = -493.4001
+offset_left = 222.08
+offset_top = -42.160034
+offset_right = -470.4001
 offset_bottom = 0.15997314
-texture = ExtResource("1_i7bmj")
+texture = ExtResource("2_6fxr0")
 expand_mode = 1
 
 [node name="Health2" type="TextureRect" parent="."]
@@ -79,11 +79,11 @@ anchor_left = 0.014
 anchor_top = 0.90300006
 anchor_right = 0.629
 anchor_bottom = 0.97200006
-offset_left = 122.08
-offset_top = -0.16003418
-offset_right = -615.12
+offset_left = 110.08
+offset_top = -42.160034
+offset_right = -581.12
 offset_bottom = 0.15997314
-texture = ExtResource("1_i7bmj")
+texture = ExtResource("2_6fxr0")
 expand_mode = 1
 
 [node name="Health1" type="TextureRect" parent="."]
@@ -92,9 +92,9 @@ anchor_left = 0.014
 anchor_top = 0.90300006
 anchor_right = 0.63000005
 anchor_bottom = 0.97200006
-offset_left = -0.9200001
-offset_top = -0.16003418
-offset_right = -739.4001
+offset_left = -1.9200001
+offset_top = -42.160034
+offset_right = -694.4001
 offset_bottom = 0.15997314
-texture = ExtResource("1_i7bmj")
+texture = ExtResource("2_6fxr0")
 expand_mode = 1
