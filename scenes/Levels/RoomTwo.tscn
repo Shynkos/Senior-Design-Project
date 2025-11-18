@@ -1585,7 +1585,7 @@ position = Vector2(1194, -86)
 collision_layer = 0
 collision_mask = 16
 ConnectedRoom = "res://scenes/Levels/StairRoom.tscn"
-PlayerPos = Vector2(97, 587)
+PlayerPos = Vector2(119.688, 592.485)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorArea2D"]
 position = Vector2(5, 38.5)
