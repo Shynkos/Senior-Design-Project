@@ -205,3 +205,8 @@ func flash(nodes):
 func set_flash_value(value: float, nodes):
 	for node in nodes:
 		node.material.set_shader_parameter('Progress', value)
+
+
+func _on_game_over_menu_respawn():
+	is_dead = false
+	PlayerGlobal.Health = PlayerGlobal.MaxHealth
