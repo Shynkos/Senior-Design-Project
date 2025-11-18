@@ -1,4 +1,4 @@
-extends Area2D
+extends Node2D
 
 @export var damage: int = 5
 @export var speed: float = 600
@@ -7,17 +7,18 @@ extends Area2D
 var target_position: Vector2
 var despawn_time = 1
 var player_velocity: Vector2 = Vector2.ZERO 
-func _ready() -> void:
+
+
+func _ready():
 	var timer = get_node("Timer")
 	timer.timeout.connect(despawn)
-
 
 
 func _physics_process(delta: float) -> void:
 	#move_local_x(target_position.x * speed * delta)
 	#move_local_y(target_position.y* speed * delta)
 	position += target_position*speed*delta
-	
+
 
 func despawn() -> void:
 	queue_free()

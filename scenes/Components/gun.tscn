@@ -7,10 +7,13 @@
 offset = Vector2(64, 0)
 script = ExtResource("2_dk5gl")
 
+[node name="Spawnpoint" type="Marker2D" parent="."]
+position = Vector2(116, -6)
+
 [node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(128, 0)
+position = Vector2(148, -6)
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(54, 8.533333)
+position = Vector2(54, 0)
 scale = Vector2(0.8, 0.8)
 texture = ExtResource("2_kw0bs")

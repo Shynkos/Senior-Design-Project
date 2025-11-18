@@ -20,14 +20,25 @@ theme_override_styles/panel = ExtResource("2_owit7")
 
 [node name="Fullscreen Toggle" type="CheckButton" parent="."]
 anchors_preset = -1
-anchor_left = 0.504
+anchor_left = 0.56600004
 anchor_top = 0.27800003
-anchor_right = 0.53800005
-anchor_bottom = 0.31100002
-offset_left = -8.119995
+anchor_right = 0.601
+anchor_bottom = 0.32200003
+offset_left = 0.5199585
 offset_top = -0.16001892
-offset_right = -7.6400757
-offset_bottom = 8.079987
+offset_right = -0.2800293
+offset_bottom = 0.15997314
+
+[node name="VSync Toggle" type="CheckButton" parent="."]
+anchors_preset = -1
+anchor_left = 0.56600004
+anchor_top = 0.347
+anchor_right = 0.601
+anchor_bottom = 0.39200002
+offset_left = 0.5199585
+offset_top = 0.16000366
+offset_right = -0.2800293
+offset_bottom = -0.24002075
 
 [node name="Fullscreen Label" type="Label" parent="."]
 anchors_preset = -1
@@ -44,17 +55,6 @@ theme_override_styles/normal = ExtResource("5_r8f5q")
 text = "Fullscreen"
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="VSync Toggle" type="CheckButton" parent="."]
-anchors_preset = -1
-anchor_left = 0.504
-anchor_top = 0.347
-anchor_right = 0.53800005
-anchor_bottom = 0.39200002
-offset_left = -7.119995
-offset_top = 0.16000366
-offset_right = -6.6400757
-offset_bottom = -0.24002075
 
 [node name="VSync Label" type="Label" parent="."]
 anchors_preset = -1
@@ -73,5 +73,23 @@ text = "VSync"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="Back Button" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.35900003
+anchor_top = 0.41700003
+anchor_right = 0.64100003
+anchor_bottom = 0.46100003
+offset_left = 0.47998047
+offset_top = -0.24002075
+offset_right = -0.4800415
+offset_bottom = 0.07998657
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+text = "Back"
+icon_alignment = 1
+
 [connection signal="toggled" from="Fullscreen Toggle" to="." method="_on_fullscreen_toggle_toggled"]
 [connection signal="toggled" from="VSync Toggle" to="." method="_on_v_sync_toggle_toggled"]
+[connection signal="pressed" from="Back Button" to="." method="_on_back_button_pressed"]

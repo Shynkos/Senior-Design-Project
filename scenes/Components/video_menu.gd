@@ -10,7 +10,7 @@ func _ready():
 		$"Fullscreen Toggle".button_pressed  = true
 
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("Pause") and visible:
 		visible = !visible
 		back.emit()
@@ -28,3 +28,8 @@ func _on_v_sync_toggle_toggled(toggled_on: bool):
 		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_ENABLED)
 	else:
 		DisplayServer.window_set_vsync_mode(DisplayServer.VSYNC_DISABLED)
+
+
+func _on_back_button_pressed():
+	visible = !visible
+	back.emit()

@@ -1,4 +1,4 @@
-[gd_scene load_steps=68 format=4 uid="uid://bau6d1rdt2acw"]
+[gd_scene load_steps=68 format=4 uid="uid://bkjktmkx0jq0i"]
 
 [ext_resource type="Texture2D" uid="uid://d0k172mksm8k5" path="res://textures/broken-city-tileset.png" id="2_j7b3c"]
 [ext_resource type="PackedScene" uid="uid://tfertef25w1k" path="res://scenes/Components/button_puzzle.tscn" id="2_ukldd"]
