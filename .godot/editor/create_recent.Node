@@ -1,18 +1,13 @@
-<<<<<<< HEAD
-Node
-Timer
-AnimationPlayer
 CollisionShape2D
-=======
->>>>>>> parent of d19228f (Room Fixes and Camera fixes)
-Sprite2D
-RemoteTransform2D
-AnimatableBody2D
-PathFollow2D
-Path2D
 Area2D
+Sprite2D
 TileMapLayer
 CanvasLayer
-CollisionShape2D
 Parallax2D
 ParallaxBackground
+AudioStreamPlayer2D
+Panel
+Label
+Control
+VBoxContainer
+StaticBody2D
