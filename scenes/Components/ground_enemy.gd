@@ -9,10 +9,11 @@ extends CharacterBody2D
 # placeholder simple movement code borrowed from https://forum.godotengine.org/t/enemy-movement-controll/75581/2
 var direction = 1
 var start_position = 0
-var walking_distance = 100
-var speed = 50
+@export var walking_distance = 100
+@export var speed = 50
 
 func _ready():
+	add_to_group("Enemies")
 	start_position = position.x
 
 func _physics_process(delta):

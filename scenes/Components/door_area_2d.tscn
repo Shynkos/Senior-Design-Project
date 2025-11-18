@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://cq5fddfdanym" path="res://scenes/Components/door_area_2d.gd" id="1_48btu"]
 
 [node name="DoorArea2D" type="Area2D"]
+collision_layer = 0
+collision_mask = 16
 script = ExtResource("1_48btu")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]

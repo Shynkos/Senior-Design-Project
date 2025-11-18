@@ -3,7 +3,7 @@ extends Area2D
 @onready var animated_sprite = $AnimatedSprite2D
 
 @export var switch_timer: Timer
-
+signal toggled(active: bool)
 
 var switch = false
 
