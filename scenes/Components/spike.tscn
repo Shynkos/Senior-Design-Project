@@ -46,7 +46,7 @@ region = Rect2(2560, 0, 310, 160)
 [sub_resource type="SpriteFrames" id="SpriteFrames_5i4ar"]
 animations = [{
 "frames": [{
-"duration": 1.0,
+"duration": 0.5,
 "texture": SubResource("AtlasTexture_57626")
 }, {
 "duration": 1.0,
@@ -83,8 +83,8 @@ particle_flag_disable_z = true
 emission_shape = 3
 emission_box_extents = Vector3(100, 1, 1)
 gravity = Vector3(0, -20, 0)
-scale_min = 9.7
-scale_max = 15.96
+scale_min = 3.36
+scale_max = 3.36
 
 [node name="Spike" type="CharacterBody2D" groups=["Attack"]]
 collision_layer = 96
