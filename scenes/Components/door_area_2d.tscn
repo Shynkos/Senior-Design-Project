@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjn3fcosvp4qc"]
+
+[ext_resource type="Script" uid="uid://cq5fddfdanym" path="res://scenes/Components/door_area_2d.gd" id="1_48btu"]
+
+[node name="DoorArea2D" type="Area2D"]
+script = ExtResource("1_48btu")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

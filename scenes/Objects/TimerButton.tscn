@@ -1,14 +1,14 @@
-[gd_scene load_steps=18 format=4 uid="uid://cglb1282nj8my"]
+[gd_scene load_steps=18 format=4 uid="uid://dfptla48wia43"]
 
-[ext_resource type="Texture2D" uid="uid://hhdim3xedh4" path="res://textures/exclusion-zone-redder.png" id="2_0a2m2"]
-[ext_resource type="Script" uid="uid://d0h2y2emtjbr4" path="res://scenes/Objects/button.gd" id="2_vxja4"]
-[ext_resource type="Texture2D" uid="uid://ust50y1fm8s2" path="res://textures/levers.png" id="3_0a2m2"]
+[ext_resource type="Script" uid="uid://domcey82e8cae" path="res://scenes/Objects/timer_button.gd" id="1_dinaq"]
+[ext_resource type="Texture2D" uid="uid://hhdim3xedh4" path="res://textures/exclusion-zone-redder.png" id="2_dffep"]
+[ext_resource type="Texture2D" uid="uid://ust50y1fm8s2" path="res://textures/levers.png" id="3_jikth"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yuep2"]
 size = Vector2(28.333334, 81.666664)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p0g7a"]
-texture = ExtResource("2_0a2m2")
+texture = ExtResource("2_dffep")
 0:0/0 = 0
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 8, 8, -8, -8, 8, -8, -8, 8, -8)
 1:0/0 = 0
@@ -582,43 +582,43 @@ physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_p0g7a")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_0a2m2"]
-atlas = ExtResource("3_0a2m2")
+atlas = ExtResource("3_jikth")
 region = Rect2(1280, 0, 320, 320)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p0g7a"]
-atlas = ExtResource("3_0a2m2")
+atlas = ExtResource("3_jikth")
 region = Rect2(960, 0, 320, 320)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rgj8l"]
-atlas = ExtResource("3_0a2m2")
+atlas = ExtResource("3_jikth")
 region = Rect2(640, 0, 320, 320)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_s06ij"]
-atlas = ExtResource("3_0a2m2")
+atlas = ExtResource("3_jikth")
 region = Rect2(320, 0, 320, 320)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ngglr"]
-atlas = ExtResource("3_0a2m2")
+atlas = ExtResource("3_jikth")
 region = Rect2(0, 0, 320, 320)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bj0ny"]
-atlas = ExtResource("3_0a2m2")
+atlas = ExtResource("3_jikth")
 region = Rect2(0, 0, 320, 320)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qfuyg"]
-atlas = ExtResource("3_0a2m2")
+atlas = ExtResource("3_jikth")
 region = Rect2(320, 0, 320, 320)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_70mc6"]
-atlas = ExtResource("3_0a2m2")
+atlas = ExtResource("3_jikth")
 region = Rect2(640, 0, 320, 320)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cr723"]
-atlas = ExtResource("3_0a2m2")
+atlas = ExtResource("3_jikth")
 region = Rect2(960, 0, 320, 320)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_11c7u"]
-atlas = ExtResource("3_0a2m2")
+atlas = ExtResource("3_jikth")
 region = Rect2(1280, 0, 320, 320)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h8hes"]
@@ -665,10 +665,10 @@ animations = [{
 "speed": 10.0
 }]
 
-[node name="Button" type="Area2D"]
+[node name="TimerButton" type="Area2D"]
 collision_layer = 4
 collision_mask = 0
-script = ExtResource("2_vxja4")
+script = ExtResource("1_dinaq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(7, -11.000002)
