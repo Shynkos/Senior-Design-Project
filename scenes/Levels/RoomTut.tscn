@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=4 uid="uid://5tj3q7fhfnwf"]
+[gd_scene load_steps=12 format=4 uid="uid://bwkoj105n3tcc"]
 
 [ext_resource type="Texture2D" uid="uid://hhdim3xedh4" path="res://textures/exclusion-zone-redder.png" id="1_g628i"]
 [ext_resource type="Texture2D" uid="uid://053takskkb4t" path="res://scenes/Background/outside-city-1.png" id="2_sys48"]
