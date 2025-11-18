@@ -16,7 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://053takskkb4t" path="res://scenes/Background/outside-city-1.png" id="7_j7b3c"]
 [ext_resource type="Texture2D" uid="uid://dmxq5to63k3e" path="res://textures/car.png" id="9_x4qyc"]
 [ext_resource type="Script" uid="uid://bk1fe0lmeejyy" path="res://scenes/Components/camera_2d.gd" id="12_7jivy"]
-[ext_resource type="PackedScene" uid="uid://bjn3fcosvp4qc" path="res://scenes/Components/door_area_2d.tscn" id="17_ap2h7"]
+[ext_resource type="PackedScene" path="res://scenes/Components/door_area_2d.tscn" id="17_ap2h7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ap2h7"]
 texture = ExtResource("3_g51ub")
@@ -1585,7 +1585,7 @@ position = Vector2(1194, -86)
 collision_layer = 0
 collision_mask = 16
 ConnectedRoom = "res://scenes/Levels/StairRoom.tscn"
-PlayerPos = Vector2(97, 587)
+PlayerPos = Vector2(119.688, 592.485)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorArea2D"]
 position = Vector2(5, 38.5)

@@ -141,6 +141,7 @@ animations = [{
 size = Vector2(47, 128)
 
 [node name="Player" type="CharacterBody2D"]
+z_index = 2
 texture_filter = 1
 collision_layer = 0
 script = ExtResource("1_g2els")
