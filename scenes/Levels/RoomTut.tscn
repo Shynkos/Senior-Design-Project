@@ -1,4 +1,12 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
 [gd_scene load_steps=21 format=4 uid="uid://bwkoj105n3tcc"]
+=======
+[gd_scene load_steps=12 format=4 uid="uid://bwkoj105n3tcc"]
+>>>>>>> parent of f33bd9b (Finalized certain components)
+=======
+[gd_scene load_steps=12 format=4 uid="uid://bwkoj105n3tcc"]
+>>>>>>> parent of f33bd9b (Finalized certain components)
 
 [ext_resource type="Texture2D" uid="uid://hhdim3xedh4" path="res://textures/exclusion-zone-redder.png" id="1_g628i"]
 [ext_resource type="Texture2D" uid="uid://053takskkb4t" path="res://scenes/Background/outside-city-1.png" id="2_sys48"]
@@ -8,10 +16,16 @@
 [ext_resource type="PackedScene" uid="uid://cesp8xbn0fvnx" path="res://scenes/Characters/player.tscn" id="6_ao8wa"]
 [ext_resource type="Texture2D" uid="uid://dl2oppicpv3yk" path="res://textures/graffiti-left_scaled_6x.png" id="7_ao8wa"]
 [ext_resource type="Script" uid="uid://bk1fe0lmeejyy" path="res://scenes/Components/camera_2d.gd" id="7_delrd"]
+<<<<<<< HEAD
+<<<<<<< HEAD
 [ext_resource type="Texture2D" uid="uid://cgdv4antrqrvf" path="res://textures/graffiti-right_scaled_6x.png" id="8_delrd"]
 [ext_resource type="Texture2D" uid="uid://d0k172mksm8k5" path="res://textures/broken-city-tileset.png" id="8_sys48"]
 [ext_resource type="Texture2D" uid="uid://dlvi85niyfv5" path="res://textures/graffiti-shoot_scaled_6x.png" id="9_pyvot"]
 [ext_resource type="Texture2D" uid="uid://ccfpnnca1qbck" path="res://textures/graffiti-jump_scaled_6x.png" id="10_hvrc8"]
+=======
+>>>>>>> parent of f33bd9b (Finalized certain components)
+=======
+>>>>>>> parent of f33bd9b (Finalized certain components)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qxoeh"]
 texture = ExtResource("1_g628i")
@@ -1023,6 +1037,8 @@ texture = ExtResource("1_g628i")
 [sub_resource type="TileSet" id="TileSet_pplse"]
 sources/1 = SubResource("TileSetAtlasSource_3ry1w")
 
+<<<<<<< HEAD
+<<<<<<< HEAD
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_evt8d"]
 texture = ExtResource("1_g628i")
 0:0/0 = 0
@@ -2065,6 +2081,10 @@ physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_hnr0y")
 
+=======
+>>>>>>> parent of f33bd9b (Finalized certain components)
+=======
+>>>>>>> parent of f33bd9b (Finalized certain components)
 [node name="Node2D" type="Node2D"]
 
 [node name="Ground" type="TileMapLayer" parent="."]
