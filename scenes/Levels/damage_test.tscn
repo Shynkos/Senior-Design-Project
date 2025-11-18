@@ -61,5 +61,8 @@ texture = SubResource("PlaceholderTexture2D_2jm22")
 position = Vector2(16, 4)
 shape = SubResource("RectangleShape2D_k3vd0")
 
+[node name="GroundEnemy2" parent="." instance=ExtResource("2_g833i")]
+position = Vector2(752, -24)
+
 [editable path="Player"]
 [editable path="Player/Gun"]

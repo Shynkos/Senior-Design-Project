@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=4 uid="uid://culhh382587r2"]
+[gd_scene load_steps=55 format=4 uid="uid://culhh382587r2"]
 
 [ext_resource type="Texture2D" uid="uid://053takskkb4t" path="res://scenes/Background/outside-city-1.png" id="1_46h7g"]
 [ext_resource type="Texture2D" uid="uid://hhdim3xedh4" path="res://textures/exclusion-zone-redder.png" id="2_qkvcp"]
@@ -24,6 +24,7 @@
 [ext_resource type="Script" uid="uid://bk1fe0lmeejyy" path="res://scenes/Components/camera_2d.gd" id="21_pv46r"]
 [ext_resource type="Texture2D" uid="uid://ct8xipjn47pta" path="res://textures/BuildingTextures/Elevator.png" id="23_2guld"]
 [ext_resource type="PackedScene" uid="uid://bnsiyl4trx0gv" path="res://scenes/Components/interactive_door_area_2d.tscn" id="24_h2nlv"]
+[ext_resource type="PackedScene" uid="uid://cj5fq7otlfpul" path="res://scenes/Components/ground_enemy.tscn" id="25_h2nlv"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fl0jq"]
 texture = ExtResource("2_qkvcp")
@@ -789,11 +790,17 @@ texture = ExtResource("3_pv46r")
 4:16/0 = 0
 5:16/0 = 0
 6:16/0 = 0
+6:16/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 4.6493473, 8, 4.847193, 8, 8, -8, 8)
 7:16/0 = 0
+7:16/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 4.5504246, 8, 3.0665913, 8, 8, -8, 8)
 8:16/0 = 0
+8:16/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 4.352581, 8, 4.1547356, 8, 8, -8, 8)
 9:16/0 = 0
+9:16/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 4.2536583, 9.001928, 3.6601238, 8, 8, -8, 8)
 10:16/0 = 0
+10:16/0/physics_layer_0/polygon_0/points = PackedVector2Array(-9.100852, 3.7590466, 8, 3.956892, 8, 8, -8, 8)
 11:16/0 = 0
+11:16/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, 4.847193, 8, 3.956892, 8, 8, -8, 8)
 12:16/0 = 0
 13:16/0 = 0
 14:16/0 = 0
@@ -1501,3 +1508,25 @@ PlayerPos = Vector2(2745, -1668)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Elevator/InteractiveDoorArea2D"]
 position = Vector2(0, 36)
 shape = SubResource("RectangleShape2D_jmjc2")
+
+[node name="Node" type="Node" parent="."]
+
+[node name="GroundEnemy" parent="Node" instance=ExtResource("25_h2nlv")]
+position = Vector2(467, -1026)
+walking_distance = 50
+
+[node name="GroundEnemy2" parent="Node" instance=ExtResource("25_h2nlv")]
+position = Vector2(491, -829)
+walking_distance = 50
+
+[node name="GroundEnemy3" parent="Node" instance=ExtResource("25_h2nlv")]
+position = Vector2(413, -643)
+walking_distance = 50
+
+[node name="GroundEnemy4" parent="Node" instance=ExtResource("25_h2nlv")]
+position = Vector2(536, -450)
+walking_distance = 50
+
+[node name="GroundEnemy5" parent="Node" instance=ExtResource("25_h2nlv")]
+position = Vector2(295, -72)
+walking_distance = 50
