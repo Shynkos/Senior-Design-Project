@@ -338,7 +338,11 @@ Player = NodePath("../Player")
 
 [node name="Player" parent="." instance=ExtResource("2_dmaki")]
 position = Vector2(24, -21)
+<<<<<<< HEAD
+scale = Vector2(0.579094, 0.579094)
+=======
 scale = Vector2(0.5790942, 0.5790942)
+>>>>>>> CoBranch
 
 [node name="ButtonPuzzle" parent="." node_paths=PackedStringArray("door") instance=ExtResource("3_hlgq7")]
 position = Vector2(2889, -120)

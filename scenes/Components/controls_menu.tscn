@@ -1,9 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://bqbudpl4pyr10"]
+[gd_scene load_steps=5 format=3 uid="uid://bqbudpl4pyr10"]
 
 [ext_resource type="Script" uid="uid://cgv4ipot1oqsh" path="res://scenes/Components/controls_menu.gd" id="1_kdy74"]
+[ext_resource type="StyleBox" uid="uid://he2daajeqpsr" path="res://addons/Buttons/Menu.tres" id="2_brwy6"]
+[ext_resource type="FontFile" uid="uid://kk516ptcda7m" path="res://addons/Buttons/super-metroid-title.otf" id="3_lbqen"]
+[ext_resource type="StyleBox" uid="uid://c0ya5b6jbh3ru" path="res://addons/Buttons/TextButton.tres" id="4_dgurj"]
 
 [node name="ControlsMenu" type="CanvasLayer"]
 script = ExtResource("1_kdy74")
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = ExtResource("2_brwy6")
 
 [node name="MoveRight" type="Button" parent="."]
 anchors_preset = -1
@@ -19,6 +32,18 @@ grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_fonts/font = ExtResource("3_lbqen")
+theme_override_styles/normal = ExtResource("4_dgurj")
+theme_override_styles/normal_mirrored = ExtResource("4_dgurj")
+theme_override_styles/pressed = ExtResource("4_dgurj")
+theme_override_styles/pressed_mirrored = ExtResource("4_dgurj")
+theme_override_styles/hover = ExtResource("4_dgurj")
+theme_override_styles/hover_mirrored = ExtResource("4_dgurj")
+theme_override_styles/hover_pressed = ExtResource("4_dgurj")
+theme_override_styles/hover_pressed_mirrored = ExtResource("4_dgurj")
+theme_override_styles/disabled = ExtResource("4_dgurj")
+theme_override_styles/disabled_mirrored = ExtResource("4_dgurj")
+theme_override_styles/focus = ExtResource("4_dgurj")
 icon_alignment = 1
 
 [node name="MoveLeft" type="Button" parent="."]
@@ -31,6 +56,18 @@ offset_left = 5.0
 offset_top = 0.16000366
 offset_right = -1.4800415
 offset_bottom = -0.24002075
+theme_override_fonts/font = ExtResource("3_lbqen")
+theme_override_styles/normal = ExtResource("4_dgurj")
+theme_override_styles/normal_mirrored = ExtResource("4_dgurj")
+theme_override_styles/pressed = ExtResource("4_dgurj")
+theme_override_styles/pressed_mirrored = ExtResource("4_dgurj")
+theme_override_styles/hover = ExtResource("4_dgurj")
+theme_override_styles/hover_mirrored = ExtResource("4_dgurj")
+theme_override_styles/hover_pressed = ExtResource("4_dgurj")
+theme_override_styles/hover_pressed_mirrored = ExtResource("4_dgurj")
+theme_override_styles/disabled = ExtResource("4_dgurj")
+theme_override_styles/disabled_mirrored = ExtResource("4_dgurj")
+theme_override_styles/focus = ExtResource("4_dgurj")
 
 [node name="Jump" type="Button" parent="."]
 anchors_preset = -1
@@ -42,6 +79,18 @@ offset_left = -0.11999512
 offset_top = -0.24002075
 offset_right = -1.4800415
 offset_bottom = 0.07998657
+theme_override_fonts/font = ExtResource("3_lbqen")
+theme_override_styles/normal = ExtResource("4_dgurj")
+theme_override_styles/normal_mirrored = ExtResource("4_dgurj")
+theme_override_styles/pressed = ExtResource("4_dgurj")
+theme_override_styles/pressed_mirrored = ExtResource("4_dgurj")
+theme_override_styles/hover = ExtResource("4_dgurj")
+theme_override_styles/hover_mirrored = ExtResource("4_dgurj")
+theme_override_styles/hover_pressed = ExtResource("4_dgurj")
+theme_override_styles/hover_pressed_mirrored = ExtResource("4_dgurj")
+theme_override_styles/disabled = ExtResource("4_dgurj")
+theme_override_styles/disabled_mirrored = ExtResource("4_dgurj")
+theme_override_styles/focus = ExtResource("4_dgurj")
 
 [node name="Interact" type="Button" parent="."]
 anchors_preset = -1
@@ -53,6 +102,18 @@ offset_left = -0.11999512
 offset_top = 0.07998657
 offset_right = -0.20007324
 offset_bottom = -0.32000732
+theme_override_fonts/font = ExtResource("3_lbqen")
+theme_override_styles/normal = ExtResource("4_dgurj")
+theme_override_styles/normal_mirrored = ExtResource("4_dgurj")
+theme_override_styles/pressed = ExtResource("4_dgurj")
+theme_override_styles/pressed_mirrored = ExtResource("4_dgurj")
+theme_override_styles/hover = ExtResource("4_dgurj")
+theme_override_styles/hover_mirrored = ExtResource("4_dgurj")
+theme_override_styles/hover_pressed = ExtResource("4_dgurj")
+theme_override_styles/hover_pressed_mirrored = ExtResource("4_dgurj")
+theme_override_styles/disabled = ExtResource("4_dgurj")
+theme_override_styles/disabled_mirrored = ExtResource("4_dgurj")
+theme_override_styles/focus = ExtResource("4_dgurj")
 
 [node name="Back Button" type="Button" parent="."]
 anchors_preset = -1
@@ -81,6 +142,8 @@ offset_left = -0.36001587
 offset_top = -0.24002075
 offset_right = -0.44006348
 offset_bottom = 0.07998657
+theme_override_fonts/font = ExtResource("3_lbqen")
+theme_override_styles/normal = ExtResource("4_dgurj")
 text = "Jump"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -95,6 +158,8 @@ offset_left = -0.36001587
 offset_top = 0.16000366
 offset_right = -0.44006348
 offset_bottom = -0.24002075
+theme_override_fonts/font = ExtResource("3_lbqen")
+theme_override_styles/normal = ExtResource("4_dgurj")
 text = "Move Left"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -109,6 +174,8 @@ offset_left = -0.36001587
 offset_top = -0.16001892
 offset_right = -0.44006348
 offset_bottom = 0.15997314
+theme_override_fonts/font = ExtResource("3_lbqen")
+theme_override_styles/normal = ExtResource("4_dgurj")
 text = "Move Right"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -123,6 +190,8 @@ offset_left = -0.36001587
 offset_top = 0.07998657
 offset_right = -0.44006348
 offset_bottom = -0.32000732
+theme_override_fonts/font = ExtResource("3_lbqen")
+theme_override_styles/normal = ExtResource("4_dgurj")
 text = "Interact"
 horizontal_alignment = 1
 vertical_alignment = 1

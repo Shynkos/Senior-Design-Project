@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bnsiyl4trx0gv"]
+
+[ext_resource type="Script" uid="uid://dgo7h6hho7xfo" path="res://interactive_door_area_2d.gd" id="1_5asjq"]
+
+[node name="InteractiveDoorArea2D" type="Area2D"]
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("1_5asjq")

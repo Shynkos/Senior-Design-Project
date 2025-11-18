@@ -1,6 +1,7 @@
-extends Sprite2D
+extends Area2D
 
 @onready var animated_sprite = $AnimatedSprite2D
+
 
 var switch = false:
 	set(value):
@@ -10,11 +11,13 @@ var switch = false:
 		else:
 			unpressed()
 
+func _ready():
+	add_to_group("Interactable")
+
 func interact():
 	switch = not switch
 
 func pressed():
-	frame = 8
 	print("test2")
 	if get_parent().has_method("push_button"):
 		print("confirm")
@@ -22,7 +25,6 @@ func pressed():
 		animated_sprite.play("switch_on")
 
 func unpressed():
-	frame = 9
 	print("test")
 	if get_parent().has_method("push_button"):
 		print("confirm")

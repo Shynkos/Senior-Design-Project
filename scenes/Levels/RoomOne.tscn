@@ -132,7 +132,7 @@ Player = NodePath("../Player")
 
 [node name="Player" parent="." instance=ExtResource("3_jg12w")]
 visibility_layer = 3
-position = Vector2(67.00001, -28.000004)
+position = Vector2(1815, -29)
 scale = Vector2(0.4327524, 0.4327524)
 
 [node name="Parallax" type="Node2D" parent="."]
