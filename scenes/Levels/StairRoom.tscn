@@ -1117,6 +1117,7 @@ texture = ExtResource("18_nw3xy")
 
 [sub_resource type="TileSet" id="TileSet_0kru2"]
 physics_layer_0/collision_layer = 1
+<<<<<<< HEAD
 sources/0 = SubResource("TileSetAtlasSource_wdpye")
 sources/1 = SubResource("TileSetAtlasSource_ih5hw")
 sources/6 = SubResource("TileSetAtlasSource_lbega")
@@ -1143,8 +1144,37 @@ sources/26 = SubResource("TileSetAtlasSource_t5xl6")
 sources/27 = SubResource("TileSetAtlasSource_hbxfs")
 sources/28 = SubResource("TileSetAtlasSource_pu5km")
 sources/29 = SubResource("TileSetAtlasSource_b8hes")
+=======
+sources/0 = SubResource("TileSetAtlasSource_l813b")
+sources/1 = SubResource("TileSetAtlasSource_j4vua")
+sources/6 = SubResource("TileSetAtlasSource_yisnf")
+sources/7 = SubResource("TileSetAtlasSource_jofei")
+sources/8 = SubResource("TileSetAtlasSource_6vled")
+sources/9 = SubResource("TileSetAtlasSource_nloxc")
+sources/10 = SubResource("TileSetAtlasSource_mc6dm")
+sources/11 = SubResource("TileSetAtlasSource_3xs6v")
+sources/12 = SubResource("TileSetAtlasSource_yus81")
+sources/13 = SubResource("TileSetAtlasSource_ivb67")
+sources/14 = SubResource("TileSetAtlasSource_0t7oq")
+sources/15 = SubResource("TileSetAtlasSource_cbswx")
+sources/16 = SubResource("TileSetAtlasSource_q37wk")
+sources/17 = SubResource("TileSetAtlasSource_dlwi3")
+sources/18 = SubResource("TileSetAtlasSource_oh8kr")
+sources/19 = SubResource("TileSetAtlasSource_lpoa5")
+sources/20 = SubResource("TileSetAtlasSource_rj5hw")
+sources/21 = SubResource("TileSetAtlasSource_lfxsm")
+sources/22 = SubResource("TileSetAtlasSource_nw3xy")
+sources/23 = SubResource("TileSetAtlasSource_wdpye")
+sources/24 = SubResource("TileSetAtlasSource_ih5hw")
+sources/25 = SubResource("TileSetAtlasSource_1f50q")
+sources/26 = SubResource("TileSetAtlasSource_jd8ny")
+sources/27 = SubResource("TileSetAtlasSource_jbd4q")
+sources/28 = SubResource("TileSetAtlasSource_tklye")
+sources/29 = SubResource("TileSetAtlasSource_ri5ni")
+>>>>>>> parent of d19228f (Room Fixes and Camera fixes)
 
 [node name="StairRoom" type="Node2D"]
+position = Vector2(3.3120117, -724.48486)
 
 [node name="ParallaxBackground" type="TileMapLayer" parent="."]
 
@@ -1166,6 +1196,7 @@ tile_map_data = PackedByteArray("AAAGACoAEgAAAAEAAAAGACsAFQAAAAAAAAAGACwAFQAAAAE
 tile_set = SubResource("TileSet_0kru2")
 collision_visibility_mode = 1
 
+<<<<<<< HEAD
 [node name="Player" parent="." instance=ExtResource("24_3xs6v")]
 visibility_layer = 3
 position = Vector2(97.19026, 587.3875)
@@ -1175,3 +1206,19 @@ scale = Vector2(0.4327524, 0.4327524)
 position = Vector2(99.38464, 582.6665)
 zoom = Vector2(2, 2)
 script = ExtResource("25_yus81")
+=======
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(64.072845, 599.19543)
+zoom = Vector2(2, 2)
+limit_left = 20
+limit_right = 1295
+limit_bottom = -5
+editor_draw_limits = true
+script = ExtResource("25_yus81")
+
+[node name="Player" parent="." instance=ExtResource("24_3xs6v")]
+visibility_layer = 3
+position = Vector2(64.094734, 595.76355)
+scale = Vector2(0.4327524, 0.4327524)
+collision_mask = 5
+>>>>>>> parent of d19228f (Room Fixes and Camera fixes)

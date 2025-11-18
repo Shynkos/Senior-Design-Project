@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
 res://scenes/Components
 res://addons/Platform
 res://
@@ -9,6 +13,19 @@ res://scenes/Background
 >>>>>>> evelyn
 res://scenes/Background
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+res://addons/Buttons
+=======
+res://scenes/Levels
+>>>>>>> CoBranch
+=======
+=======
+>>>>>>> CoBranch
+res://scenes/Background
+<<<<<<< HEAD
+>>>>>>> parent of d19228f (Room Fixes and Camera fixes)
 =======
 res://scenes/Levels
 >>>>>>> CoBranch
