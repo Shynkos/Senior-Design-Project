@@ -1,3 +1,4 @@
+res://textures
 res://scenes/Components
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -5,7 +6,6 @@ res://scenes/Components
 =======
 res://addons/Platform
 res://
-res://textures
 >>>>>>> CoBranch
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -14,7 +14,6 @@ res://scenes/Background
 >>>>>>> evelyn
 <<<<<<< HEAD
 >>>>>>> main
-res://textures
 res://scenes/Background
 <<<<<<< HEAD
 <<<<<<< HEAD

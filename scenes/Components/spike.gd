@@ -1,5 +1,7 @@
 extends Node2D
 
+@onready var animated_sprite = $SpikeTexture
+
 @export var damage: int = 5
 
 var active = false
@@ -15,6 +17,7 @@ func _on_particle_timer_timeout():
 	$Particles.emitting = false
 	$SpikeTexture.visible = true
 	active = true
+	animated_sprite.play("default")
 	if entered:
 		Player.take_damage($Area2D)
 
