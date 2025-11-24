@@ -229,4 +229,3 @@ shape = SubResource("RectangleShape2D_r13nr")
 [connection signal="video" from="Menus/OptionsMenu" to="." method="_on_options_menu_video"]
 [connection signal="back" from="Menus/ControlsMenu" to="." method="_on_controls_menu_back"]
 [connection signal="back" from="Menus/VideoMenu" to="." method="_on_video_menu_back"]
-[connection signal="respawn" from="Menus/GameOverMenu" to="." method="_on_game_over_menu_respawn"]
