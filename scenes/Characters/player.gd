@@ -9,6 +9,9 @@ var wants_to_fire = false
 @export var gravity = 2000.0
 @export var jump_vel = -800.0
 var on_ground = true
+var in_hitbox = false
+var enemybody: Node2D = null
+
 var SpikeScene = preload("res://scenes/Components/spike.tscn")
 
 var jump = false
@@ -61,36 +64,46 @@ func _process(delta):
 		Attack(delta)
 		fire_cooldown = fire_delay
 		wants_to_fire = false
+		
+	if in_hitbox:
+		take_damage(enemybody)
 
 
 #enemy damage
 func _on_hurtbox_body_entered(body: Node2D):	
-	if not $Timers/InvulnTimer.time_left:
-		if body.is_in_group("Enemies"):
-			take_damage(body)
+	if body.is_in_group("Enemies"):
+		in_hitbox = true
+		enemybody = body
+		
+
+func _on_hurtbox_body_exited(body: Node2D):
+	if body.is_in_group("Enemies"):
+		in_hitbox = false
+		enemybody = null
 
 
 func take_damage(source: Node2D):
-	PlayerGlobal.Health -= 1
-	if PlayerGlobal.Health == 0:
-		# decrease healthbar
-		$HUD.hearts[PlayerGlobal.Health].visible = false
-		
-		#player dies
-		death()
-	elif PlayerGlobal.Health > 0:
-		var direction = sign(global_position.x - source.global_position.x)
-		
-		knockback_velocity = Vector2(300 * direction, -400)
-		velocity = knockback_velocity
-		is_hit = true
-		
-		#decrease healthbar
-		$HUD.hearts[PlayerGlobal.Health].visible = false
-		
-		$Timers/InvulnTimer.start()
-		flash([$AnimatedSprite2D])
-		#play damage noise
+	if not $Timers/InvulnTimer.time_left:
+		PlayerGlobal.Health -= 1
+		if PlayerGlobal.Health == 0:
+			# decrease healthbar
+			$HUD.hearts[PlayerGlobal.Health].visible = false
+			
+			#player dies
+			death()
+		elif PlayerGlobal.Health > 0:
+			var direction = sign(global_position.x - source.global_position.x)
+			
+			knockback_velocity = Vector2(300 * direction, -400)
+			velocity = knockback_velocity
+			is_hit = true
+			
+			#decrease healthbar
+			$HUD.hearts[PlayerGlobal.Health].visible = false
+			
+			$Timers/InvulnTimer.start()
+			flash([$AnimatedSprite2D])
+			#play damage noise
 		
 
 func death():

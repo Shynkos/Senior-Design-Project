@@ -221,6 +221,7 @@ position = Vector2(1.5, 0)
 shape = SubResource("RectangleShape2D_r13nr")
 
 [connection signal="body_entered" from="Hurtbox" to="." method="_on_hurtbox_body_entered"]
+[connection signal="body_exited" from="Hurtbox" to="." method="_on_hurtbox_body_exited"]
 [connection signal="options" from="Menus/PauseMenu" to="." method="_on_pause_menu_options"]
 [connection signal="pause" from="Menus/PauseMenu" to="." method="_on_pause_menu_pause"]
 [connection signal="back" from="Menus/OptionsMenu" to="." method="_on_options_menu_back"]
