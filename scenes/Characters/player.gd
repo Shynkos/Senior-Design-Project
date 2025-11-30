@@ -25,13 +25,15 @@ var knockback_velocity = Vector2.ZERO
 func Attack(delta):
 	get_node("Gun").fire(velocity, delta)
 
-func _ready() -> void:
+
+func _ready():
 	add_to_group("player")
 	if RoomChangeGlobal.Activate:
 		global_position = RoomChangeGlobal.PlayerPos
 		if RoomChangeGlobal.PlayerJumpOnEnter:
 			velocity.y = jump_vel
 		RoomChangeGlobal.Activate = false
+
 
 func _input(_event):
 	if Input.is_action_just_pressed("Pause") and !$Menus/ControlsMenu.visible and !$Menus/VideoMenu.visible and !$Menus/GameOverMenu.visible:
@@ -76,6 +78,7 @@ func _on_hurtbox_body_entered(body: Node2D):
 		enemybody = body
 		
 
+
 func _on_hurtbox_body_exited(body: Node2D):
 	if body.is_in_group("Enemies"):
 		in_hitbox = false
@@ -104,7 +107,7 @@ func take_damage(source: Node2D):
 			$Timers/InvulnTimer.start()
 			flash([$AnimatedSprite2D])
 			#play damage noise
-		
+
 
 func death():
 	is_dead = true
