@@ -148,7 +148,7 @@ func handle_movement(delta):
 	velocity.y += gravity * delta
 	
 	# jump if user presses space
-	if Input.is_action_just_pressed("Jump") and (is_on_floor() or $Timers/Coyote.time_left):
+	if Input.is_action_just_pressed("Jump") and (is_on_floor() or $Timers/Coyote.time_left) and jump == false:
 		velocity.y = jump_vel
 		jump = true
 	
