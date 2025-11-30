@@ -288,15 +288,24 @@ limit_right = 1883
 limit_bottom = 100
 script = ExtResource("10_3rtii")
 
-[node name="DoorCloseTrigger" parent="." node_paths=PackedStringArray("door", "hitbox") instance=ExtResource("11_46seo")]
+[node name="DoorCloseTrigger" parent="." node_paths=PackedStringArray("door", "hitbox", "camera") instance=ExtResource("11_46seo")]
 collision_layer = 0
 collision_mask = 32
 door = NodePath("../Ground")
 doorTileRange = Array[Vector2i]([Vector2i(83, -9), Vector2i(83, -1)])
 hitbox = NodePath("CollisionShape2D")
+camera = NodePath("../Camera2D")
+room_top_left = Vector2(38, -445)
+room_bottom_right = Vector2(1327, 7)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorCloseTrigger"]
 position = Vector2(1282, -211)
 shape = SubResource("RectangleShape2D_wiywi")
+
+[node name="TopLeft" type="Marker2D" parent="."]
+position = Vector2(38, -445)
+
+[node name="BottomRight" type="Marker2D" parent="."]
+position = Vector2(1327, 7)
 
 [connection signal="attack1" from="Boss" to="Player" method="_on_boss_attack_1"]
