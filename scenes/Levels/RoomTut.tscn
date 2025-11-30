@@ -2174,7 +2174,7 @@ texture = ExtResource("10_hvrc8")
 
 [node name="Player" parent="." instance=ExtResource("6_ao8wa")]
 visibility_layer = 3
-position = Vector2(-1050, -28.000002)
+position = Vector2(-866.0001, -38)
 scale = Vector2(0.4327524, 0.4327524)
 collision_mask = 5
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=4 uid="uid://c2f3sjgb1t0f"]
+[gd_scene load_steps=15 format=4 uid="uid://c2f3sjgb1t0f"]
 
 [ext_resource type="Script" uid="uid://by6kcc7gu136w" path="res://scenes/Levels/ground.gd" id="2_jg12w"]
 [ext_resource type="PackedScene" uid="uid://cy1dwq0ok3w3n" path="res://scenes/Characters/boss.tscn" id="2_rn3pl"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dwu5y2tacvuhx" path="res://scenes/Background/Layer_1.png" id="7_h12vk"]
 [ext_resource type="Texture2D" uid="uid://ca1wujfdn4qvd" path="res://textures/iu_1059916_7908026.png" id="8_y2rrj"]
 [ext_resource type="Script" uid="uid://bk1fe0lmeejyy" path="res://scenes/Components/camera_2d.gd" id="10_3rtii"]
+[ext_resource type="PackedScene" uid="uid://bbslyjc86f5es" path="res://scenes/Components/door_close_trigger.tscn" id="11_46seo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bqfbb"]
 texture = ExtResource("2_y2rrj")
@@ -112,6 +113,9 @@ texture = ExtResource("2_y2rrj")
 physics_layer_0/collision_layer = 1
 physics_layer_0/collision_mask = 0
 sources/1 = SubResource("TileSetAtlasSource_bqfbb")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wiywi"]
+size = Vector2(20, 420)
 
 [node name="RoomOne" type="Node2D"]
 
@@ -283,5 +287,16 @@ limit_top = -500
 limit_right = 1883
 limit_bottom = 100
 script = ExtResource("10_3rtii")
+
+[node name="DoorCloseTrigger" parent="." node_paths=PackedStringArray("door", "hitbox") instance=ExtResource("11_46seo")]
+collision_layer = 0
+collision_mask = 32
+door = NodePath("../Ground")
+doorTileRange = Array[Vector2i]([Vector2i(83, -9), Vector2i(83, -1)])
+hitbox = NodePath("CollisionShape2D")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorCloseTrigger"]
+position = Vector2(1282, -211)
+shape = SubResource("RectangleShape2D_wiywi")
 
 [connection signal="attack1" from="Boss" to="Player" method="_on_boss_attack_1"]
