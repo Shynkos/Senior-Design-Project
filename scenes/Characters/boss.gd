@@ -60,6 +60,7 @@ func take_damage(amount):
 func die():
 	#get death animation
 	queue_free()
+	get_tree().change_scene_to_file("res://scenes/Components/victory_menu.tscn")
 
 
 func flash(nodes):
