@@ -40,4 +40,5 @@ func _on_options_menu_video():
 
 
 func _on_play_button_pressed():
+	PlayerGlobal.Health = PlayerGlobal.MaxHealth
 	get_tree().change_scene_to_file("res://scenes/Levels/RoomTut.tscn")
