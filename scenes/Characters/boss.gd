@@ -7,14 +7,15 @@ var speed = 100
 @export var health: int = 1000
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var nav = $NavigationAgent2D as NavigationAgent2D
-
+var awake = false
 
 func _physics_process(_delta):
-	var direction = to_local(nav.get_next_path_position()).normalized().x
-	velocity.x = direction * speed
-	pathfinding()
-	move_and_slide()
-	handle_movement_animation(direction)
+	if awake:
+		var direction = to_local(nav.get_next_path_position()).normalized().x
+		velocity.x = direction * speed
+		pathfinding()
+		move_and_slide()
+		handle_movement_animation(direction)
 
 
 func handle_movement_animation(dir):

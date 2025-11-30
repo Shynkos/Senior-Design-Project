@@ -4,6 +4,12 @@ extends Area2D
 @export var door : TileMapLayer
 @export var doorTileRange : Array[Vector2i] = []
 @export var hitbox : CollisionShape2D
+@export var camera: Camera2D
+@export var room_top_left: Vector2
+@export var room_bottom_right: Vector2
+@export var pan_time := 1.0
+
+
 
 var doorTiles: Array[Vector2i] = []
 func _ready() -> void:
@@ -22,3 +28,25 @@ func _on_body_entered(body: Node2D) -> void:
 		for pos in doorTiles:
 			door.set_cell(pos,1, Vector2i(0,1)) # 5 is tile number to replace with
 		enabled = false
+		door.notify_runtime_tile_data_update()
+		lock_camera()
+
+func lock_camera():
+	var center := (room_top_left + room_bottom_right) * 0.5
+	
+	#panning
+	var tween := get_tree().create_tween()
+	tween.tween_property(camera, "global_position", center, pan_time)\
+		.set_trans(Tween.TRANS_SINE)\
+		.set_ease(Tween.EASE_IN_OUT)
+	
+	#lock cam
+	tween.finished.connect(func():
+		camera.limit_left = int(room_top_left.x)
+		camera.limit_top = int(room_top_left.y)
+		camera.limit_right = int(room_bottom_right.x)
+		camera.limit_bottom = int(room_bottom_right.y)
+		
+		camera.position_smoothing_enabled = false
+	)
+	
