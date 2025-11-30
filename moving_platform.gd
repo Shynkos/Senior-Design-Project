@@ -8,7 +8,8 @@ extends Path2D
 @onready var path = $PathFollow2D
 @onready var animation = $AnimationPlayer
 
-
+func _ready() -> void:
+	animation.speed_scale = speed_scale
 
 func _process(delta: float) -> void:
 	if timer:
