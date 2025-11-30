@@ -17,7 +17,8 @@ func _ready() -> void:
 
 #one time use door set
 func _on_body_entered(body: Node2D) -> void:
-	if body.name == "Player" and enabled:
+	if enabled:
+		print("test")
 		for pos in doorTiles:
-			door.set_cell(pos,0, Vector2i(11,1)) # 5 is tile number to replace with
+			door.set_cell(pos,1, Vector2i(0,1)) # 5 is tile number to replace with
 		enabled = false
