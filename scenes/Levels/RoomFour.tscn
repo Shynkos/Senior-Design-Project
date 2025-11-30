@@ -2873,10 +2873,9 @@ _data = {
 }
 point_count = 2
 
-[sub_resource type="Curve2D" id="Curve2D_r47is"]
-resource_local_to_scene = true
+[sub_resource type="Curve2D" id="Curve2D_yd1rb"]
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -54.54545, 800, 0, 0, 0, 0, 2593.9392, 800)
+"points": PackedVector2Array(0, 0, 0, 0, -72.72705, 781.8179, 0, 0, 0, 0, -2739.3936, 787.8784)
 }
 point_count = 2
 
@@ -5234,7 +5233,7 @@ tile_set = SubResource("TileSet_c8dmw")
 [node name="Player" parent="." instance=ExtResource("4_p5dks")]
 visibility_layer = 3
 z_index = 3
-position = Vector2(-4168, -2204.0002)
+position = Vector2(-2203, -180.00003)
 scale = Vector2(0.4327524, 0.4327524)
 
 [node name="Platforms" type="Node" parent="."]
@@ -5255,15 +5254,9 @@ position = Vector2(-741, -305)
 scale = Vector2(0.165, 0.165)
 curve = SubResource("Curve2D_fa3fu")
 loop = false
-speed = 1.5
+speed = 1.0
+speed_scale = 0.75
 timer = NodePath("../../Switches/TimerButton/PlatformTimer")
-
-[node name="PathFollow2D" parent="Platforms/MovingPlatform2" index="0"]
-position = Vector2(-24.242188, 6.060669)
-
-[node name="AnimatableBody2D" parent="Platforms/MovingPlatform2" index="1"]
-position = Vector2(-24.242188, 6.060669)
-scale = Vector2(0.99999994, 0.99999994)
 
 [node name="MovingPlatform3" parent="Platforms" node_paths=PackedStringArray("timer") instance=ExtResource("13_p5dks")]
 position = Vector2(-200, -700)
@@ -5272,13 +5265,6 @@ curve = SubResource("Curve2D_22bu4")
 loop = false
 speed = 1.5
 timer = NodePath("../../Switches/TimerButton/PlatformTimer")
-
-[node name="PathFollow2D" parent="Platforms/MovingPlatform3" index="0"]
-position = Vector2(2006.0604, 775.75757)
-
-[node name="AnimatableBody2D" parent="Platforms/MovingPlatform3" index="1"]
-position = Vector2(2006.0603, 775.75757)
-scale = Vector2(0.99999994, 0.99999994)
 
 [node name="MovingPlatform5" parent="Platforms" node_paths=PackedStringArray("timer") instance=ExtResource("13_p5dks")]
 position = Vector2(112, -921)
@@ -5289,9 +5275,9 @@ speed = 2.25
 timer = NodePath("../../Switches/TimerButton/PlatformTimer")
 
 [node name="MovingPlatform4" parent="Platforms" node_paths=PackedStringArray("timer") instance=ExtResource("13_p5dks")]
-position = Vector2(0, -1300)
+position = Vector2(439.99997, -1300)
 scale = Vector2(0.165, 0.165)
-curve = SubResource("Curve2D_r47is")
+curve = SubResource("Curve2D_yd1rb")
 loop = false
 timer = NodePath("../../Switches/TimerButton2/PlatformTimer")
 
@@ -5393,6 +5379,3 @@ PlayerPos = Vector2(1815, -29)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorArea2D"]
 position = Vector2(-29.5, -20)
 shape = SubResource("RectangleShape2D_fa3fu")
-
-[editable path="Platforms/MovingPlatform2"]
-[editable path="Platforms/MovingPlatform3"]
