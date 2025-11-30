@@ -4,6 +4,7 @@ var fire_cooldown = 0.0
 var wants_to_fire = false
 @export var fire_delay = 0.2
 @onready var animated_sprite = $AnimatedSprite2D
+@export var player_speed: float = 400.0
 # gravity and jump velocity
 @export var gravity = 2000.0
 @export var jump_vel = -800.0
@@ -124,7 +125,7 @@ func handle_movement(delta):
 	var direction = Input.get_axis("Move left", "Move right")
 	
 	# update horizontal velocity based on direction
-	velocity.x = 500 * direction
+	velocity.x = player_speed * direction
 	
 	
 	# gravity
