@@ -1,9 +1,11 @@
-[gd_scene load_steps=23 format=3 uid="uid://cy1dwq0ok3w3n"]
+[gd_scene load_steps=25 format=3 uid="uid://cy1dwq0ok3w3n"]
 
 [ext_resource type="Script" uid="uid://s3uassyqtk2e" path="res://scenes/Characters/boss.gd" id="1_b1njl"]
 [ext_resource type="Shader" uid="uid://c6ybxh4tj0h76" path="res://scenes/Components/flash.gdshader" id="2_4j6or"]
 [ext_resource type="Texture2D" uid="uid://bl8056cb05ql3" path="res://addons/Heart Golem/Golem Idle-Sheet_scaled_4x.png" id="3_4j6or"]
 [ext_resource type="Texture2D" uid="uid://s7q8c7kva1ff" path="res://addons/Heart Golem/Golem Move-Sheet_scaled_4x.png" id="4_4j6or"]
+[ext_resource type="AudioStream" uid="uid://ls8l10o8ckqi" path="res://addons/Sound/Boss hit 1.wav" id="5_dtam2"]
+[ext_resource type="AudioStream" uid="uid://8jlqfn6nr3ql" path="res://addons/Sound/Boss Death Sound.mp3" id="6_2qa43"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_b1njl"]
 vertices = PackedVector2Array(70, 50, -70, 50, -70, -50, 70, -50)
@@ -162,5 +164,13 @@ offset_right = 97.0
 offset_bottom = -182.0
 value = 100.0
 rounded = true
+
+[node name="HurtSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_dtam2")
+volume_db = -7.385
+
+[node name="DeathSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_2qa43")
+volume_db = -8.0
 
 [connection signal="timeout" from="EventTimer" to="." method="_on_timer_timeout"]

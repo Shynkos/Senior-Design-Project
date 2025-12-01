@@ -8,7 +8,10 @@ var speed = 100
 @onready var nav = $NavigationAgent2D as NavigationAgent2D
 var SpikeScene = preload("res://scenes/Components/spike.tscn")
 var awake = false
-
+#audio
+@onready var hurt_sound: AudioStreamPlayer2D = $HurtSound
+@onready var death_sound: AudioStreamPlayer2D = $DeathSound
+@onready var gun_sound: AudioStreamPlayer2D = $GunSound
 
 func _ready():
 	#initalize health bar
@@ -62,6 +65,10 @@ func take_damage(amount):
 	flash(nodes)
 	health -= amount
 	
+	if hurt_sound:
+		hurt_sound.stop()
+		hurt_sound.play()
+	
 	#update health bar
 	$HealthBar.value = (float(health) / 1000) * 100
 	
@@ -71,6 +78,9 @@ func take_damage(amount):
 
 func die():
 	#get death animation
+	if death_sound:
+		death_sound.play()
+		
 	queue_free()
 	get_tree().change_scene_to_file("res://scenes/Components/victory_menu.tscn")
 

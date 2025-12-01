@@ -2191,3 +2191,5 @@ PlayerPos = Vector2(-470, -33)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorArea2D"]
 position = Vector2(7, -190)
 shape = SubResource("RectangleShape2D_pyvot")
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
