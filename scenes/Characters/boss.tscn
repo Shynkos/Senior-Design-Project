@@ -338,6 +338,7 @@ material = SubResource("ShaderMaterial_lymv5")
 position = Vector2(0, -49)
 sprite_frames = SubResource("SpriteFrames_bn40l")
 animation = &"attack"
+flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -28.500002)
