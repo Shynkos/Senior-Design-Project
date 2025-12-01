@@ -16,23 +16,26 @@ offset_bottom = 40.0
 
 [node name="Label2" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 128.0
-offset_top = 35.0
-offset_right = 1183.0
-offset_bottom = 141.0
+offset_left = 133.0
+offset_top = 81.0
+offset_right = 1188.0
+offset_bottom = 187.0
 theme_override_fonts/font = ExtResource("2_g4wvt")
 theme_override_font_sizes/font_size = 100
 text = "thanks for playing!"
 script = ExtResource("3_pjc1l")
+float_height = 7
+float_duration = 1.5
 menu_scene = "uid://dm5yxnc7t8pg8"
 
 [node name="Label" type="Label" parent="Control"]
 layout_mode = 0
-offset_left = 479.0
-offset_top = 156.0
-offset_right = 922.0
-offset_bottom = 728.0
+offset_left = 233.0
+offset_top = 197.0
+offset_right = 1057.0
+offset_bottom = 769.0
 theme_override_fonts/font = ExtResource("3_j6beo")
+theme_override_font_sizes/font_size = 14
 text = "Creative Team: 
 Anthony Gomez, Evelyn Meckley, Alyssa Eriksen
 Programmers: 
@@ -45,7 +48,13 @@ kinulworks - boss golem
 echoofthebanana - lever 
 fontstruct - super metroid title
 "
+horizontal_alignment = 1
+autowrap_mode = 2
+autowrap_trim_flags = 0
+justification_flags = 128
 script = ExtResource("3_pjc1l")
+float_height = 7
+float_duration = 1.5
 
 [node name="Panel" type="Panel" parent="Control"]
 z_index = -1
