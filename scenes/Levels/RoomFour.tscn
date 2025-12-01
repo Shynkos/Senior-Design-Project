@@ -1,9 +1,10 @@
-[gd_scene load_steps=26 format=4 uid="uid://bda2xftdmq0xt"]
+[gd_scene load_steps=27 format=4 uid="uid://bda2xftdmq0xt"]
 
 [ext_resource type="Texture2D" uid="uid://dsgojcd0u7xvd" path="res://textures/exclusion-zone-darker.png" id="1_mtubk"]
 [ext_resource type="PackedScene" uid="uid://cesp8xbn0fvnx" path="res://scenes/Characters/player.tscn" id="4_p5dks"]
 [ext_resource type="Texture2D" uid="uid://cecejiwho7mtq" path="res://textures/Bridge_tileset(3).png" id="6_p5dks"]
 [ext_resource type="Texture2D" uid="uid://ca1wujfdn4qvd" path="res://textures/iu_1059916_7908026.png" id="9_r47is"]
+[ext_resource type="AudioStream" uid="uid://b5dhduh5b0cg1" path="res://addons/Sound/cave themeb4.ogg" id="10_kg01d"]
 [ext_resource type="Script" uid="uid://bk1fe0lmeejyy" path="res://scenes/Components/camera_2d.gd" id="10_sb27g"]
 [ext_resource type="Texture2D" uid="uid://pntn6c8yt7xe" path="res://textures/cave-tileset(2).png" id="12_mtubk"]
 [ext_resource type="PackedScene" uid="uid://dfptla48wia43" path="res://scenes/Objects/TimerButton.tscn" id="13_j25dm"]
@@ -5381,4 +5382,5 @@ position = Vector2(-29.5, -20)
 shape = SubResource("RectangleShape2D_fa3fu")
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("10_kg01d")
 autoplay = true
