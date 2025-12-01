@@ -11,6 +11,10 @@ var wants_to_fire = false
 var on_ground = true
 var in_hitbox = false
 var enemybody: Node2D = null
+# audio
+@onready var footstep_sound: AudioStreamPlayer2D = $FootstepSound
+@export var step_interval := 0.22
+var step_timer := 0.0
 
 var jump = false
 var is_hit = false
@@ -114,11 +118,11 @@ func death():
 
 
 func _physics_process(delta):
-	#cleaning up
 	if is_hit or is_dead:
 		handle_knockback(delta)
 	else:
 		handle_movement(delta)
+	
 	on_ground = is_on_floor()
 	move_and_slide()
 	PlayerGlobal.position = position
@@ -126,8 +130,18 @@ func _physics_process(delta):
 	if is_on_floor():
 		is_hit = false
 		jump = false
+	
 	if not is_hit and not is_on_floor() and on_ground:
 		$Timers/Coyote.start()
+	
+	# footsteps
+	if is_on_floor() and abs(velocity.x) > 0.1:
+		step_timer -= delta
+		if step_timer <= 0:
+			footstep_sound.play()
+			step_timer = step_interval
+	else:
+		step_timer = step_interval
 
 
 func handle_knockback(delta):
