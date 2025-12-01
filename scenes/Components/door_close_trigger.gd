@@ -8,7 +8,7 @@ extends Area2D
 @export var room_top_left: Vector2
 @export var room_bottom_right: Vector2
 @export var pan_time := 1.0
-
+@export var boss: CharacterBody2D
 
 
 var doorTiles: Array[Vector2i] = []
@@ -48,5 +48,10 @@ func lock_camera():
 		camera.limit_bottom = int(room_bottom_right.y)
 		
 		camera.position_smoothing_enabled = false
+		boss_setup()
 	)
 	
+
+func boss_setup():
+	#setting the boss to active
+	boss.setAwake(true)

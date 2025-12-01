@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b07d4m8xg83f0"
-path="res://.godot/imported/golem_attack_upscaled.png-4ac0b01677b001bafc76c4237ca97781.ctex"
+uid="uid://b7fo3yto74ot"
+path="res://.godot/imported/golem attack_scaled_4x_pngcrushed.png-256643243ba196682ed9952a531b63d4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/Heart Golem/golem_attack_upscaled.png"
-dest_files=["res://.godot/imported/golem_attack_upscaled.png-4ac0b01677b001bafc76c4237ca97781.ctex"]
+source_file="res://addons/Heart Golem/golem attack_scaled_4x_pngcrushed.png"
+dest_files=["res://.godot/imported/golem attack_scaled_4x_pngcrushed.png-256643243ba196682ed9952a531b63d4.ctex"]
 
 [params]
 
