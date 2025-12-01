@@ -291,6 +291,7 @@ limit_bottom = 100
 script = ExtResource("10_3rtii")
 
 [node name="DoorCloseTrigger" parent="." node_paths=PackedStringArray("door", "hitbox", "camera") instance=ExtResource("11_46seo")]
+visible = false
 collision_layer = 0
 collision_mask = 32
 door = NodePath("../Ground")
@@ -301,6 +302,7 @@ room_top_left = Vector2(38, -445)
 room_bottom_right = Vector2(1327, 7)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorCloseTrigger"]
+visible = false
 position = Vector2(1282, -211)
 shape = SubResource("RectangleShape2D_wiywi")
 
