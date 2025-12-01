@@ -10,6 +10,11 @@ var SpikeScene = preload("res://scenes/Components/spike.tscn")
 var awake = false
 
 
+func _ready():
+	#initalize health bar
+	$HealthBar.value = 100
+
+
 func _physics_process(_delta):
 	if awake:
 		var direction = to_local(nav.get_next_path_position()).normalized().x
@@ -56,6 +61,10 @@ func take_damage(amount):
 	var nodes = [$AnimatedSprite2D]
 	flash(nodes)
 	health -= amount
+	
+	#update health bar
+	$HealthBar.value = (float(health) / 1000) * 100
+	
 	if health <= 0:
 		die()
 

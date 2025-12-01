@@ -155,4 +155,12 @@ position = Vector2(0, -28.500002)
 scale = Vector2(0.2, 0.2)
 shape = SubResource("RectangleShape2D_ademu")
 
+[node name="HealthBar" type="ProgressBar" parent="."]
+offset_left = -96.0
+offset_top = -209.0
+offset_right = 97.0
+offset_bottom = -182.0
+value = 100.0
+rounded = true
+
 [connection signal="timeout" from="EventTimer" to="." method="_on_timer_timeout"]
