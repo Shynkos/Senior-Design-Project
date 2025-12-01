@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://dpgb5ajpr3wm5"]
+[gd_scene load_steps=24 format=4 uid="uid://dpgb5ajpr3wm5"]
 
 [ext_resource type="Texture2D" uid="uid://hhdim3xedh4" path="res://textures/exclusion-zone-redder.png" id="1_g628i"]
 [ext_resource type="Texture2D" uid="uid://053takskkb4t" path="res://scenes/Background/outside-city-1.png" id="2_sys48"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dlvi85niyfv5" path="res://textures/graffiti-shoot_scaled_6x.png" id="9_pyvot"]
 [ext_resource type="Texture2D" uid="uid://ccfpnnca1qbck" path="res://textures/graffiti-jump_scaled_6x.png" id="10_hvrc8"]
 [ext_resource type="PackedScene" uid="uid://bjn3fcosvp4qc" path="res://scenes/Components/door_area_2d.tscn" id="13_delrd"]
+[ext_resource type="AudioStream" uid="uid://d1cxkfrtmps2n" path="res://addons/Sound/old city theme.ogg" id="14_pyvot"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qxoeh"]
 texture = ExtResource("1_g628i")
@@ -2193,3 +2194,5 @@ position = Vector2(7, -190)
 shape = SubResource("RectangleShape2D_pyvot")
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_pyvot")
+autoplay = true
