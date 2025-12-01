@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=4 uid="uid://crpxvftsri0aw"]
+[gd_scene load_steps=53 format=4 uid="uid://crpxvftsri0aw"]
 
 [ext_resource type="Texture2D" uid="uid://hhdim3xedh4" path="res://textures/exclusion-zone-redder.png" id="1_fbt56"]
 [ext_resource type="Texture2D" uid="uid://053takskkb4t" path="res://scenes/Background/outside-city-1.png" id="1_j4vua"]
@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://bjn3fcosvp4qc" path="res://scenes/Components/door_area_2d.tscn" id="22_j4vua"]
 [ext_resource type="PackedScene" uid="uid://cj5fq7otlfpul" path="res://scenes/Components/ground_enemy.tscn" id="23_mc6dm"]
 [ext_resource type="PackedScene" uid="uid://cesp8xbn0fvnx" path="res://scenes/Characters/player.tscn" id="24_3xs6v"]
+[ext_resource type="AudioStream" uid="uid://d1cxkfrtmps2n" path="res://addons/Sound/old city theme.ogg" id="24_yus81"]
 [ext_resource type="Script" uid="uid://bk1fe0lmeejyy" path="res://scenes/Components/camera_2d.gd" id="25_yus81"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l813b"]
@@ -1216,3 +1217,5 @@ position = Vector2(1044, -513)
 walking_distance = 70
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("24_yus81")
+autoplay = true

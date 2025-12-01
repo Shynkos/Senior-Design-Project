@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=4 uid="uid://culhh382587r2"]
+[gd_scene load_steps=56 format=4 uid="uid://culhh382587r2"]
 
 [ext_resource type="Texture2D" uid="uid://053takskkb4t" path="res://scenes/Background/outside-city-1.png" id="1_46h7g"]
 [ext_resource type="Texture2D" uid="uid://hhdim3xedh4" path="res://textures/exclusion-zone-redder.png" id="2_qkvcp"]
@@ -25,6 +25,7 @@
 [ext_resource type="Texture2D" uid="uid://ct8xipjn47pta" path="res://textures/BuildingTextures/Elevator.png" id="23_2guld"]
 [ext_resource type="PackedScene" uid="uid://bnsiyl4trx0gv" path="res://scenes/Components/interactive_door_area_2d.tscn" id="24_h2nlv"]
 [ext_resource type="PackedScene" uid="uid://cj5fq7otlfpul" path="res://scenes/Components/ground_enemy.tscn" id="25_h2nlv"]
+[ext_resource type="AudioStream" uid="uid://d1cxkfrtmps2n" path="res://addons/Sound/old city theme.ogg" id="26_jmjc2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fl0jq"]
 texture = ExtResource("2_qkvcp")
@@ -1494,7 +1495,7 @@ script = ExtResource("21_pv46r")
 
 [node name="Player" parent="." instance=ExtResource("20_qkvcp")]
 visibility_layer = 3
-position = Vector2(79, -1024)
+position = Vector2(614.99994, -171.00006)
 scale = Vector2(0.4327524, 0.4327524)
 collision_mask = 5
 
@@ -1532,3 +1533,7 @@ walking_distance = 50
 [node name="GroundEnemy5" parent="Node" instance=ExtResource("25_h2nlv")]
 position = Vector2(295, -67)
 walking_distance = 50
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("26_jmjc2")
+autoplay = true

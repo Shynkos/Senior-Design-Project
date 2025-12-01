@@ -1,4 +1,4 @@
-[gd_scene load_steps=69 format=4 uid="uid://bkjktmkx0jq0i"]
+[gd_scene load_steps=70 format=4 uid="uid://bkjktmkx0jq0i"]
 
 [ext_resource type="Texture2D" uid="uid://d0k172mksm8k5" path="res://textures/broken-city-tileset.png" id="2_j7b3c"]
 [ext_resource type="PackedScene" uid="uid://tfertef25w1k" path="res://scenes/Components/button_puzzle.tscn" id="2_ukldd"]
@@ -18,6 +18,7 @@
 [ext_resource type="Script" uid="uid://bk1fe0lmeejyy" path="res://scenes/Components/camera_2d.gd" id="12_7jivy"]
 [ext_resource type="Texture2D" uid="uid://cr31j3g81hyx0" path="res://textures/graffiti-e_scaled_6x.png" id="17_87ybm"]
 [ext_resource type="PackedScene" uid="uid://bjn3fcosvp4qc" path="res://scenes/Components/door_area_2d.tscn" id="17_ap2h7"]
+[ext_resource type="AudioStream" uid="uid://d1cxkfrtmps2n" path="res://addons/Sound/old city theme.ogg" id="19_wpdr0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wpdr0"]
 texture = ExtResource("3_g51ub")
@@ -1601,6 +1602,8 @@ position = Vector2(5, 38.5)
 shape = SubResource("RectangleShape2D_87ybm")
 
 [node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("19_wpdr0")
+autoplay = true
 
 [editable path="ButtonPuzzle/PurpleSwitch"]
 [editable path="ButtonPuzzle/BlueSwitch"]
