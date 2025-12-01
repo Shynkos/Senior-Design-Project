@@ -8,8 +8,13 @@ var target_position: Vector2
 var despawn_time = 1
 var player_velocity: Vector2 = Vector2.ZERO 
 
+@onready var gun_sound: AudioStreamPlayer2D = $GunSound
+
 
 func _ready():
+	if gun_sound:
+		gun_sound.play()
+		
 	var timer = get_node("Timer")
 	timer.timeout.connect(despawn)
 
