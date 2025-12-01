@@ -35,14 +35,13 @@ offset_top = 197.0
 offset_right = 1057.0
 offset_bottom = 769.0
 theme_override_fonts/font = ExtResource("3_j6beo")
-theme_override_font_sizes/font_size = 14
+theme_override_font_sizes/font_size = 13
 text = "Creative Team: 
 Anthony Gomez, Evelyn Meckley, Alyssa Eriksen
 Programmers: 
 Cody Kelly, Christopher Kostas
 Assets:
-ansimuz - warped city, 
-craftpix.net - player model, background
+craftpix.net - player model, background, tilemaps
 admurin - slime and bat
 kinulworks - boss golem
 echoofthebanana - lever 
