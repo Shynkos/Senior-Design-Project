@@ -307,5 +307,3 @@ position = Vector2(38, -445)
 
 [node name="BottomRight" type="Marker2D" parent="."]
 position = Vector2(1327, 7)
-
-[connection signal="attack1" from="Boss" to="Player" method="_on_boss_attack_1"]

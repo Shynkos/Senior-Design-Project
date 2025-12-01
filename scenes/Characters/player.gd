@@ -12,8 +12,6 @@ var on_ground = true
 var in_hitbox = false
 var enemybody: Node2D = null
 
-var SpikeScene = preload("res://scenes/Components/spike.tscn")
-
 var jump = false
 var is_hit = false
 var is_dead = false
@@ -27,6 +25,7 @@ func Attack(delta):
 
 
 func _ready():
+	PlayerGlobal.position = position
 	add_to_group("player")
 	if RoomChangeGlobal.Activate:
 		global_position = RoomChangeGlobal.PlayerPos
@@ -76,7 +75,6 @@ func _on_hurtbox_body_entered(body: Node2D):
 	if body.is_in_group("Enemies"):
 		in_hitbox = true
 		enemybody = body
-		
 
 
 func _on_hurtbox_body_exited(body: Node2D):
@@ -123,6 +121,7 @@ func _physics_process(delta):
 		handle_movement(delta)
 	on_ground = is_on_floor()
 	move_and_slide()
+	PlayerGlobal.position = position
 	
 	if is_on_floor():
 		is_hit = false
@@ -205,12 +204,6 @@ func _on_pause_menu_pause():
 
 func _on_options_menu_pause():
 	$Menus/PauseMenu.visible = true
-
-
-func _on_boss_attack_1():
-	var spikes = SpikeScene.instantiate()
-	spikes.position.x = position.x
-	add_sibling(spikes)
 
 
 func flash(nodes):
