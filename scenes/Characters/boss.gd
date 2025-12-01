@@ -1,13 +1,14 @@
 extends CharacterBody2D
 
 
-signal attack1
 var speed = 100
 @export var Player: Node2D
 @export var health: int = 1000
 @onready var animated_sprite = $AnimatedSprite2D
 @onready var nav = $NavigationAgent2D as NavigationAgent2D
+var SpikeScene = preload("res://scenes/Components/spike.tscn")
 var awake = false
+
 
 func _physics_process(_delta):
 	if awake:
@@ -44,7 +45,9 @@ func _on_timer_timeout():
 	if random == 1:
 		speed = 300
 	if random == 2:
-		attack1.emit()
+		var spikes = SpikeScene.instantiate()
+		spikes.position.x = PlayerGlobal.position.x
+		add_sibling(spikes)
 
 
 #damage system
