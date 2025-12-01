@@ -7,13 +7,8 @@ extends Area2D
 @export var PlayerJumpOnEnter: bool = false
 
 
-
-
-
 func _on_area_entered(area: Area2D) -> void:
-	print("test")
 	if area.get_parent().is_in_group("player"):
-		print("test2")
 		RoomChangeGlobal.Activate = true
 		RoomChangeGlobal.PlayerPos = PlayerPos
 		RoomChangeGlobal.PlayerJumpOnEnter = PlayerJumpOnEnter

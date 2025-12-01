@@ -33,6 +33,7 @@ func doDie():
 
 func setAwake(value: bool):
 	if value:
+		$AnimatedSprite2D.visible = true
 		animated_sprite.play("awake")
 		await animated_sprite.animation_finished
 	awake = value
