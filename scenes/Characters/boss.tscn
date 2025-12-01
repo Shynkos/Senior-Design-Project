@@ -1,9 +1,10 @@
-[gd_scene load_steps=25 format=3 uid="uid://cy1dwq0ok3w3n"]
+[gd_scene load_steps=35 format=3 uid="uid://cy1dwq0ok3w3n"]
 
 [ext_resource type="Script" uid="uid://s3uassyqtk2e" path="res://scenes/Characters/boss.gd" id="1_b1njl"]
 [ext_resource type="Shader" uid="uid://c6ybxh4tj0h76" path="res://scenes/Components/flash.gdshader" id="2_4j6or"]
 [ext_resource type="Texture2D" uid="uid://bl8056cb05ql3" path="res://addons/Heart Golem/Golem Idle-Sheet_scaled_4x.png" id="3_4j6or"]
 [ext_resource type="Texture2D" uid="uid://s7q8c7kva1ff" path="res://addons/Heart Golem/Golem Move-Sheet_scaled_4x.png" id="4_4j6or"]
+[ext_resource type="Texture2D" uid="uid://dw4ttsdgdiprk" path="res://addons/Heart Golem/Golem Death2.png" id="5_2qa43"]
 [ext_resource type="AudioStream" uid="uid://ls8l10o8ckqi" path="res://addons/Sound/Boss hit 1.wav" id="5_dtam2"]
 [ext_resource type="AudioStream" uid="uid://8jlqfn6nr3ql" path="res://addons/Sound/Boss Death Sound.mp3" id="6_2qa43"]
 
@@ -73,6 +74,42 @@ region = Rect2(1920, 0, 320, 320)
 atlas = ExtResource("4_4j6or")
 region = Rect2(2240, 0, 320, 320)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_45kji"]
+atlas = ExtResource("5_2qa43")
+region = Rect2(0, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bn40l"]
+atlas = ExtResource("5_2qa43")
+region = Rect2(80, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2p8x7"]
+atlas = ExtResource("5_2qa43")
+region = Rect2(160, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ggv8t"]
+atlas = ExtResource("5_2qa43")
+region = Rect2(240, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tasbg"]
+atlas = ExtResource("5_2qa43")
+region = Rect2(320, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vn40w"]
+atlas = ExtResource("5_2qa43")
+region = Rect2(400, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s4how"]
+atlas = ExtResource("5_2qa43")
+region = Rect2(480, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_agf1w"]
+atlas = ExtResource("5_2qa43")
+region = Rect2(560, 0, 80, 80)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_svuus"]
+atlas = ExtResource("5_2qa43")
+region = Rect2(640, 0, 80, 80)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_bn40l"]
 animations = [{
 "frames": [{
@@ -126,6 +163,38 @@ animations = [{
 "loop": true,
 "name": &"move",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_45kji")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bn40l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2p8x7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ggv8t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tasbg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vn40w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s4how")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_agf1w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_svuus")
+}],
+"loop": true,
+"name": &"new_animation",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ademu"]
@@ -144,18 +213,18 @@ debug_enabled = true
 navigation_polygon = SubResource("NavigationPolygon_b1njl")
 
 [node name="EventTimer" type="Timer" parent="."]
-autostart = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_4j6or")
 position = Vector2(0, -49)
 sprite_frames = SubResource("SpriteFrames_bn40l")
-animation = &"idle"
+animation = &"new_animation"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -28.500002)
 scale = Vector2(0.2, 0.2)
 shape = SubResource("RectangleShape2D_ademu")
+disabled = true
 
 [node name="HealthBar" type="ProgressBar" parent="."]
 offset_left = -96.0

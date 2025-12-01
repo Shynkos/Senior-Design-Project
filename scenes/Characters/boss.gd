@@ -12,14 +12,20 @@ var awake = false
 @onready var hurt_sound: AudioStreamPlayer2D = $HurtSound
 @onready var death_sound: AudioStreamPlayer2D = $DeathSound
 @onready var gun_sound: AudioStreamPlayer2D = $GunSound
-
+@onready var hitbox: CollisionShape2D = $CollisionShape2D
+@onready var timer = $EventTimer
 func _ready():
 	#initalize health bar
 	$HealthBar.value = 100
 
+func setAwake(value: bool):
+	awake = value
+	hitbox.disabled = !awake
 
 func _physics_process(_delta):
 	if awake:
+		if timer.is_stopped():
+			timer.start()
 		var direction = to_local(nav.get_next_path_position()).normalized().x
 		velocity.x = direction * speed
 		pathfinding()
