@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://cesp8xbn0fvnx"]
+[gd_scene load_steps=33 format=3 uid="uid://cesp8xbn0fvnx"]
 
 [ext_resource type="Script" uid="uid://cujmkd7d5hao1" path="res://scenes/Characters/player.gd" id="1_g2els"]
 [ext_resource type="PackedScene" uid="uid://dsmyypjk2bfv7" path="res://scenes/Components/hud.tscn" id="2_vvg2b"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://dpww8k7e1acm" path="res://textures/player-sprites/player-run-scaled-5x.png" id="9_vvg2b"]
 [ext_resource type="PackedScene" uid="uid://cffh7tcdkvckp" path="res://scenes/Components/game_over_menu.tscn" id="12_r13nr"]
 [ext_resource type="AudioStream" uid="uid://vuj8npt2wupp" path="res://addons/Sound/Step Sound.wav" id="13_qvi6s"]
+[ext_resource type="AudioStream" uid="uid://6vn8r0xgeebt" path="res://addons/Sound/Hit Sound.wav" id="14_qvi6s"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
 size = Vector2(42, 128)
@@ -224,6 +225,9 @@ shape = SubResource("RectangleShape2D_r13nr")
 [node name="FootstepSound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("13_qvi6s")
 volume_db = -8.0
+
+[node name="HurtSound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("14_qvi6s")
 
 [connection signal="body_entered" from="Hurtbox" to="." method="_on_hurtbox_body_entered"]
 [connection signal="body_exited" from="Hurtbox" to="." method="_on_hurtbox_body_exited"]

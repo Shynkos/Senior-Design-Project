@@ -15,6 +15,7 @@ var enemybody: Node2D = null
 @onready var footstep_sound: AudioStreamPlayer2D = $FootstepSound
 @export var step_interval := 0.22
 var step_timer := 0.0
+@onready var hurt_sound: AudioStreamPlayer2D = $HurtSound
 
 var jump = false
 var is_hit = false
@@ -90,6 +91,10 @@ func _on_hurtbox_body_exited(body: Node2D):
 func take_damage(source: Node2D):
 	if not $Timers/InvulnTimer.time_left:
 		PlayerGlobal.Health -= 1
+		if hurt_sound:
+			hurt_sound.stop()
+			hurt_sound.play()
+			
 		if PlayerGlobal.Health == 0:
 			# decrease healthbar
 			$HUD.hearts[PlayerGlobal.Health].visible = false
@@ -142,6 +147,8 @@ func _physics_process(delta):
 			step_timer = step_interval
 	else:
 		step_timer = step_interval
+	
+	
 
 
 func handle_knockback(delta):
