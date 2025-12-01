@@ -1214,3 +1214,5 @@ walking_distance = 70
 [node name="GroundEnemy4" parent="Enemies" instance=ExtResource("23_mc6dm")]
 position = Vector2(1044, -513)
 walking_distance = 70
+
+[node name="Music" type="AudioStreamPlayer2D" parent="."]

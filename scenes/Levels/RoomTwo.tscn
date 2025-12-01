@@ -1597,6 +1597,8 @@ PlayerPos = Vector2(119.688, 592.485)
 position = Vector2(5, 38.5)
 shape = SubResource("RectangleShape2D_87ybm")
 
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+
 [editable path="ButtonPuzzle/PurpleSwitch"]
 [editable path="ButtonPuzzle/BlueSwitch"]
 [editable path="ButtonPuzzle/GreenSwitch"]
