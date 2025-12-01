@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://c2f3sjgb1t0f"]
+[gd_scene load_steps=16 format=4 uid="uid://c2f3sjgb1t0f"]
 
 [ext_resource type="Script" uid="uid://by6kcc7gu136w" path="res://scenes/Levels/ground.gd" id="2_jg12w"]
 [ext_resource type="PackedScene" uid="uid://cy1dwq0ok3w3n" path="res://scenes/Characters/boss.tscn" id="2_rn3pl"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://ca1wujfdn4qvd" path="res://textures/iu_1059916_7908026.png" id="8_y2rrj"]
 [ext_resource type="Script" uid="uid://bk1fe0lmeejyy" path="res://scenes/Components/camera_2d.gd" id="10_3rtii"]
 [ext_resource type="PackedScene" uid="uid://bbslyjc86f5es" path="res://scenes/Components/door_close_trigger.tscn" id="11_46seo"]
+[ext_resource type="AudioStream" uid="uid://d0gse6wt1w5c5" path="res://addons/Sound/Boss Music.wav" id="12_wiywi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bqfbb"]
 texture = ExtResource("2_y2rrj")
@@ -154,7 +155,8 @@ repeat_times = 20
 [node name="Sprite2D" type="Sprite2D" parent="Parallax/Parallax2D4"]
 light_mask = 64
 visibility_layer = 64
-scale = Vector2(1.3647147, 1.3647147)
+position = Vector2(19.388004, 13.490334)
+scale = Vector2(1.4858898, 1.5146074)
 texture = ExtResource("4_3rtii")
 
 [node name="Parallax2D3" type="Parallax2D" parent="Parallax"]
@@ -308,5 +310,6 @@ position = Vector2(38, -445)
 [node name="BottomRight" type="Marker2D" parent="."]
 position = Vector2(1327, 7)
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="Music" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("12_wiywi")
 autoplay = true
