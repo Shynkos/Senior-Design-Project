@@ -15,6 +15,8 @@ var maxHealth: int
 @onready var gun_sound: AudioStreamPlayer2D = $GunSound
 @onready var hitbox: CollisionShape2D = $CollisionShape2D
 @onready var timer = $EventTimer
+
+
 func _ready():
 	#initalize health bar
 	$HealthBar.value = 100
@@ -72,7 +74,7 @@ func pathfinding():
 
 func _on_timer_timeout():
 	speed = 100
-	var random = randi_range(1, 5)
+	var random = randi_range(1, 4)
 	
 	if random == 1 and speed != 0:
 		speed = 300

@@ -36,8 +36,7 @@ offset_right = 843.0
 offset_bottom = 580.0
 theme_override_fonts/font = ExtResource("3_j6beo")
 text = "Creative Team: 
-Anthony Gomez, Evelyn Meckley
-Evelyn Meckley, Alyssa Eriksen
+Anthony Gomez, Evelyn Meckley, Alyssa Eriksen
 Programmers: 
 Cody Kelly, Christopher Kostas
 Assets:

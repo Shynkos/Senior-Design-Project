@@ -330,6 +330,7 @@ debug_enabled = true
 navigation_polygon = SubResource("NavigationPolygon_b1njl")
 
 [node name="EventTimer" type="Timer" parent="."]
+wait_time = 0.7
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 material = SubResource("ShaderMaterial_lymv5")
@@ -361,7 +362,7 @@ stream = ExtResource("6_2qa43")
 volume_db = -8.0
 
 [node name="AttackStall" type="Timer" parent="."]
-wait_time = 3.0
+wait_time = 1.5
 one_shot = true
 
 [connection signal="timeout" from="EventTimer" to="." method="_on_timer_timeout"]
