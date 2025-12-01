@@ -32,7 +32,7 @@ func despawn() -> void:
 #if it hits an enemy do damage then despawn otherwise just despawn
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Enemies"):
-		print("enemy hit")
+		#print("enemy hit")
 		body.take_damage(damage)
 		despawn()
 	elif body.is_in_group("ground"):

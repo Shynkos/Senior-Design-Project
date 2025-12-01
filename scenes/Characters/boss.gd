@@ -9,6 +9,7 @@ var speed = 100
 var SpikeScene = preload("res://scenes/Components/spike.tscn")
 var awake = false
 #audio
+var maxHealth: int
 @onready var hurt_sound: AudioStreamPlayer2D = $HurtSound
 @onready var death_sound: AudioStreamPlayer2D = $DeathSound
 @onready var gun_sound: AudioStreamPlayer2D = $GunSound
@@ -17,15 +18,32 @@ var awake = false
 func _ready():
 	#initalize health bar
 	$HealthBar.value = 100
+	maxHealth = health
+
+func doDie():
+	awake = false
+	timer.stop()
+	hitbox.set_deferred("disabled",true)
+	$HealthBar.visible = false
+	speed = 0
+	velocity = Vector2.ZERO
+	animated_sprite.stop()
 
 func setAwake(value: bool):
+	if value:
+		animated_sprite.play("awake")
+		await animated_sprite.animation_finished
 	awake = value
 	hitbox.disabled = !awake
+	$HealthBar.visible = awake
+	if awake and timer.is_stopped():
+			timer.start()
+	elif !awake:
+		timer.stop()
 
 func _physics_process(_delta):
-	if awake:
-		if timer.is_stopped():
-			timer.start()
+	if awake and $AttackStall.is_stopped():
+
 		var direction = to_local(nav.get_next_path_position()).normalized().x
 		velocity.x = direction * speed
 		pathfinding()
@@ -60,6 +78,7 @@ func _on_timer_timeout():
 		speed = 300
 	if random == 2:
 		speed = 0
+		animated_sprite.play("attack")
 		$AttackStall.start()
 		var spikes = SpikeScene.instantiate()
 		spikes.position.x = PlayerGlobal.position.x
@@ -78,7 +97,7 @@ func take_damage(amount):
 		hurt_sound.play()
 	
 	#update health bar
-	$HealthBar.value = (float(health) / 1000) * 100
+	$HealthBar.value = (float(health) / maxHealth) * 100
 	
 	if health <= 0:
 		die()
@@ -86,11 +105,14 @@ func take_damage(amount):
 
 func die():
 	#get death animation
+	print("called death")
+	doDie()
+	animated_sprite.play("death")
 	if death_sound:
 		death_sound.play()
-		
-	queue_free()
+	await animated_sprite.animation_finished
 	get_tree().change_scene_to_file("res://scenes/Components/victory_menu.tscn")
+	queue_free()
 
 
 func flash(nodes):

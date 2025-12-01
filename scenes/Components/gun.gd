@@ -24,7 +24,7 @@ func _process(_delta: float):
 func fire(player_velocity: Vector2, _delta):
 	var new_bullet = BULLET.instantiate()
 	new_bullet.global_position = spawnpoint.global_position
-	print(new_bullet.global_position, " ", marker_2d.global_position)
+	#print(new_bullet.global_position, " ", marker_2d.global_position)
 	
 	new_bullet.rotation = marker_2d.global_rotation
 	new_bullet.target_position = (marker_2d.global_position - spawnpoint.global_position).normalized()

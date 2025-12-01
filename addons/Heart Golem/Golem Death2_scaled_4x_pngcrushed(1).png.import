@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mbsvggd6q4aj"
-path="res://.godot/imported/Golem_Death2_upscaled.png-c9c638a6d493630a53e90600806082dd.ctex"
+uid="uid://be52gx4c8l0hg"
+path="res://.godot/imported/Golem Death2_scaled_4x_pngcrushed(1).png-98a541e0c7ecbcca202c7e2ea305cef0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/Heart Golem/Golem_Death2_upscaled.png"
-dest_files=["res://.godot/imported/Golem_Death2_upscaled.png-c9c638a6d493630a53e90600806082dd.ctex"]
+source_file="res://addons/Heart Golem/Golem Death2_scaled_4x_pngcrushed(1).png"
+dest_files=["res://.godot/imported/Golem Death2_scaled_4x_pngcrushed(1).png-98a541e0c7ecbcca202c7e2ea305cef0.ctex"]
 
 [params]
 
