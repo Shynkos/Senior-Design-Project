@@ -333,6 +333,7 @@ navigation_polygon = SubResource("NavigationPolygon_b1njl")
 wait_time = 0.7
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visible = false
 material = SubResource("ShaderMaterial_lymv5")
 position = Vector2(0, -49)
 sprite_frames = SubResource("SpriteFrames_bn40l")

@@ -1463,6 +1463,7 @@ size = Vector2(288, 352)
 [node name="ParallaxBackground" type="TileMapLayer" parent="."]
 
 [node name="Sky" type="Parallax2D" parent="ParallaxBackground"]
+scroll_offset = Vector2(186, -493)
 
 [node name="SkySprite" type="Sprite2D" parent="ParallaxBackground/Sky"]
 position = Vector2(1.1368684e-13, -2816)
@@ -1482,6 +1483,7 @@ tile_set = SubResource("TileSet_v80be")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 visible = false
+position = Vector2(80, -1025)
 zoom = Vector2(2, 2)
 limit_left = 55
 limit_top = -1175
@@ -1512,21 +1514,21 @@ shape = SubResource("RectangleShape2D_jmjc2")
 [node name="Node" type="Node" parent="."]
 
 [node name="GroundEnemy" parent="Node" instance=ExtResource("25_h2nlv")]
-position = Vector2(467, -1026)
+position = Vector2(467, -1023)
 walking_distance = 50
 
 [node name="GroundEnemy2" parent="Node" instance=ExtResource("25_h2nlv")]
-position = Vector2(491, -829)
+position = Vector2(491, -831)
 walking_distance = 50
 
 [node name="GroundEnemy3" parent="Node" instance=ExtResource("25_h2nlv")]
-position = Vector2(413, -643)
+position = Vector2(413, -639)
 walking_distance = 50
 
 [node name="GroundEnemy4" parent="Node" instance=ExtResource("25_h2nlv")]
-position = Vector2(536, -450)
+position = Vector2(536, -447)
 walking_distance = 50
 
 [node name="GroundEnemy5" parent="Node" instance=ExtResource("25_h2nlv")]
-position = Vector2(295, -72)
+position = Vector2(295, -67)
 walking_distance = 50

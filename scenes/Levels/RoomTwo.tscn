@@ -1576,7 +1576,6 @@ texture = ExtResource("17_87ybm")
 
 [node name="Pipes" type="TileMapLayer" parent="Foreground"]
 z_index = 1
-tile_map_data = PackedByteArray("AADg/9r/AAACAAoAAADh/9r/AAADAAoAAADh/9v/AAADAAsAAADi/9r/AAAEAAoAAADj/9r/AAAFAAoAAADj/9z/AAAFAA4AAADi/9z/AAAEAA4AAADi/9v/AAAEAA0AAADj/9v/AAAFAA0AAADg/9z/AAACAA4AAADh/9z/AAADAA4AAADh/97/AAABAAoAABDh/9//AAABAA0AABDh/+D/AAABAA4AABDi/97/AAAAAAoAABDi/9//AAAAAA0AABDi/+D/AAAAAA4AABDg/97/AAADAA4AAADg/+D/AAADAA4AAAA=")
 tile_set = SubResource("TileSet_s3qfa")
 
 [node name="SideBuildings" type="TileMapLayer" parent="Foreground"]

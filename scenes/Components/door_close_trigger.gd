@@ -22,7 +22,7 @@ func _ready() -> void:
 			doorTiles.append(Vector2i(x,y))
 
 #one time use door set
-func _on_body_entered(body: Node2D) -> void:
+func _on_body_entered(_body: Node2D):
 	if enabled:
 		print("test")
 		for pos in doorTiles:
@@ -43,9 +43,7 @@ func lock_camera():
 	#lock cam
 	tween.finished.connect(func():
 		camera.limit_left = int(room_top_left.x)
-		camera.limit_top = int(room_top_left.y)
 		camera.limit_right = int(room_bottom_right.x)
-		camera.limit_bottom = int(room_bottom_right.y)
 		
 		camera.position_smoothing_enabled = false
 		boss_setup()
