@@ -56,9 +56,11 @@ func _on_timer_timeout():
 	speed = 100
 	var random = randi_range(1, 5)
 	
-	if random == 1:
+	if random == 1 and speed != 0:
 		speed = 300
 	if random == 2:
+		speed = 0
+		$AttackStall.start()
 		var spikes = SpikeScene.instantiate()
 		spikes.position.x = PlayerGlobal.position.x
 		add_sibling(spikes)
@@ -100,3 +102,7 @@ func flash(nodes):
 func set_flash_value(value: float, nodes):
 	for node in nodes:
 		node.material.set_shader_parameter('Progress', value)
+
+
+func _on_attack_stall_timeout():
+	speed = 100

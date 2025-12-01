@@ -242,4 +242,8 @@ volume_db = -7.385
 stream = ExtResource("6_2qa43")
 volume_db = -8.0
 
+[node name="AttackStall" type="Timer" parent="."]
+wait_time = 3.0
+
 [connection signal="timeout" from="EventTimer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="AttackStall" to="." method="_on_attack_stall_timeout"]
